@@ -2247,3 +2247,20 @@ body.cursor-actiu textarea,
 body.cursor-actiu select {
   cursor: none;
 }
+/* =========================================================
+   CURSOR - EVITAR CURSOR NORMAL AL CLICAR
+   ========================================================= */
+
+html,
+body,
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none !important;
+}
+
+.cursor-personalitzat {
+  cursor: none !important;
+}
