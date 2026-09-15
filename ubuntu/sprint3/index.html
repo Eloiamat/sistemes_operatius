@@ -1,28 +1,341 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sprint Ubuntu 3</title>
-<link rel="stylesheet" href="../../css/estils.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sprint 3 · Seguretat i administració · Ubuntu</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <link rel="stylesheet" href="../../css/estils.css">
 </head>
-<body class="pagina-ubuntu">
-<header class="hero">
-  <nav class="hero-nav">
-    <a href="../../index.html">Portada</a>
-    <a href="../index.html">Índex Ubuntu</a>
-    <a href="../../windows/index.html">Índex Windows</a>
-    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
-  </nav>
-  <div class="hero-titol">
-    <p class="miguetes"><a href="../../index.html">Portada</a> / <a href="../index.html">Índex Ubuntu</a> / Sprint 3</p>
-    <h1>Sprint Ubuntu 3</h1>
-  </div>
-</header>
-<main class="contenidor"><section class="panell">
-  <p>Espai preparat per al contingut de l'activitat del Sprint Ubuntu 3.</p>
-  <p class="tornar-index"><a href="../index.html">↑ Tornar a l'Índex Ubuntu</a></p>
-</section></main>
-<footer class="peu"><p class="peu-llicencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31"></a><span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span></p><p class="autoria">Autor/a: <strong>Nom Cognom1 Cognom2</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p></footer>
+
+<body class="pagina-ubuntu pagina-sprint">
+
+  <!-- CAPÇALERA -->
+
+  <header class="hero hero-sprint">
+
+    <div class="capcalera-portada">
+
+      <a class="marca-portada" href="../../index.html">
+        <span class="marca-icon">›_</span>
+        <span>sistemes_operatius</span>
+      </a>
+
+      <nav class="hero-nav">
+
+        <a href="../../index.html">
+          Home
+        </a>
+
+        <a href="../index.html">
+          Índex Ubuntu
+        </a>
+
+        <a href="../../windows/index.html">
+          Índex Windows
+        </a>
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Codi a GitHub ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <!-- INFORMACIÓ DEL SPRINT -->
+
+    <div class="sprint-capcalera">
+
+      <div class="sprint-presentacio">
+
+        <p class="etiqueta-curs">
+          UBUNTU · SPRINT 3
+        </p>
+
+        <h1>
+          Seguretat i<br>
+          administració
+        </h1>
+
+        <p class="subtitol">
+          Sprint 3 · Sistemes Operatius
+        </p>
+
+      </div>
+
+
+      <!-- TERMINAL -->
+
+      <figure class="terminal-sprint">
+
+        <div class="terminal-cap">
+
+          <div class="terminal-punts">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <span class="terminal-titol">
+            ubuntu/sprint3
+          </span>
+
+        </div>
+
+
+        <div class="terminal-contingut">
+
+          <div class="terminal-comanda">
+            <span>$</span>
+            <span>cat index.md</span>
+          </div>
+
+
+          <a
+            class="terminal-apartat"
+            href="#apartat1"
+          >
+            <span class="apartat-numero">
+              01
+            </span>
+
+            <span>
+              Tallafocs i control d'accés
+            </span>
+          </a>
+
+
+          <a
+            class="terminal-apartat"
+            href="#apartat2"
+          >
+            <span class="apartat-numero">
+              02
+            </span>
+
+            <span>
+              Còpies de seguretat
+            </span>
+          </a>
+
+
+          <a
+            class="terminal-apartat"
+            href="#apartat3"
+          >
+            <span class="apartat-numero">
+              03
+            </span>
+
+            <span>
+              Monitorització del sistema
+            </span>
+          </a>
+
+
+          <div class="terminal-prompt">
+            <span>$</span>
+            <span>_</span>
+          </div>
+
+        </div>
+
+      </figure>
+
+    </div>
+
+  </header>
+
+
+  <!-- CONTINGUT -->
+
+  <main class="contingut-sprint">
+
+    <!-- APARTAT 1 -->
+
+    <section
+      id="apartat1"
+      class="apartat-sprint"
+    >
+
+      <p class="etiqueta-apartat">
+        APARTAT 01
+      </p>
+
+      <h2>
+        Tallafocs i control d'accés
+      </h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Un <strong>tallafocs</strong> ben configurat només obre els
+        ports que realment es fan servir.
+      </p>
+
+      <ul>
+
+        <li>
+          Consultar les regles actives.
+        </li>
+
+        <li>
+          Obrir només els ports necessaris.
+        </li>
+
+        <li>
+          Bloquejar la resta de trànsit entrant.
+        </li>
+
+      </ul>
+
+
+      <p class="tornar-index">
+        <a href="#">
+          ↑ Tornar a l'índex
+        </a>
+      </p>
+
+    </section>
+
+
+    <!-- APARTAT 2 -->
+
+    <section
+      id="apartat2"
+      class="apartat-sprint"
+    >
+
+      <p class="etiqueta-apartat">
+        APARTAT 02
+      </p>
+
+      <h2>
+        Còpies de seguretat
+      </h2>
+
+      <p>
+        Sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Una política de <strong>còpies de seguretat</strong>
+        periòdiques evita perdre informació important.
+      </p>
+
+
+      <img
+        class="imatge-apartat"
+        src="../../img/exemple.svg"
+        alt="Exemple de captura de pantalla d'una còpia de seguretat"
+      >
+
+
+      <p class="tornar-index">
+        <a href="#">
+          ↑ Tornar a l'índex
+        </a>
+      </p>
+
+    </section>
+
+
+    <!-- APARTAT 3 -->
+
+    <section
+      id="apartat3"
+      class="apartat-sprint"
+    >
+
+      <p class="etiqueta-apartat">
+        APARTAT 03
+      </p>
+
+      <h2>
+        Monitorització del sistema
+      </h2>
+
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+        Monitoritzar l'ús de <strong>CPU, memòria i disc</strong>
+        ajuda a detectar problemes abans que afectin el servei.
+      </p>
+
+      <ul>
+
+        <li>
+          Revisar l'ús de recursos amb eines del sistema.
+        </li>
+
+        <li>
+          Configurar alertes davant valors anormals.
+        </li>
+
+      </ul>
+
+
+      <p class="tornar-index">
+        <a href="#">
+          ↑ Tornar a l'índex
+        </a>
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- PEU -->
+
+  <footer class="peu">
+
+    <p class="peu-llicencia">
+
+      <a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+        target="_blank"
+        rel="license noopener"
+      >
+        <img
+          src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+          alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0"
+          width="88"
+          height="31"
+        >
+      </a>
+
+      <span>
+        Contingut sota llicència
+
+        <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+          target="_blank"
+          rel="license noopener"
+        >
+          CC BY-NC-SA 4.0
+        </a>
+
+      </span>
+
+    </p>
+
+
+    <p class="autoria">
+
+      Autor/a:
+      <strong>Eloi Amat Farrerons</strong>
+
+      · Pràctica 0 · Sistemes Operatius (ISOPJ1)
+
+    </p>
+
+  </footer>
+
 </body>
 </html>
