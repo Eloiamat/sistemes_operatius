@@ -977,7 +977,8 @@ a:focus-visible {
 
   text-align: right;
 
-  /* Desplaça el text una mica cap a l'esquerra */
+  /* Fa que el bloc ocupi més espai cap a l'esquerra */
+  width: calc(100% + 50px);
   margin-left: -50px;
 
 }
@@ -1030,7 +1031,6 @@ a:focus-visible {
   text-decoration: underline;
 
 }
-
 
 /* =========================================================
    INSÍGNIA CREATIVE COMMONS
