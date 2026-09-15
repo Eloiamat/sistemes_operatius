@@ -1300,7 +1300,10 @@ footer.peu .autoria strong {
 
   border-radius: 10px;
 
-  color: rgba(255, 255, 255, 0.88);
+  /* Targetes més fosques per millorar el contrast */
+  background: rgba(5, 25, 45, 0.42);
+
+  color: rgba(255, 255, 255, 0.92);
 
   font-family: Consolas, "Courier New", monospace;
   font-size: 0.88rem;
