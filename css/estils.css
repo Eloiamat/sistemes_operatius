@@ -1,8 +1,12 @@
 /* =========================================================
    SISTEMES OPERATIUS
-   ESTILS COMUNS
+   Estils comuns
    ========================================================= */
 
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 
 :root {
 
@@ -14,22 +18,15 @@
 
   --ambre: #e86c31;
 
-  --tinta: #17233a;
-  --tinta-suau: #60708a;
-
-  --fons: #edf2f8;
-
   --blanc: #ffffff;
+  --blanc-suau: rgba(255, 255, 255, 0.82);
 
-  --vora: #dbe4f0;
+  --tinta: #17233a;
+  --fons: #edf2f8;
 
   --radi: 16px;
 
-  --accent: var(--teal);
-  --accent-fosc: #075a63;
-  --accent-suau: #dff3f4;
 }
-
 
 
 /* =========================================================
@@ -59,19 +56,13 @@ body {
 
   color: var(--tinta);
 
-  background:
-    radial-gradient(
-      circle at 8% 4%,
-      rgba(13, 120, 132, 0.08),
-      transparent 24rem
-    ),
-    var(--fons);
+  background: var(--fons);
 
   line-height: 1.55;
 
   letter-spacing: 0.005em;
-}
 
+}
 
 
 a {
@@ -83,9 +74,9 @@ a {
   transition:
     color 0.18s ease,
     background-color 0.18s ease,
-    border-color 0.18s ease,
     transform 0.18s ease,
     box-shadow 0.18s ease;
+
 }
 
 
@@ -96,30 +87,16 @@ a:hover {
 
 a:focus-visible {
 
-  outline: 3px solid #f5b44c;
+  outline:
+    3px solid #f5b44c;
 
   outline-offset: 3px;
+
 }
 
 
-
 /* =========================================================
-   CONTENEDOR GENERAL
-   ========================================================= */
-
-.contenidor {
-
-  max-width: 1040px;
-
-  margin: 0 auto;
-
-  padding: 0 20px;
-}
-
-
-
-/* =========================================================
-   HERO COMÚN
+   HERO
    ========================================================= */
 
 .hero {
@@ -127,8 +104,6 @@ a:focus-visible {
   position: relative;
 
   overflow: hidden;
-
-  padding-bottom: 72px;
 
   color: var(--blanc);
 
@@ -152,8 +127,11 @@ a:focus-visible {
       #0d6472 61%,
       #133352 100%
     );
+
 }
 
+
+/* Decoración */
 
 .hero::after {
 
@@ -161,628 +139,27 @@ a:focus-visible {
 
   position: absolute;
 
-  inset: auto -90px -130px auto;
+  right: -90px;
+  bottom: -130px;
 
   width: 360px;
-
   height: 360px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.13);
+    1px solid rgba(255, 255, 255, 0.10);
 
   border-radius: 50%;
 
   pointer-events: none;
-}
 
+}
 
 
 /* =========================================================
-   NAVEGACIÓN GENERAL
+   CAPÇALERA
    ========================================================= */
 
-.hero-nav {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  flex-wrap: wrap;
-}
-
-
-.hero-nav a {
-
-  padding: 8px 13px;
-
-  color: rgba(255, 255, 255, 0.95);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.24);
-
-  background:
-    rgba(255, 255, 255, 0.08);
-
-  border-radius: 999px;
-
-  font-size: 0.82rem;
-
-  font-weight: 600;
-
-  letter-spacing: 0.01em;
-
-  text-decoration: none;
-}
-
-
-.hero-nav a:hover {
-
-  color: #fff;
-
-  background:
-    rgba(255, 255, 255, 0.20);
-
-  border-color:
-    rgba(255, 255, 255, 0.44);
-
-  transform: translateY(-1px);
-
-  text-decoration: none;
-}
-
-
-
-/* =========================================================
-   HERO TÍTULOS GENERALES
-   ========================================================= */
-
-.hero-titol {
-
-  position: relative;
-
-  z-index: 1;
-
-  max-width: 1040px;
-
-  margin: 0 auto;
-
-  padding: 42px 20px 0;
-}
-
-
-.hero-titol h1 {
-
-  margin: 0 0 8px;
-
-  color: #fff;
-
-  font-size:
-    clamp(2.3rem, 5vw, 3.85rem);
-
-  line-height: 1.02;
-
-  letter-spacing: -0.045em;
-}
-
-
-.hero-titol p.subtitol {
-
-  max-width: 650px;
-
-  margin: 0;
-
-  font-size: 1.05rem;
-
-  line-height: 1.6;
-
-  opacity: 0.92;
-}
-
-
-.hero-titol .miguetes {
-
-  font-size: 0.85rem;
-
-  font-weight: 600;
-
-  letter-spacing: 0.02em;
-
-  opacity: 0.85;
-
-  margin: 0 0 10px;
-}
-
-
-.hero-titol .miguetes a {
-
-  color: #fff;
-
-  text-decoration: underline;
-}
-
-
-
-/* =========================================================
-   MAIN
-   ========================================================= */
-
-main {
-
-  padding-bottom: 50px;
-}
-
-
-
-/* =========================================================
-   PANELS
-   ========================================================= */
-
-.panell {
-
-  position: relative;
-
-  z-index: 1;
-
-  padding:
-    34px
-    clamp(23px, 4vw, 42px);
-
-  background: var(--blanc);
-
-  border:
-    1px solid rgba(219, 228, 240, 0.9);
-
-  border-radius: 20px;
-
-  box-shadow:
-    0 18px 45px rgba(20, 43, 79, 0.13);
-}
-
-
-
-/* =========================================================
-   TARGETES / SPRINTS
-   ========================================================= */
-
-.rejilla-targetes {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(220px, 1fr)
-    );
-
-  gap: 18px;
-
-  margin:
-    26px 0 6px;
-}
-
-
-.targeta {
-
-  position: relative;
-
-  display: block;
-
-  min-height: 166px;
-
-  padding: 21px;
-
-  overflow: hidden;
-
-  border:
-    1px solid #dce5f0;
-
-  border-radius: 16px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fff,
-      #f7faff
-    );
-
-  transition:
-    box-shadow 0.15s,
-    transform 0.15s;
-}
-
-
-.targeta::after {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  width: 5px;
-  height: 100%;
-
-  background:
-    var(--accent);
-
-  opacity: 0.85;
-}
-
-
-.targeta:hover {
-
-  border-color:
-    color-mix(
-      in srgb,
-      var(--accent) 42%,
-      #dce5f0
-    );
-
-  box-shadow:
-    0 13px 25px rgba(23, 50, 88, 0.15);
-
-  transform:
-    translateY(-4px);
-
-  text-decoration: none;
-}
-
-
-.targeta .numero {
-
-  display: inline-block;
-
-  margin-bottom: 8px;
-
-  padding: 4px 10px;
-
-  color: var(--blanc);
-
-  background:
-    var(--accent);
-
-  border-radius: 999px;
-
-  font-size: 0.75rem;
-
-  font-weight: 700;
-
-  letter-spacing: 0.055em;
-}
-
-
-.targeta h3 {
-
-  margin:
-    3px 0 4px;
-
-  color: var(--tinta);
-
-  font-size: 1.1rem;
-}
-
-
-.targeta p {
-
-  margin: 0;
-
-  color: var(--accent-fosc);
-
-  font-size: 0.9rem;
-
-  font-weight: 600;
-}
-
-
-
-/* =========================================================
-   BOTONES GENERALES
-   ========================================================= */
-
-.boto {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 10px;
-
-  min-height: 47px;
-
-  padding:
-    12px 20px;
-
-  color: var(--blanc) !important;
-
-  background:
-    var(--accent);
-
-  border-radius: 12px;
-
-  font-weight: 700;
-
-  text-decoration: none !important;
-
-  box-shadow:
-    0 9px 18px rgba(7, 90, 99, 0.18);
-
-  transition:
-    background-color 0.18s ease,
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-
-.boto:hover {
-
-  background:
-    var(--accent-fosc);
-
-  box-shadow:
-    0 12px 21px rgba(7, 90, 99, 0.25);
-
-  transform:
-    translateY(-2px);
-}
-
-
-.boto-ubuntu {
-
-  --accent: #dc5d28;
-
-  --accent-fosc: #aa401b;
-}
-
-
-.boto-windows {
-
-  --accent: #1976d2;
-
-  --accent-fosc: #115aa4;
-}
-
-
-
-/* =========================================================
-   CONSELLS
-   ========================================================= */
-
-.consell {
-
-  padding:
-    11px 13px;
-
-  color: var(--tinta-suau);
-
-  font-size: 0.9rem;
-
-  border-left:
-    3px solid var(--accent);
-
-  border-radius:
-    0 9px 9px 0;
-
-  background:
-    var(--accent-suau);
-}
-
-
-.consell code {
-
-  padding:
-    1px 5px;
-
-  background:
-    var(--fons);
-
-  border-radius: 4px;
-}
-
-
-
-/* =========================================================
-   TAULES
-   ========================================================= */
-
-.taula-apartats {
-
-  width: 100%;
-
-  margin:
-    6px 0 8px;
-
-  overflow: hidden;
-
-  border:
-    1px solid var(--vora);
-
-  border-radius: 12px;
-
-  border-collapse: collapse;
-}
-
-
-.taula-apartats th,
-.taula-apartats td {
-
-  padding:
-    12px 14px;
-
-  text-align: left;
-
-  border-bottom:
-    1px solid var(--vora);
-}
-
-
-.taula-apartats th {
-
-  color: var(--accent-fosc);
-
-  background:
-    var(--accent-suau);
-
-  font-size: 0.72rem;
-
-  letter-spacing: 0.06em;
-
-  text-transform: uppercase;
-}
-
-
-.taula-apartats td:first-child,
-.taula-apartats th:first-child {
-
-  width: 46px;
-
-  color: var(--tinta-suau);
-}
-
-
-.taula-apartats tr:hover td {
-
-  background:
-    #f7faff;
-}
-
-
-.taula-apartats a {
-
-  color:
-    var(--accent-fosc);
-
-  font-weight: 600;
-}
-
-
-
-/* =========================================================
-   APARTATS
-   ========================================================= */
-
-.apartat {
-
-  scroll-margin-top: 20px;
-
-  padding-top: 26px;
-
-  margin-top: 26px;
-
-  border-top:
-    1px solid var(--vora);
-}
-
-
-.apartat h2 {
-
-  margin-top: 0;
-
-  color:
-    var(--accent-fosc);
-}
-
-
-.apartat img {
-
-  max-width: 100%;
-
-  margin:
-    14px 0;
-
-  border:
-    1px solid var(--vora);
-
-  border-radius:
-    var(--radi);
-
-  box-shadow:
-    0 7px 20px rgba(19, 42, 79, 0.11);
-}
-
-
-.apartat ul {
-
-  padding-left: 22px;
-}
-
-
-.apartat li {
-
-  margin: 4px 0;
-}
-
-
-.tornar-index {
-
-  font-size: 0.85rem;
-}
-
-
-.tornar-index a {
-
-  color:
-    var(--accent-fosc);
-
-  font-weight: 700;
-}
-
-
-
-/* =========================================================
-   IDENTITAT UBUNTU / WINDOWS
-   ========================================================= */
-
-.pagina-ubuntu {
-
-  --accent: #dc5d28;
-
-  --accent-fosc: #aa401b;
-
-  --accent-suau: #fff0e9;
-}
-
-
-.pagina-windows {
-
-  --accent: #1976d2;
-
-  --accent-fosc: #115aa4;
-
-  --accent-suau: #e8f2ff;
-}
-
-
-
-/* =========================================================
-   =========================================================
-   PORTADA
-   =========================================================
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   HERO PORTADA
-   --------------------------------------------------------- */
-
-.pagina-portada .hero-portada {
-
-  padding-bottom: 0;
-
-  min-height: 638px;
-}
-
-
-
-/* ---------------------------------------------------------
-   CAPÇALERA PORTADA
-   --------------------------------------------------------- */
-
-.pagina-portada .capcalera-portada {
+.capcalera-portada {
 
   position: relative;
 
@@ -802,18 +179,17 @@ main {
       calc(100% - 40px)
     );
 
-  margin:
-    0 auto;
+  margin: 0 auto;
 
   padding:
     30px 0 0;
+
 }
 
 
-
-/* ---------------------------------------------------------
+/* =========================================================
    MARCA
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .marca-portada {
 
@@ -830,6 +206,7 @@ main {
   font-weight: 700;
 
   white-space: nowrap;
+
 }
 
 
@@ -838,20 +215,23 @@ main {
   color: #fff;
 
   text-decoration: none;
+
 }
 
 
-.marca-portada-logo {
+/* Icono terminal */
 
-  display: block;
+.marca-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 
   width: 45px;
 
   height: 45px;
-
-  padding: 8px;
-
-  object-fit: contain;
 
   border-radius: 12px;
 
@@ -861,70 +241,77 @@ main {
   border:
     1px solid rgba(255, 255, 255, 0.08);
 
-  filter:
-    drop-shadow(
-      0 5px 8px rgba(0, 0, 0, 0.20)
-    );
+  color: #fff;
+
+  font-family:
+    Consolas,
+    "Courier New",
+    monospace;
+
+  font-size: 1.1rem;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
+
 }
 
 
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
 
-/* ---------------------------------------------------------
-   NAVEGACIÓN PORTADA
-   --------------------------------------------------------- */
+.hero-nav {
 
-.pagina-portada .hero-nav {
+  display: flex;
+
+  align-items: center;
 
   justify-content: flex-end;
 
-  gap: 25px;
+  gap: 26px;
 
-  margin: 0;
+  flex-wrap: wrap;
 
-  padding: 0;
 }
 
 
-.pagina-portada .hero-nav a {
+.hero-nav a {
 
   padding: 4px 0;
 
   color:
     rgba(255, 255, 255, 0.90);
 
-  border: 0;
-
-  background: transparent;
-
-  border-radius: 0;
-
   font-size: 0.92rem;
 
   font-weight: 500;
-}
-
-
-.pagina-portada .hero-nav a:hover {
-
-  color: #fff;
 
   background: transparent;
 
   border: 0;
+
+  text-decoration: none;
+
+}
+
+
+.hero-nav a:hover {
+
+  color: #fff;
 
   transform:
     translateY(-1px);
 
   text-decoration: none;
+
 }
 
 
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
 
-/* ---------------------------------------------------------
-   COMPOSICIÓN PRINCIPAL
-   --------------------------------------------------------- */
-
-.pagina-portada .portada-capcalera {
+.portada-capcalera {
 
   position: relative;
 
@@ -951,24 +338,22 @@ main {
       calc(100% - 40px)
     );
 
-  margin:
-    0 auto;
+  margin: 0 auto;
 
   padding:
     72px 0 65px;
 
-  text-align: left;
 }
 
 
-
-/* ---------------------------------------------------------
-   PRESENTACIÓ
-   --------------------------------------------------------- */
+/* =========================================================
+   PRESENTACIÓN
+   ========================================================= */
 
 .presentacio-portada {
 
   min-width: 0;
+
 }
 
 
@@ -985,14 +370,13 @@ main {
   font-weight: 800;
 
   letter-spacing: 0.09em;
+
 }
 
 
 .presentacio-portada h1 {
 
   margin: 0;
-
-  max-width: 570px;
 
   color: #fff;
 
@@ -1008,10 +392,11 @@ main {
   letter-spacing: -0.055em;
 
   font-weight: 700;
+
 }
 
 
-.pagina-portada .subtitol {
+.subtitol {
 
   max-width: 650px;
 
@@ -1024,15 +409,15 @@ main {
   font-size: 1.05rem;
 
   line-height: 1.55;
+
 }
 
 
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
 
-/* ---------------------------------------------------------
-   FITXA ALUMNE
-   --------------------------------------------------------- */
-
-.pagina-portada .fitxa-alumne {
+.fitxa-alumne {
 
   display: grid;
 
@@ -1043,7 +428,7 @@ main {
     );
 
   gap:
-    9px 35px;
+    12px 35px;
 
   width:
     min(
@@ -1056,27 +441,27 @@ main {
 
   padding: 0;
 
-  color:
-    rgba(255, 255, 255, 0.76);
-
   background: transparent;
 
   border: 0;
 
-  border-radius: 0;
+  color:
+    rgba(255, 255, 255, 0.76);
+
 }
 
 
-.pagina-portada .fitxa-alumne p {
+.fitxa-alumne p {
 
   margin:
     0 0 13px;
 
   font-size: 0.91rem;
+
 }
 
 
-.pagina-portada .fitxa-alumne strong {
+.fitxa-alumne strong {
 
   display: block;
 
@@ -1087,13 +472,13 @@ main {
   font-size: 0.82rem;
 
   font-weight: 700;
+
 }
 
 
-
-/* ---------------------------------------------------------
-   BOTONES PORTADA
-   --------------------------------------------------------- */
+/* =========================================================
+   BOTONES
+   ========================================================= */
 
 .accessos-sistemes {
 
@@ -1104,12 +489,19 @@ main {
   gap: 14px;
 
   margin-top: 5px;
+
 }
 
 
-.accessos-sistemes .boto {
+.boto {
 
-  margin: 0;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
 
   min-height: 58px;
 
@@ -1118,28 +510,67 @@ main {
 
   border-radius: 13px;
 
+  color: #fff !important;
+
   font-size: 1rem;
+
+  font-weight: 700;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+
+}
+
+
+.boto:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 27px rgba(0, 0, 0, 0.22);
+
+  filter:
+    brightness(1.06);
+
+}
+
+
+.boto-ubuntu {
+
+  background:
+    #ed5b20;
+
+}
+
+
+.boto-windows {
+
+  background:
+    #1976d2;
+
 }
 
 
 .boto-icona {
 
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 
   line-height: 1;
+
 }
 
 
-
-/* ---------------------------------------------------------
+/* =========================================================
    TERMINAL
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .terminal-portada {
 
@@ -1155,6 +586,7 @@ main {
   border-radius: 22px;
 
   background:
+
     linear-gradient(
       145deg,
       rgba(255, 255, 255, 0.09),
@@ -1166,11 +598,13 @@ main {
 
   backdrop-filter:
     blur(10px);
+
 }
 
 
-
-/* CABECERA TERMINAL */
+/* =========================================================
+   CABECERA TERMINAL
+   ========================================================= */
 
 .terminal-cap {
 
@@ -1185,6 +619,7 @@ main {
 
   border-bottom:
     1px solid rgba(255, 255, 255, 0.05);
+
 }
 
 
@@ -1193,6 +628,7 @@ main {
   display: flex;
 
   gap: 7px;
+
 }
 
 
@@ -1208,6 +644,7 @@ main {
 
   background:
     rgba(255, 255, 255, 0.55);
+
 }
 
 
@@ -1222,16 +659,19 @@ main {
     monospace;
 
   font-size: 0.76rem;
+
 }
 
 
-
-/* CONTENIDO TERMINAL */
+/* =========================================================
+   CONTENIDO TERMINAL
+   ========================================================= */
 
 .terminal-contingut {
 
   padding:
     25px 21px 30px;
+
 }
 
 
@@ -1251,17 +691,21 @@ main {
     monospace;
 
   font-size: 0.95rem;
+
 }
 
 
 .terminal-comanda span:first-child {
 
-  color: #75d7d0;
+  color:
+    #75d7d0;
+
 }
 
 
-
-/* CARPETAS */
+/* =========================================================
+   CARPETAS
+   ========================================================= */
 
 .terminal-carpeta {
 
@@ -1280,13 +724,13 @@ main {
   padding:
     0 16px;
 
-  color:
-    rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
 
   background:
     rgba(255, 255, 255, 0.10);
 
-  border-radius: 12px;
+  color:
+    rgba(255, 255, 255, 0.88);
 
   font-family:
     Consolas,
@@ -1296,20 +740,22 @@ main {
   font-size: 0.92rem;
 
   text-decoration: none;
+
 }
 
 
 .terminal-carpeta:hover {
 
-  color: #fff;
-
   background:
     rgba(255, 255, 255, 0.16);
+
+  color: #fff;
 
   transform:
     translateX(3px);
 
   text-decoration: none;
+
 }
 
 
@@ -1323,11 +769,18 @@ main {
 
   width: 20px;
 
-  color: #dff9f7;
-
   font-size: 1.25rem;
 
   line-height: 1;
+
+}
+
+
+.carpeta-ubuntu .carpeta-icona {
+
+  color:
+    #dff9f7;
+
 }
 
 
@@ -1335,6 +788,7 @@ main {
 
   color:
     #ffd1b4;
+
 }
 
 
@@ -1342,11 +796,13 @@ main {
 
   color:
     #ffbd91;
+
 }
 
 
-
-/* PROMPT */
+/* =========================================================
+   PROMPT FINAL
+   ========================================================= */
 
 .terminal-prompt {
 
@@ -1365,43 +821,42 @@ main {
     monospace;
 
   font-size: 0.95rem;
+
 }
 
 
 .terminal-prompt span:last-child {
 
   color: #fff;
+
 }
 
 
-
 /* =========================================================
-   FRANJA DE LICENCIA
+   LLICÈNCIA
    ========================================================= */
 
 .contingut-portada {
 
   width: 100%;
 
-  padding: 0;
-
   background:
     #17233d;
+
 }
 
 
-.pagina-portada .bloc-llicencia {
+.bloc-llicencia {
 
   display: grid;
 
   grid-template-columns:
-    minmax(250px, 0.72fr)
-    minmax(0, 1.28fr);
+    minmax(250px, 0.80fr)
+    minmax(0, 1.20fr);
 
   align-items: center;
 
-  gap:
-    55px;
+  gap: 55px;
 
   width:
     min(
@@ -1409,8 +864,7 @@ main {
       calc(100% - 40px)
     );
 
-  margin:
-    0 auto;
+  margin: 0 auto;
 
   padding:
     35px 0;
@@ -1418,16 +872,12 @@ main {
   color:
     rgba(255, 255, 255, 0.76);
 
-  background: transparent;
-
-  border: 0;
-
-  border-radius: 0;
 }
 
 
-
-/* ESQUERRA */
+/* =========================================================
+   LLICÈNCIA - ESQUERRA
+   ========================================================= */
 
 .llicencia-esquerra {
 
@@ -1436,6 +886,7 @@ main {
   align-items: center;
 
   gap: 16px;
+
 }
 
 
@@ -1447,13 +898,13 @@ main {
 
   justify-content: center;
 
-  flex: 0 0 48px;
+  flex: 0 0 60px;
 
-  width: 48px;
+  width: 60px;
 
-  height: 48px;
+  height: 60px;
 
-  border-radius: 14px;
+  border-radius: 15px;
 
   background:
     #dff5f5;
@@ -1461,23 +912,30 @@ main {
   color:
     #0b7884;
 
-  font-size: 1.2rem;
+  font-family:
+    Consolas,
+    "Courier New",
+    monospace;
 
-  font-weight: 800;
+  font-size: 1.15rem;
+
+  font-weight: 500;
+
 }
 
 
 .llicencia-esquerra h3 {
 
   margin:
-    0 0 3px;
+    0 0 4px;
 
   color:
-    rgba(255, 255, 255, 0.75);
+    rgba(255, 255, 255, 0.72);
 
   font-size: 0.82rem;
 
   letter-spacing: 0.08em;
+
 }
 
 
@@ -1486,15 +944,18 @@ main {
   color: #fff;
 
   font-size: 0.92rem;
+
 }
 
 
-
-/* DRETA */
+/* =========================================================
+   LLICÈNCIA - DRETA
+   ========================================================= */
 
 .llicencia-text {
 
   text-align: right;
+
 }
 
 
@@ -1509,18 +970,21 @@ main {
   font-size: 0.82rem;
 
   line-height: 1.55;
+
 }
 
 
 .llicencia-text p:last-child {
 
   margin-bottom: 0;
+
 }
 
 
 .llicencia-text strong {
 
   color: #fff;
+
 }
 
 
@@ -1530,16 +994,54 @@ main {
     #8dd7d5;
 
   text-decoration: none;
+
 }
 
 
 .llicencia-text a:hover {
 
-  color: #b7eeec;
+  color:
+    #b7eeec;
 
   text-decoration: underline;
+
 }
 
+
+/* =========================================================
+   INSÍGNIA CREATIVE COMMONS
+   ========================================================= */
+
+.badge-cc {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 14px;
+
+}
+
+
+.badge-cc img {
+
+  display: block;
+
+}
+
+
+.badge-cc span {
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 0.82rem;
+
+}
 
 
 /* =========================================================
@@ -1550,20 +1052,19 @@ footer.peu {
 
   width: 100%;
 
-  margin: 0;
-
   padding:
-    30px 20px 46px;
-
-  color:
-    var(--tinta-suau);
-
-  background:
-    var(--fons);
+    25px 20px 35px;
 
   text-align: center;
 
+  color:
+    #60708a;
+
   font-size: 0.85rem;
+
+  background:
+    #edf2f8;
+
 }
 
 
@@ -1581,134 +1082,516 @@ footer.peu {
 
   margin:
     0 0 8px;
+
 }
 
 
 .peu-llicencia img {
 
   display: block;
+
 }
 
 
 footer.peu .autoria {
 
   margin: 0;
+
 }
 
 
 footer.peu .autoria strong {
 
   color:
-    var(--accent-fosc);
+    #17233a;
+
 }
 
 
+/* =========================================================
+   COLORES UBUNTU
+   ========================================================= */
+
+.pagina-ubuntu {
+
+  --accent:
+    #e85d25;
+
+  --accent-fosc:
+    #b94318;
+
+  --accent-suau:
+    #fff0e9;
+
+}
+
+
+/* Elementos que utilicen accent */
+
+.pagina-ubuntu .numero {
+
+  background:
+    var(--accent);
+
+}
+
+
+.pagina-ubuntu .targeta:hover {
+
+  border-color:
+    rgba(232, 93, 37, 0.35);
+
+}
+
+
+.pagina-ubuntu .apartat h2 {
+
+  color:
+    var(--accent-fosc);
+
+}
+
+
+.pagina-ubuntu .consell {
+
+  border-left-color:
+    var(--accent);
+
+  background:
+    var(--accent-suau);
+
+}
+
 
 /* =========================================================
-   RESPONSIVE
+   COLORES WINDOWS
+   ========================================================= */
+
+.pagina-windows {
+
+  --accent:
+    #1976d2;
+
+  --accent-fosc:
+    #115aa4;
+
+  --accent-suau:
+    #e8f2ff;
+
+}
+
+
+.pagina-windows .numero {
+
+  background:
+    var(--accent);
+
+}
+
+
+.pagina-windows .targeta:hover {
+
+  border-color:
+    rgba(25, 118, 210, 0.35);
+
+}
+
+
+.pagina-windows .apartat h2 {
+
+  color:
+    var(--accent-fosc);
+
+}
+
+
+.pagina-windows .consell {
+
+  border-left-color:
+    var(--accent);
+
+  background:
+    var(--accent-suau);
+
+}
+
+
+/* =========================================================
+   ELEMENTOS COMUNES PARA LOS ÍNDICES
+   ========================================================= */
+
+.rejilla-targetes {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap: 18px;
+
+  margin:
+    26px 0 6px;
+
+}
+
+
+.targeta {
+
+  display: block;
+
+  padding: 21px;
+
+  min-height: 166px;
+
+  border:
+    1px solid #dce5f0;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #f7faff
+    );
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+
+}
+
+
+.targeta:hover {
+
+  box-shadow:
+    0 13px 25px rgba(23, 50, 88, 0.15);
+
+  transform:
+    translateY(-4px);
+
+  text-decoration: none;
+
+}
+
+
+.targeta .numero {
+
+  display: inline-block;
+
+  padding:
+    4px 10px;
+
+  color: #fff;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+}
+
+
+.targeta h3 {
+
+  margin:
+    7px 0 4px;
+
+  color:
+    var(--tinta);
+
+  font-size: 1.1rem;
+
+}
+
+
+.targeta p {
+
+  margin: 0;
+
+  color:
+    var(--accent-fosc);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   TABLAS
+   ========================================================= */
+
+.taula-apartats {
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--vora);
+
+  border-radius: 12px;
+
+  border-collapse: collapse;
+
+}
+
+
+.taula-apartats th,
+.taula-apartats td {
+
+  padding:
+    12px 14px;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid var(--vora);
+
+}
+
+
+.taula-apartats th {
+
+  color:
+    var(--accent-fosc);
+
+  background:
+    var(--accent-suau);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+}
+
+
+.taula-apartats tr:hover td {
+
+  background:
+    #f7faff;
+
+}
+
+
+/* =========================================================
+   APARTATS
+   ========================================================= */
+
+.apartat {
+
+  scroll-margin-top: 20px;
+
+  padding-top: 26px;
+
+  margin-top: 26px;
+
+  border-top:
+    1px solid var(--vora);
+
+}
+
+
+.apartat h2 {
+
+  color:
+    var(--accent-fosc);
+
+}
+
+
+.apartat img {
+
+  max-width: 100%;
+
+  margin:
+    14px 0;
+
+  border:
+    1px solid var(--vora);
+
+  border-radius:
+    var(--radi);
+
+}
+
+
+.tornar-index {
+
+  font-size: 0.85rem;
+
+}
+
+
+/* =========================================================
+   CONSELLS
+   ========================================================= */
+
+.consell {
+
+  padding:
+    11px 13px;
+
+  color:
+    var(--tinta-suau);
+
+  font-size: 0.9rem;
+
+  border-left:
+    3px solid var(--accent);
+
+  border-radius:
+    0 9px 9px 0;
+
+  background:
+    var(--accent-suau);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
    ========================================================= */
 
 @media (max-width: 850px) {
 
 
-  .pagina-portada .capcalera-portada {
+  .capcalera-portada {
 
-    align-items: flex-start;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    flex-direction:
+      column;
 
-    padding-top: 22px;
+    padding-top:
+      22px;
+
   }
 
 
-  .pagina-portada .hero-nav {
+  .hero-nav {
 
-    justify-content: flex-start;
+    justify-content:
+      flex-start;
 
     gap:
-      10px 18px;
+      18px;
+
   }
 
 
-  .pagina-portada .portada-capcalera {
+  .portada-capcalera {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 45px;
+    gap:
+      45px;
 
-    padding-top: 55px;
+    padding-top:
+      55px;
+
   }
 
 
   .terminal-portada {
 
-    max-width: 520px;
+    max-width:
+      520px;
+
   }
 
 
-  .pagina-portada .bloc-llicencia {
+  .bloc-llicencia {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 25px;
+    gap:
+      25px;
 
-    padding:
-      35px 0;
   }
 
 
   .llicencia-text {
 
-    text-align: left;
+    text-align:
+      left;
+
+  }
+
+
+  .badge-cc {
+
+    justify-content:
+      flex-start;
+
   }
 
 }
 
 
-
 /* =========================================================
-   MÓVIL
+   RESPONSIVE - MÓVIL
    ========================================================= */
 
 @media (max-width: 560px) {
 
 
-  .pagina-portada .capcalera-portada,
-  .pagina-portada .portada-capcalera,
-  .pagina-portada .bloc-llicencia {
+  .capcalera-portada,
+  .portada-capcalera,
+  .bloc-llicencia {
 
     width:
       min(
-        100% - 28px,
+        calc(100% - 28px),
         1120px
       );
+
   }
 
 
-  .pagina-portada .hero-nav {
+  .hero-nav {
 
     gap:
-      8px 15px;
+      10px 16px;
+
   }
 
 
-  .pagina-portada .hero-nav a {
+  .hero-nav a {
 
-    font-size: 0.82rem;
+    font-size:
+      0.82rem;
+
   }
 
 
   .presentacio-portada h1 {
 
-    font-size: 3.3rem;
+    font-size:
+      3.3rem;
+
   }
 
 
-  .pagina-portada .fitxa-alumne {
+  .fitxa-alumne {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
     gap: 0;
+
   }
 
 
@@ -1716,19 +1599,16 @@ footer.peu .autoria strong {
 
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
+
   }
 
 
-  .accessos-sistemes .boto {
+  .boto {
 
     width: 100%;
-  }
 
-
-  .terminal-portada {
-
-    border-radius: 18px;
   }
 
 
@@ -1736,6 +1616,7 @@ footer.peu .autoria strong {
 
     padding:
       22px 18px 18px;
+
   }
 
 
@@ -1743,58 +1624,40 @@ footer.peu .autoria strong {
 
     padding:
       22px 17px 25px;
+
   }
 
 
-  .pagina-portada .bloc-llicencia {
+  .bloc-llicencia {
 
     padding:
       30px 0;
+
+  }
+
+
+  .llicencia-esquerra {
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .llicencia-text {
+
+    font-size:
+      0.85rem;
+
   }
 
 
   .llicencia-text p {
 
-    font-size: 0.82rem;
+    font-size:
+      0.82rem;
+
   }
 
 }
-
-
-
-/* =========================================================
-   MÓVILES PEQUEÑOS
-   ========================================================= */
-
-@media (max-width: 460px) {
-
-
-  .hero-nav {
-
-    gap: 7px;
-  }
-
-
-  .hero-nav a {
-
-    padding:
-      7px 10px;
-
-    font-size: 0.77rem;
-  }
-
-
-  .accessos-sistemes {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-  }
-
-
-  .accessos-sistemes .boto {
-
-    text-align: center;
-  }
-
 }
