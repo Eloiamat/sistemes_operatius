@@ -718,7 +718,7 @@ a:focus-visible {
   border-radius: 12px;
 
   background:
-    rgba(255, 255, 255, 0.10);
+    rgba(5, 25, 45, 0.42);
 
   color:
     rgba(255, 255, 255, 0.88);
@@ -778,7 +778,7 @@ a:focus-visible {
 .carpeta-windows {
 
   color:
-    #2583c7;
+    #42a5f5;
 
 }
 
@@ -786,7 +786,7 @@ a:focus-visible {
 .carpeta-windows .carpeta-icona {
 
   color:
-    #ffbd91;
+    #42a5f5;
 
 }
 
@@ -809,15 +809,15 @@ a:focus-visible {
 }
 
 .pagina-portada .carpeta-windows {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 .pagina-portada .carpeta-windows .carpeta-icona {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 .pagina-portada .carpeta-windows:hover {
-  background: rgba(25, 118, 210, 0.14);
+  background: rgba(66, 165, 245, 0.14);
 }
 
 
@@ -1179,10 +1179,10 @@ footer.peu .autoria strong {
 .pagina-windows {
 
   --accent:
-    #1976d2;
+    #42a5f5;
 
   --accent-fosc:
-    #115aa4;
+    #1976d2;
 
   --accent-suau:
     #e8f2ff;
@@ -1356,27 +1356,27 @@ footer.peu .autoria strong {
    ========================================================= */
 
 .pagina-sprint.pagina-windows .terminal-accent {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 .pagina-sprint.pagina-windows .terminal-sprint-line:hover {
-  background: rgba(25, 118, 210, 0.14);
+  background: rgba(66, 165, 245, 0.14);
 }
 
 
 
 .pagina-sprint.pagina-windows .sprint-terminal .terminal-titol {
-  color: rgba(25, 118, 210, 0.90);
+  color: rgba(66, 165, 245, 0.90);
 }
 
 .pagina-sprint.pagina-windows
 .sprint-terminal .terminal-comanda span:first-child {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 .pagina-sprint.pagina-windows
 .sprint-terminal .terminal-prompt span:first-child {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 
@@ -2064,7 +2064,7 @@ footer.peu .autoria strong {
   margin-bottom: 14px;
   padding: 0 16px;
   border-radius: 13px;
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(5, 25, 45, 0.42);
   color: rgba(255, 255, 255, 0.9);
   font-family: Consolas, "Courier New", monospace;
   font-size: 0.92rem;
@@ -2098,7 +2098,7 @@ footer.peu .autoria strong {
 }
 
 .pagina-windows .index-terminal-item:hover {
-  background: rgba(25, 118, 210, 0.18);
+  background: rgba(66, 165, 245, 0.18);
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
@@ -2135,8 +2135,8 @@ footer.peu .autoria strong {
    ========================================================= */
 
 .pagina-windows {
-  --accent: #1976d2;
-  --accent-fosc: #115aa4;
+  --accent: #42a5f5;
+  --accent-fosc: #1976d2;
   --accent-suau: #e8f2ff;
 }
 
