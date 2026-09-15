@@ -1,28 +1,422 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sprint Ubuntu 2</title>
-<link rel="stylesheet" href="../../css/estils.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sprint 2 · Ubuntu</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="../../img/logo.svg"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../../css/estils.css"
+  >
+
 </head>
-<body class="pagina-ubuntu">
-<header class="hero">
-  <nav class="hero-nav">
-    <a href="../../index.html">Portada</a>
-    <a href="../index.html">Índex Ubuntu</a>
-    <a href="../../windows/index.html">Índex Windows</a>
-    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
-  </nav>
-  <div class="hero-titol">
-    <p class="miguetes"><a href="../../index.html">Portada</a> / <a href="../index.html">Índex Ubuntu</a> / Sprint 2</p>
-    <h1>Sprint Ubuntu 2</h1>
+
+
+<body class="pagina-ubuntu pagina-sprint">
+
+
+<!-- =========================================================
+     CAPÇALERA
+     ========================================================= -->
+
+<header class="hero" id="index-apartats">
+
+
+  <!-- CAPÇALERA PRINCIPAL -->
+
+  <div class="capcalera-portada">
+
+    <a
+      class="marca-portada"
+      href="../../index.html"
+    >
+
+      <span class="marca-icon">›_</span>
+
+      <span>sistemes_operatius</span>
+
+    </a>
+
+
+    <nav class="hero-nav">
+
+      <a href="../../index.html">
+        Home
+      </a>
+
+      <a href="../index.html">
+        Índex Ubuntu
+      </a>
+
+      <a href="../../windows/index.html">
+        Índex Windows
+      </a>
+
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Codi a GitHub ↗
+      </a>
+
+    </nav>
+
   </div>
+
+
+  <!-- =======================================================
+       HERO DEL SPRINT
+       ======================================================= -->
+
+  <div class="sprint-hero">
+
+
+    <!-- PRESENTACIÓ -->
+
+    <div class="sprint-presentacio">
+
+      <p class="etiqueta-curs">
+        UBUNTU · SPRINT 2
+      </p>
+
+
+      <h1>
+        Gestió de<br>
+        programari i usuaris
+      </h1>
+
+
+      <p class="subtitol">
+        Sprint 2 · Sistemes Operatius
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         TERMINAL / ÍNDEX
+         ===================================================== -->
+
+    <figure class="terminal-portada sprint-terminal">
+
+
+      <div class="terminal-cap">
+
+        <div class="terminal-punts">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+
+        <span class="terminal-titol">
+          ubuntu/sprint2
+        </span>
+
+      </div>
+
+
+      <div class="terminal-contingut">
+
+
+        <div class="terminal-comanda">
+
+          <span>$</span>
+
+          <span>
+            cat index.md
+          </span>
+
+        </div>
+
+
+        <!-- APARTAT 1 -->
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat1"
+        >
+
+          <span class="terminal-accent">
+            01
+          </span>
+
+          <span>
+            Gestors de paquets
+          </span>
+
+        </a>
+
+
+        <!-- APARTAT 2 -->
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat2"
+        >
+
+          <span class="terminal-accent">
+            02
+          </span>
+
+          <span>
+            Permisos i propietaris d'arxius
+          </span>
+
+        </a>
+
+
+        <div class="terminal-prompt">
+
+          <span>$</span>
+
+          <span>_</span>
+
+        </div>
+
+      </div>
+
+    </figure>
+
+  </div>
+
 </header>
-<main class="contenidor"><section class="panell">
-  <p>Espai preparat per al contingut de l'activitat del Sprint Ubuntu 2.</p>
-  <p class="tornar-index"><a href="../index.html">↑ Tornar a l'Índex Ubuntu</a></p>
-</section></main>
-<footer class="peu"><p class="peu-llicencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31"></a><span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span></p><p class="autoria">Autor/a: <strong>Nom Cognom1 Cognom2</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p></footer>
+
+
+
+<!-- =========================================================
+     CONTINGUT
+     ========================================================= -->
+
+<main class="sprint-contingut">
+
+
+  <!-- =======================================================
+       APARTAT 1
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat1"
+  >
+
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        01
+      </span>
+
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 01
+        </p>
+
+        <h2>
+          Gestors de paquets
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. El gestor de paquets permet
+        <strong>
+          instal·lar, actualitzar i eliminar
+        </strong>
+        programari de manera controlada.
+      </p>
+
+
+      <ul>
+
+        <li>
+          Actualitzar la llista de paquets disponibles.
+        </li>
+
+        <li>
+          Instal·lar un paquet nou.
+        </li>
+
+        <li>
+          Eliminar un paquet que ja no es fa servir.
+        </li>
+
+      </ul>
+
+
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       APARTAT 2
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat2"
+  >
+
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        02
+      </span>
+
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 02
+        </p>
+
+        <h2>
+          Permisos i propietaris d'arxius
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Cada arxiu
+        té un
+        <strong>
+          propietari, un grup i uns permisos
+        </strong>
+        que en determinen l'accés.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/exemple.svg"
+          alt="Exemple de captura de pantalla dels permisos d'un arxiu"
+        >
+
+        <figcaption>
+          Exemple de captura de pantalla dels permisos d'un arxiu.
+        </figcaption>
+
+      </figure>
+
+
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+
+
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="peu">
+
+
+  <p class="peu-llicencia">
+
+    <a
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+      target="_blank"
+      rel="license noopener"
+    >
+
+      <img
+        src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+        alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0"
+        width="88"
+        height="31"
+      >
+
+    </a>
+
+
+    <span>
+
+      Contingut sota llicència
+
+      <a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+        target="_blank"
+        rel="license noopener"
+      >
+        CC BY-NC-SA 4.0
+      </a>
+
+    </span>
+
+  </p>
+
+
+  <p class="autoria">
+
+    Autor:
+    <strong>Eloi Amat Farrerons</strong>
+    · Sprint 2 · Sistemes Operatius (ISOPJ1)
+
+  </p>
+
+
+</footer>
+
+
 </body>
 </html>
