@@ -1,28 +1,486 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sprint Ubuntu 1</title>
-<link rel="stylesheet" href="../../css/estils.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sprint 1 · Instal·lació i configuració inicial · Ubuntu</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <link rel="stylesheet" href="../../css/estils.css">
 </head>
-<body class="pagina-ubuntu">
-<header class="hero">
-  <nav class="hero-nav">
-    <a href="../../index.html">Portada</a>
-    <a href="../index.html">Índex Ubuntu</a>
-    <a href="../../windows/index.html">Índex Windows</a>
-    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
-  </nav>
-  <div class="hero-titol">
-    <p class="miguetes"><a href="../../index.html">Portada</a> / <a href="../index.html">Índex Ubuntu</a> / Sprint 1</p>
-    <h1>Sprint Ubuntu 1</h1>
-  </div>
-</header>
-<main class="contenidor"><section class="panell">
-  <p>Espai preparat per al contingut de l'activitat del Sprint Ubuntu 1.</p>
-  <p class="tornar-index"><a href="../index.html">↑ Tornar a l'Índex Ubuntu</a></p>
-</section></main>
-<footer class="peu"><p class="peu-llicencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31"></a><span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span></p><p class="autoria">Autor/a: <strong>Nom Cognom1 Cognom2</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p></footer>
+
+<body class="pagina-ubuntu pagina-sprint">
+
+  <header class="hero">
+
+    <div class="capcalera-portada">
+
+      <a class="marca-portada" href="../../index.html">
+        <span class="marca-icon">›_</span>
+        <span>sistemes_operatius</span>
+      </a>
+
+      <nav class="hero-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Índex Ubuntu</a>
+        <a href="../../windows/index.html">Índex Windows</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">
+          Codi a GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+
+    <div class="sprint-hero">
+
+      <div class="sprint-presentacio">
+
+        <p class="etiqueta-curs">
+          UBUNTU · SPRINT 1
+        </p>
+
+        <h1>
+          Instal·lació i<br>
+          configuració inicial
+        </h1>
+
+        <p class="subtitol">
+          Sprint 1 · Sistemes Operatius
+        </p>
+
+      </div>
+
+      <figure class="terminal-portada sprint-terminal">
+
+        <div class="terminal-cap">
+
+          <div class="terminal-punts">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <span class="terminal-titol">
+            ubuntu/sprint1
+          </span>
+
+        </div>
+
+        <div class="terminal-contingut">
+
+          <div class="terminal-comanda">
+            <span>$</span>
+            <span>cat index.md</span>
+          </div>
+
+          <div class="terminal-sprint-line">
+            <span class="terminal-accent">01</span>
+            <span>Instal·lació del sistema operatiu</span>
+          </div>
+
+          <div class="terminal-sprint-line">
+            <span class="terminal-accent">02</span>
+            <span>Configuració de xarxa bàsica</span>
+          </div>
+
+          <div class="terminal-sprint-line">
+            <span class="terminal-accent">03</span>
+            <span>Creació d'usuaris i grups</span>
+          </div>
+
+          <div class="terminal-sprint-line">
+            <span class="terminal-accent">04</span>
+            <span>Comprovació final</span>
+          </div>
+
+          <div class="terminal-prompt">
+            <span>$</span>
+            <span>_</span>
+          </div>
+
+        </div>
+
+      </figure>
+
+    </div>
+
+  </header>
+
+
+  <main class="sprint-contingut">
+
+    <section class="sprint-index" id="index-apartats">
+
+      <div class="sprint-index-cap">
+
+        <span class="sprint-index-numero">
+          01
+        </span>
+
+        <div>
+          <p class="sprint-index-etiqueta">
+            ÍNDEX DEL SPRINT
+          </p>
+
+          <h2>
+            Índex d'apartats d'aquest sprint
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="sprint-index-taula">
+
+        <a href="#apartat1">
+          <span class="taula-numero">01</span>
+          <span>Instal·lació del sistema operatiu</span>
+          <span class="taula-fletxa">→</span>
+        </a>
+
+        <a href="#apartat2">
+          <span class="taula-numero">02</span>
+          <span>Configuració de xarxa bàsica</span>
+          <span class="taula-fletxa">→</span>
+        </a>
+
+        <a href="#apartat3">
+          <span class="taula-numero">03</span>
+          <span>Creació d'usuaris i grups</span>
+          <span class="taula-fletxa">→</span>
+        </a>
+
+        <a href="#apartat4">
+          <span class="taula-numero">04</span>
+          <span>Comprovació final</span>
+          <span class="taula-fletxa">→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- APARTAT 1 -->
+
+    <section class="sprint-apartat" id="apartat1">
+
+      <div class="apartat-cap">
+
+        <span class="apartat-numero">
+          01
+        </span>
+
+        <div>
+          <p class="apartat-etiqueta">
+            APARTAT 01
+          </p>
+
+          <h2>
+            Instal·lació del sistema operatiu
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="apartat-cos">
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Un cop arrencat el suport d'instal·lació, cal seguir
+          l'assistent i triar les opcions de particionat abans de
+          continuar. <strong>Aquest pas és irreversible</strong>,
+          així que revisa bé el disc de destinació.
+        </p>
+
+
+        <ul>
+          <li>Arrencar des del USB o la imatge ISO.</li>
+          <li>Triar l'idioma i la distribució de teclat.</li>
+          <li>Configurar el particionat del disc.</li>
+          <li>Esperar que finalitzi la còpia d'arxius i reiniciar.</li>
+        </ul>
+
+
+        <figure class="captura-sprint">
+
+          <img
+            src="../../img/exemple.svg"
+            alt="Exemple de captura de pantalla de l'assistent d'instal·lació">
+
+          <figcaption>
+            Exemple de captura de pantalla de l'assistent d'instal·lació
+          </figcaption>
+
+        </figure>
+
+
+        <p>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Un cop reiniciat el sistema, comprova que arrenca correctament
+          i que reconeix tot el maquinari abans de continuar amb el següent
+          apartat.
+        </p>
+
+      </div>
+
+
+      <a class="tornar-index" href="#index-apartats">
+        ↑ Tornar a l'índex
+      </a>
+
+    </section>
+
+
+    <!-- APARTAT 2 -->
+
+    <section class="sprint-apartat" id="apartat2">
+
+      <div class="apartat-cap">
+
+        <span class="apartat-numero">
+          02
+        </span>
+
+        <div>
+          <p class="apartat-etiqueta">
+            APARTAT 02
+          </p>
+
+          <h2>
+            Configuració de xarxa bàsica
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="apartat-cos">
+
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+          La configuració de xarxa és <strong>imprescindible</strong>
+          per poder actualitzar el sistema i instal·lar programari nou.
+        </p>
+
+
+        <ul>
+          <li>
+            Comprovar l'adreça IP assignada amb
+            <code>ip a</code>.
+          </li>
+
+          <li>
+            Configurar una IP estàtica si el servei ho requereix.
+          </li>
+
+          <li>
+            Verificar la connectivitat amb
+            <code>ping</code>.
+          </li>
+        </ul>
+
+
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+
+      </div>
+
+
+      <a class="tornar-index" href="#index-apartats">
+        ↑ Tornar a l'índex
+      </a>
+
+    </section>
+
+
+    <!-- APARTAT 3 -->
+
+    <section class="sprint-apartat" id="apartat3">
+
+      <div class="apartat-cap">
+
+        <span class="apartat-numero">
+          03
+        </span>
+
+        <div>
+          <p class="apartat-etiqueta">
+            APARTAT 03
+          </p>
+
+          <h2>
+            Creació d'usuaris i grups
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="apartat-cos">
+
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus
+          qui blanditiis praesentium voluptatum deleniti atque corrupti.
+          Cada usuari nou s'hauria d'assignar al
+          <strong>grup mínim necessari</strong>
+          segons les tasques que ha de fer.
+        </p>
+
+
+        <figure class="captura-sprint">
+
+          <img
+            src="../../img/exemple.svg"
+            alt="Exemple de captura de pantalla de la gestió d'usuaris">
+
+          <figcaption>
+            Exemple de captura de pantalla de la gestió d'usuaris
+          </figcaption>
+
+        </figure>
+
+
+        <ul>
+          <li>
+            Crear l'usuari amb
+            <code>useradd</code>.
+          </li>
+
+          <li>
+            Assignar contrasenya amb
+            <code>passwd</code>.
+          </li>
+
+          <li>
+            Afegir l'usuari als grups necessaris amb
+            <code>usermod -aG</code>.
+          </li>
+        </ul>
+
+      </div>
+
+
+      <a class="tornar-index" href="#index-apartats">
+        ↑ Tornar a l'índex
+      </a>
+
+    </section>
+
+
+    <!-- APARTAT 4 -->
+
+    <section class="sprint-apartat" id="apartat4">
+
+      <div class="apartat-cap">
+
+        <span class="apartat-numero">
+          04
+        </span>
+
+        <div>
+          <p class="apartat-etiqueta">
+            APARTAT 04
+          </p>
+
+          <h2>
+            Comprovació final
+          </h2>
+        </div>
+
+      </div>
+
+
+      <div class="apartat-cos">
+
+        <p>
+          Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio
+          cumque nihil impedit. Abans de donar per acabat el sprint,
+          revisa aquest resum:
+        </p>
+
+
+        <ul>
+          <li>
+            El sistema arrenca sense errors.
+          </li>
+
+          <li>
+            La xarxa respon correctament als <em>pings</em>.
+          </li>
+
+          <li>
+            <strong>
+              Els usuaris i grups creats coincideixen amb l'enunciat.
+            </strong>
+          </li>
+        </ul>
+
+
+        <p>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+          aut odit aut fugit, sed quia consequuntur magni dolores
+          eos qui ratione voluptatem sequi nesciunt.
+        </p>
+
+      </div>
+
+
+      <a class="tornar-index" href="#index-apartats">
+        ↑ Tornar a l'índex
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer class="peu">
+
+    <p class="peu-llicencia">
+
+      <a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+        target="_blank"
+        rel="license noopener">
+
+        <img
+          src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+          alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0"
+          width="88"
+          height="31">
+
+      </a>
+
+      <span>
+        Contingut sota llicència
+        <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"
+          target="_blank"
+          rel="license noopener">
+          CC BY-NC-SA 4.0
+        </a>
+      </span>
+
+    </p>
+
+
+    <p class="autoria">
+      Autor/a:
+      <strong>Eloi Amat Farrerons</strong>
+      · Sprint 1 · Sistemes Operatius (ISOPJ1)
+    </p>
+
+  </footer>
+
 </body>
 </html>
