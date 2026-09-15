@@ -191,8 +191,9 @@ a:focus-visible {
    MARCA
    ========================================================= */
 
-.marca-portada {
+/* MARCA */
 
+.marca-portada {
   display: inline-flex;
 
   align-items: center;
@@ -206,20 +207,15 @@ a:focus-visible {
   font-weight: 700;
 
   white-space: nowrap;
-
 }
 
 
 .marca-portada:hover {
-
   color: #fff;
 
   text-decoration: none;
-
 }
 
-
-/* Icono terminal */
 
 .marca-icon {
   display: flex;
@@ -247,6 +243,7 @@ a:focus-visible {
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.12);
 }
+
 
 /* =========================================================
    NAVEGACIÓN
