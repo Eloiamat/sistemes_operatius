@@ -1,0 +1,594 @@
+/* Full de estils comu per a tot el lloc.
+   Enllaça-la sempre igual:
+   <link rel="stylesheet" href="../css/estils.css">  (des d'una carpeta de sprint)
+   <link rel="stylesheet" href="css/estils.css">      (des de l'arrel) */
+
+:root {
+  --mari: #0e1f3e;
+  --teal: #0b7884;
+  --ambre: #e86c31;
+  --tinta: #17233a;
+  --tinta-suau: #60708a;
+  --fons: #edf2f8;
+  --blanc: #ffffff;
+  --vora: #dbe4f0;
+  --radi: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--tinta);
+  background: var(--fons);
+  line-height: 1.55;
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.contenidor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Capçalera / hero (present a totes les pàgines) ---------- */
+.hero {
+  background: linear-gradient(125deg, var(--mari) 0%, var(--teal) 55%, var(--ambre) 100%);
+  padding-bottom: 60px;
+  color: var(--blanc);
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 18px 20px 0;
+}
+
+.hero-nav a {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.hero-nav a:hover { background: rgba(255, 255, 255, 0.24); text-decoration: none; }
+
+.hero-titol {
+  text-align: center;
+  padding: 30px 20px 0;
+}
+
+.hero-titol .miguetes {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin: 0 0 10px;
+}
+.hero-titol .miguetes a { color: #fff; text-decoration: underline; }
+
+.hero-titol h1 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  color: #fff;
+}
+
+.hero-titol p.subtitol {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 1.05rem;
+}
+
+/* ---------- Panell blanc flotant que xafa el hero ---------- */
+main { padding-bottom: 50px; }
+
+.panell {
+  background: var(--blanc);
+  border-radius: var(--radi);
+  box-shadow: 0 12px 32px rgba(18, 37, 66, 0.16);
+  margin-top: -42px;
+  padding: 32px 34px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Portada ---------- */
+.portada-hero { text-align: center; }
+.portada-hero img.imatge-portada {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+.fitxa-alumne {
+  display: inline-block;
+  background: var(--fons);
+  border: 1px solid var(--vora);
+  border-radius: var(--radi);
+  padding: 14px 22px;
+  margin: 20px 0;
+  text-align: left;
+}
+.fitxa-alumne p { margin: 3px 0; }
+.fitxa-alumne strong { color: var(--mari); }
+
+.boto {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--blanc) !important;
+  padding: 12px 26px;
+  border-radius: var(--radi);
+  font-weight: 600;
+  text-decoration: none !important;
+  margin-top: 8px;
+}
+.boto:hover { background: var(--mari); }
+
+/* ---------- Graella de targetes (sprints / apartats) ---------- */
+.rejilla-targetes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0 6px;
+}
+
+.targeta {
+  display: block;
+  background: var(--fons);
+  border: 1px solid var(--vora);
+  border-radius: var(--radi);
+  padding: 18px 20px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.targeta:hover {
+  box-shadow: 0 4px 14px rgba(12, 110, 115, 0.18);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.targeta .numero {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--blanc);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.targeta h3 { margin: 0 0 4px; color: var(--tinta); font-size: 1.05rem; }
+.targeta p { margin: 0; color: var(--tinta-suau); font-size: 0.9rem; }
+
+h1, h2 { color: var(--mari); }
+
+.consell {
+  color: var(--tinta-suau);
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
+.consell code { background: var(--fons); padding: 1px 5px; border-radius: 4px; }
+
+/* ---------- Taula d'apartats (índex intern d'un sprint, amb ancoratges) ---------- */
+.taula-apartats {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0 8px;
+}
+.taula-apartats th, .taula-apartats td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--vora);
+}
+.taula-apartats th {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinta-suau);
+}
+.taula-apartats td:first-child, .taula-apartats th:first-child { width: 46px; color: var(--tinta-suau); }
+.taula-apartats tr:hover td { background: var(--fons); }
+.taula-apartats a { font-weight: 600; }
+
+/* ---------- Contingut d'un apartat, dins de la mateixa pàgina ---------- */
+.apartat {
+  scroll-margin-top: 20px;
+  padding-top: 26px;
+  margin-top: 26px;
+  border-top: 1px solid var(--vora);
+}
+.apartat h2 { margin-top: 0; }
+.apartat img {
+  max-width: 100%;
+  border-radius: var(--radi);
+  border: 1px solid var(--vora);
+  margin: 14px 0;
+}
+.apartat ul { padding-left: 22px; }
+.apartat li { margin: 4px 0; }
+.tornar-index { font-size: 0.85rem; }
+
+/* ---------- Peu de pàgina: llicència i autoria (fix a totes les pàgines) ---------- */
+footer.peu {
+  text-align: center;
+  color: var(--tinta-suau);
+  font-size: 0.85rem;
+  padding: 30px 20px 46px;
+}
+.peu-llicencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 8px;
+}
+.peu-llicencia img { display: block; }
+footer.peu .autoria { margin: 0; }
+footer.peu .autoria strong { color: var(--tinta); }
+
+/* ---------- Bloc de llicència a la portada ---------- */
+.bloc-llicencia {
+  border: 1px solid var(--vora);
+  border-radius: var(--radi);
+  padding: 18px 20px;
+  margin-top: 22px;
+  text-align: left;
+  background: var(--fons);
+}
+.bloc-llicencia h3 { margin: 0 0 8px; font-size: 1rem; color: var(--mari); }
+.bloc-llicencia p { margin: 6px 0; font-size: 0.92rem; }
+.bloc-llicencia .badge-cc { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+
+/* ---------- Identitat visual comuna ---------- */
+:root {
+  --accent: var(--teal);
+  --accent-fosc: #075a63;
+  --accent-suau: #dff3f4;
+}
+
+.pagina-ubuntu {
+  --accent: #dc5d28;
+  --accent-fosc: #aa401b;
+  --accent-suau: #fff0e9;
+}
+
+.pagina-windows {
+  --accent: #1976d2;
+  --accent-fosc: #115aa4;
+  --accent-suau: #e8f2ff;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(13, 120, 132, 0.08), transparent 24rem),
+    var(--fons);
+  font-family: "Aptos", "Segoe UI", Roboto, Arial, sans-serif;
+  letter-spacing: 0.005em;
+}
+
+a { transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease; }
+a:focus-visible { outline: 3px solid #f5b44c; outline-offset: 3px; }
+
+.contenidor { max-width: 1040px; }
+
+/* Capçaleres de totes les pàgines */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 72px;
+  background:
+    radial-gradient(circle at 88% -8%, rgba(122, 223, 221, 0.34), transparent 25rem),
+    radial-gradient(circle at 6% 115%, rgba(232, 108, 49, 0.24), transparent 24rem),
+    linear-gradient(128deg, #0b1e3d 0%, #0d6472 61%, #133352 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -90px -130px auto;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-nav {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 20px 20px 0;
+}
+
+.hero-nav a {
+  padding: 8px 13px;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hero-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.44);
+  transform: translateY(-1px);
+}
+
+.hero-nav::before {
+  content: "";
+  flex: 0 0 31px;
+  width: 31px;
+  height: 31px;
+  margin: 0 2px 0 0;
+  border-radius: 9px;
+  background: url("../img/logo-sistemes-operatius.png") center / contain no-repeat;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.hero-titol {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 42px 20px 0;
+}
+
+.hero-titol h1 {
+  color: #fff;
+  font-size: clamp(2.3rem, 5vw, 3.85rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.hero-titol p.subtitol {
+  max-width: 650px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hero-titol .miguetes {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Panells, targetes i enllaços */
+.panell {
+  padding: 34px clamp(23px, 4vw, 42px);
+  border: 1px solid rgba(219, 228, 240, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(20, 43, 79, 0.13);
+}
+
+.rejilla-targetes { gap: 18px; margin-top: 26px; }
+
+.targeta {
+  position: relative;
+  min-height: 166px;
+  padding: 21px;
+  overflow: hidden;
+  border-color: #dce5f0;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fff, #f7faff);
+}
+
+.targeta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.85;
+}
+
+.targeta:hover {
+  border-color: color-mix(in srgb, var(--accent) 42%, #dce5f0);
+  box-shadow: 0 13px 25px rgba(23, 50, 88, 0.15);
+  transform: translateY(-4px);
+}
+
+.targeta .numero {
+  background: var(--accent);
+  padding: 4px 10px;
+  letter-spacing: 0.055em;
+}
+
+.targeta h3 { font-size: 1.1rem; margin-top: 3px; }
+.targeta p { color: var(--accent-fosc); font-weight: 600; }
+
+.boto {
+  min-height: 47px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--accent);
+  box-shadow: 0 9px 18px rgba(7, 90, 99, 0.18);
+}
+
+.boto:hover {
+  background: var(--accent-fosc);
+  box-shadow: 0 12px 21px rgba(7, 90, 99, 0.25);
+  transform: translateY(-2px);
+}
+
+.consell {
+  padding: 11px 13px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 9px 9px 0;
+  background: var(--accent-suau);
+}
+
+/* Taules i contingut dels sprints */
+.taula-apartats { overflow: hidden; border: 1px solid var(--vora); border-radius: 12px; }
+.taula-apartats th, .taula-apartats td { padding: 12px 14px; }
+.taula-apartats th { background: var(--accent-suau); color: var(--accent-fosc); }
+.taula-apartats tr:hover td { background: #f7faff; }
+.taula-apartats a { color: var(--accent-fosc); }
+
+.apartat { border-top-color: var(--vora); }
+.apartat h2 { color: var(--accent-fosc); }
+.apartat img { box-shadow: 0 7px 20px rgba(19, 42, 79, 0.11); }
+.tornar-index a { color: var(--accent-fosc); font-weight: 700; }
+
+/* Peu de pàgina comú */
+footer.peu {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+footer.peu .autoria strong { color: var(--accent-fosc); }
+
+/* Portada: composició especial, amb la mateixa identitat */
+.pagina-portada .hero-portada { padding-bottom: 68px; }
+
+.capcalera-portada {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 20px 0;
+}
+
+.marca-portada {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.marca-portada:hover { color: #fff; text-decoration: none; }
+
+.marca-portada-logo {
+  display: block;
+  width: 39px;
+  height: 39px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.22));
+}
+
+.pagina-portada .hero-nav { margin: 0; padding: 0; }
+.pagina-portada .hero-nav::before { display: none; }
+
+.pagina-portada .portada-capcalera {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 92px);
+  max-width: 1120px;
+  padding: 54px 20px 0;
+  text-align: left;
+}
+
+.pagina-portada .hero-titol h1 { max-width: 570px; font-size: clamp(3rem, 6vw, 5.1rem); }
+.pagina-portada .hero-titol p.subtitol { margin: 17px 0 0; }
+
+.pagina-portada .fitxa-alumne {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px 22px;
+  width: min(100%, 480px);
+  margin: 25px 0;
+  padding: 15px 18px;
+  border-color: rgba(255, 255, 255, 0.21);
+  border-radius: 14px;
+  background: rgba(7, 20, 43, 0.22);
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.pagina-portada .fitxa-alumne p { margin: 0; font-size: 0.86rem; }
+.pagina-portada .fitxa-alumne strong { display: block; color: #fff; font-size: 0.77rem; letter-spacing: 0.025em; }
+
+.accessos-sistemes { display: flex; flex-wrap: wrap; gap: 12px; }
+.accessos-sistemes .boto { margin: 0; }
+.boto-ubuntu { --accent: #dc5d28; --accent-fosc: #aa401b; }
+.boto-windows { --accent: #1976d2; --accent-fosc: #115aa4; }
+
+.terminal-portada {
+  position: relative;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 21px;
+  background: rgba(6, 17, 37, 0.34);
+  box-shadow: 0 23px 46px rgba(4, 14, 31, 0.27);
+  backdrop-filter: blur(9px);
+}
+
+.terminal-portada::before {
+  content: "sistemes_operatius";
+  display: block;
+  margin: 0 0 12px 4px;
+  color: rgba(255, 255, 255, 0.72);
+  font: 0.76rem Consolas, monospace;
+}
+
+.pagina-portada .imatge-portada {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.contingut-portada { max-width: 940px; }
+
+.pagina-portada .portada-hero {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.pagina-portada .bloc-llicencia {
+  margin: 0;
+  padding: clamp(24px, 5vw, 38px);
+  border: 0;
+  border-left: 5px solid var(--teal);
+  border-radius: 0;
+  background: linear-gradient(100deg, #fff, #f3fbfc);
+}
+
+.pagina-portada .bloc-llicencia h3 { color: var(--mari); font-size: 1.12rem; }
+.pagina-portada .bloc-llicencia p { max-width: 790px; line-height: 1.65; }
+.pagina-portada .bloc-llicencia .badge-cc { margin-top: 15px; }
+
+@media (max-width: 760px) {
+  .hero { padding-bottom: 58px; }
+  .hero-nav { justify-content: flex-start; padding-top: 16px; }
+  .hero-titol { padding-top: 32px; }
+  .panell { padding: 26px 20px; border-radius: 16px; }
+  .targeta { min-height: auto; }
+
+  .capcalera-portada { display: block; padding-top: 17px; }
+  .pagina-portada .hero-nav { margin-top: 15px; }
+  .pagina-portada .portada-capcalera { grid-template-columns: 1fr; gap: 31px; padding-top: 38px; }
+  .pagina-portada .fitxa-alumne { grid-template-columns: 1fr; }
+  .terminal-portada { max-width: 450px; }
+}
+
+@media (max-width: 460px) {
+  .hero-nav { gap: 7px; }
+  .hero-nav a { padding: 7px 10px; font-size: 0.77rem; }
+  .accessos-sistemes { display: grid; grid-template-columns: 1fr; }
+  .accessos-sistemes .boto { text-align: center; }
+}
