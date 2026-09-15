@@ -2199,3 +2199,18 @@ footer.peu .autoria strong {
 
   transform: translate(-50%, -50%); 
 }
+
+* =========================================================
+   OCULTAR CURSOR ORIGINAL
+   ========================================================= */
+
+html,
+body,
+body *,
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none !important;
+}
