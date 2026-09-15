@@ -1,9 +1,11 @@
 /* =========================================================
    SISTEMES OPERATIUS
-   Estils comuns
+   ESTILS COMUNS
    ========================================================= */
 
+
 :root {
+
   --mari: #0e1f3e;
   --mari-fosc: #091a35;
 
@@ -12,15 +14,27 @@
 
   --ambre: #e86c31;
 
-  --blanc: #ffffff;
-  --blanc-suau: rgba(255, 255, 255, 0.82);
-
   --tinta: #17233a;
+  --tinta-suau: #60708a;
+
   --fons: #edf2f8;
 
+  --blanc: #ffffff;
+
+  --vora: #dbe4f0;
+
   --radi: 16px;
+
+  --accent: var(--teal);
+  --accent-fosc: #075a63;
+  --accent-suau: #dff3f4;
 }
 
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -33,6 +47,7 @@ html {
 
 
 body {
+
   margin: 0;
 
   font-family:
@@ -44,7 +59,13 @@ body {
 
   color: var(--tinta);
 
-  background: var(--fons);
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(13, 120, 132, 0.08),
+      transparent 24rem
+    ),
+    var(--fons);
 
   line-height: 1.55;
 
@@ -52,13 +73,17 @@ body {
 }
 
 
+
 a {
+
   color: var(--teal);
+
   text-decoration: none;
 
   transition:
     color 0.18s ease,
     background-color 0.18s ease,
+    border-color 0.18s ease,
     transform 0.18s ease,
     box-shadow 0.18s ease;
 }
@@ -70,23 +95,45 @@ a:hover {
 
 
 a:focus-visible {
+
   outline: 3px solid #f5b44c;
+
   outline-offset: 3px;
 }
 
 
+
 /* =========================================================
-   HERO
+   CONTENEDOR GENERAL
+   ========================================================= */
+
+.contenidor {
+
+  max-width: 1040px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+
+
+/* =========================================================
+   HERO COMÚN
    ========================================================= */
 
 .hero {
+
   position: relative;
 
   overflow: hidden;
 
+  padding-bottom: 72px;
+
   color: var(--blanc);
 
   background:
+
     radial-gradient(
       circle at 88% -8%,
       rgba(122, 223, 221, 0.34),
@@ -108,11 +155,635 @@ a:focus-visible {
 }
 
 
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: auto -90px -130px auto;
+
+  width: 360px;
+
+  height: 360px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+
 /* =========================================================
-   CAPÇALERA
+   NAVEGACIÓN GENERAL
    ========================================================= */
 
-.capcalera-portada {
+.hero-nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+
+.hero-nav a {
+
+  padding: 8px 13px;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.24);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.01em;
+
+  text-decoration: none;
+}
+
+
+.hero-nav a:hover {
+
+  color: #fff;
+
+  background:
+    rgba(255, 255, 255, 0.20);
+
+  border-color:
+    rgba(255, 255, 255, 0.44);
+
+  transform: translateY(-1px);
+
+  text-decoration: none;
+}
+
+
+
+/* =========================================================
+   HERO TÍTULOS GENERALES
+   ========================================================= */
+
+.hero-titol {
+
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 1040px;
+
+  margin: 0 auto;
+
+  padding: 42px 20px 0;
+}
+
+
+.hero-titol h1 {
+
+  margin: 0 0 8px;
+
+  color: #fff;
+
+  font-size:
+    clamp(2.3rem, 5vw, 3.85rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+}
+
+
+.hero-titol p.subtitol {
+
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 1.05rem;
+
+  line-height: 1.6;
+
+  opacity: 0.92;
+}
+
+
+.hero-titol .miguetes {
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  opacity: 0.85;
+
+  margin: 0 0 10px;
+}
+
+
+.hero-titol .miguetes a {
+
+  color: #fff;
+
+  text-decoration: underline;
+}
+
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+  padding-bottom: 50px;
+}
+
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.panell {
+
+  position: relative;
+
+  z-index: 1;
+
+  padding:
+    34px
+    clamp(23px, 4vw, 42px);
+
+  background: var(--blanc);
+
+  border:
+    1px solid rgba(219, 228, 240, 0.9);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px rgba(20, 43, 79, 0.13);
+}
+
+
+
+/* =========================================================
+   TARGETES / SPRINTS
+   ========================================================= */
+
+.rejilla-targetes {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap: 18px;
+
+  margin:
+    26px 0 6px;
+}
+
+
+.targeta {
+
+  position: relative;
+
+  display: block;
+
+  min-height: 166px;
+
+  padding: 21px;
+
+  overflow: hidden;
+
+  border:
+    1px solid #dce5f0;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #f7faff
+    );
+
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+
+.targeta::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background:
+    var(--accent);
+
+  opacity: 0.85;
+}
+
+
+.targeta:hover {
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--accent) 42%,
+      #dce5f0
+    );
+
+  box-shadow:
+    0 13px 25px rgba(23, 50, 88, 0.15);
+
+  transform:
+    translateY(-4px);
+
+  text-decoration: none;
+}
+
+
+.targeta .numero {
+
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  padding: 4px 10px;
+
+  color: var(--blanc);
+
+  background:
+    var(--accent);
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.055em;
+}
+
+
+.targeta h3 {
+
+  margin:
+    3px 0 4px;
+
+  color: var(--tinta);
+
+  font-size: 1.1rem;
+}
+
+
+.targeta p {
+
+  margin: 0;
+
+  color: var(--accent-fosc);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+}
+
+
+
+/* =========================================================
+   BOTONES GENERALES
+   ========================================================= */
+
+.boto {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 47px;
+
+  padding:
+    12px 20px;
+
+  color: var(--blanc) !important;
+
+  background:
+    var(--accent);
+
+  border-radius: 12px;
+
+  font-weight: 700;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    0 9px 18px rgba(7, 90, 99, 0.18);
+
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.boto:hover {
+
+  background:
+    var(--accent-fosc);
+
+  box-shadow:
+    0 12px 21px rgba(7, 90, 99, 0.25);
+
+  transform:
+    translateY(-2px);
+}
+
+
+.boto-ubuntu {
+
+  --accent: #dc5d28;
+
+  --accent-fosc: #aa401b;
+}
+
+
+.boto-windows {
+
+  --accent: #1976d2;
+
+  --accent-fosc: #115aa4;
+}
+
+
+
+/* =========================================================
+   CONSELLS
+   ========================================================= */
+
+.consell {
+
+  padding:
+    11px 13px;
+
+  color: var(--tinta-suau);
+
+  font-size: 0.9rem;
+
+  border-left:
+    3px solid var(--accent);
+
+  border-radius:
+    0 9px 9px 0;
+
+  background:
+    var(--accent-suau);
+}
+
+
+.consell code {
+
+  padding:
+    1px 5px;
+
+  background:
+    var(--fons);
+
+  border-radius: 4px;
+}
+
+
+
+/* =========================================================
+   TAULES
+   ========================================================= */
+
+.taula-apartats {
+
+  width: 100%;
+
+  margin:
+    6px 0 8px;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--vora);
+
+  border-radius: 12px;
+
+  border-collapse: collapse;
+}
+
+
+.taula-apartats th,
+.taula-apartats td {
+
+  padding:
+    12px 14px;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid var(--vora);
+}
+
+
+.taula-apartats th {
+
+  color: var(--accent-fosc);
+
+  background:
+    var(--accent-suau);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+.taula-apartats td:first-child,
+.taula-apartats th:first-child {
+
+  width: 46px;
+
+  color: var(--tinta-suau);
+}
+
+
+.taula-apartats tr:hover td {
+
+  background:
+    #f7faff;
+}
+
+
+.taula-apartats a {
+
+  color:
+    var(--accent-fosc);
+
+  font-weight: 600;
+}
+
+
+
+/* =========================================================
+   APARTATS
+   ========================================================= */
+
+.apartat {
+
+  scroll-margin-top: 20px;
+
+  padding-top: 26px;
+
+  margin-top: 26px;
+
+  border-top:
+    1px solid var(--vora);
+}
+
+
+.apartat h2 {
+
+  margin-top: 0;
+
+  color:
+    var(--accent-fosc);
+}
+
+
+.apartat img {
+
+  max-width: 100%;
+
+  margin:
+    14px 0;
+
+  border:
+    1px solid var(--vora);
+
+  border-radius:
+    var(--radi);
+
+  box-shadow:
+    0 7px 20px rgba(19, 42, 79, 0.11);
+}
+
+
+.apartat ul {
+
+  padding-left: 22px;
+}
+
+
+.apartat li {
+
+  margin: 4px 0;
+}
+
+
+.tornar-index {
+
+  font-size: 0.85rem;
+}
+
+
+.tornar-index a {
+
+  color:
+    var(--accent-fosc);
+
+  font-weight: 700;
+}
+
+
+
+/* =========================================================
+   IDENTITAT UBUNTU / WINDOWS
+   ========================================================= */
+
+.pagina-ubuntu {
+
+  --accent: #dc5d28;
+
+  --accent-fosc: #aa401b;
+
+  --accent-suau: #fff0e9;
+}
+
+
+.pagina-windows {
+
+  --accent: #1976d2;
+
+  --accent-fosc: #115aa4;
+
+  --accent-suau: #e8f2ff;
+}
+
+
+
+/* =========================================================
+   =========================================================
+   PORTADA
+   =========================================================
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO PORTADA
+   --------------------------------------------------------- */
+
+.pagina-portada .hero-portada {
+
+  padding-bottom: 0;
+
+  min-height: 638px;
+}
+
+
+
+/* ---------------------------------------------------------
+   CAPÇALERA PORTADA
+   --------------------------------------------------------- */
+
+.pagina-portada .capcalera-portada {
+
   position: relative;
 
   z-index: 2;
@@ -125,17 +796,27 @@ a:focus-visible {
 
   gap: 30px;
 
-  width: min(1120px, calc(100% - 40px));
+  width:
+    min(
+      1120px,
+      calc(100% - 40px)
+    );
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  padding: 30px 0 0;
+  padding:
+    30px 0 0;
 }
 
 
-/* MARCA */
+
+/* ---------------------------------------------------------
+   MARCA
+   --------------------------------------------------------- */
 
 .marca-portada {
+
   display: inline-flex;
 
   align-items: center;
@@ -153,88 +834,98 @@ a:focus-visible {
 
 
 .marca-portada:hover {
+
   color: #fff;
 
   text-decoration: none;
 }
 
 
-.marca-icon {
-  display: flex;
+.marca-portada-logo {
 
-  align-items: center;
-
-  justify-content: center;
+  display: block;
 
   width: 45px;
 
   height: 45px;
 
+  padding: 8px;
+
+  object-fit: contain;
+
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.13);
+  background:
+    rgba(255, 255, 255, 0.13);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
 
-  color: #fff;
-
-  font-family: Consolas, monospace;
-
-  font-size: 1.1rem;
-
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.12);
+  filter:
+    drop-shadow(
+      0 5px 8px rgba(0, 0, 0, 0.20)
+    );
 }
 
 
-/* =========================================================
-   NAVEGACIÓN
-   ========================================================= */
 
-.hero-nav {
-  display: flex;
+/* ---------------------------------------------------------
+   NAVEGACIÓN PORTADA
+   --------------------------------------------------------- */
 
-  align-items: center;
+.pagina-portada .hero-nav {
 
   justify-content: flex-end;
 
-  gap: 26px;
+  gap: 25px;
 
-  flex-wrap: wrap;
+  margin: 0;
+
+  padding: 0;
 }
 
 
-.hero-nav a {
+.pagina-portada .hero-nav a {
+
   padding: 4px 0;
 
-  color: rgba(255, 255, 255, 0.9);
+  color:
+    rgba(255, 255, 255, 0.90);
+
+  border: 0;
+
+  background: transparent;
+
+  border-radius: 0;
 
   font-size: 0.92rem;
 
   font-weight: 500;
+}
+
+
+.pagina-portada .hero-nav a:hover {
+
+  color: #fff;
 
   background: transparent;
 
   border: 0;
 
-  text-decoration: none;
-}
-
-
-.hero-nav a:hover {
-  color: #fff;
-
-  transform: translateY(-1px);
+  transform:
+    translateY(-1px);
 
   text-decoration: none;
 }
 
 
-/* =========================================================
-   CONTENIDO PRINCIPAL DEL HERO
-   ========================================================= */
 
-.portada-capcalera {
+/* ---------------------------------------------------------
+   COMPOSICIÓN PRINCIPAL
+   --------------------------------------------------------- */
+
+.pagina-portada .portada-capcalera {
+
   position: relative;
 
   z-index: 1;
@@ -247,29 +938,47 @@ a:focus-visible {
 
   align-items: center;
 
-  gap: clamp(45px, 7vw, 90px);
+  gap:
+    clamp(
+      45px,
+      7vw,
+      90px
+    );
 
-  width: min(1120px, calc(100% - 40px));
+  width:
+    min(
+      1120px,
+      calc(100% - 40px)
+    );
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  padding: 72px 0 65px;
+  padding:
+    72px 0 65px;
+
+  text-align: left;
 }
 
 
-/* =========================================================
-   PRESENTACIÓN
-   ========================================================= */
+
+/* ---------------------------------------------------------
+   PRESENTACIÓ
+   --------------------------------------------------------- */
 
 .presentacio-portada {
+
   min-width: 0;
 }
 
 
 .etiqueta-curs {
-  margin: 0 0 20px;
 
-  color: rgba(255, 255, 255, 0.78);
+  margin:
+    0 0 20px;
+
+  color:
+    rgba(255, 255, 255, 0.78);
 
   font-size: 0.78rem;
 
@@ -280,11 +989,19 @@ a:focus-visible {
 
 
 .presentacio-portada h1 {
+
   margin: 0;
+
+  max-width: 570px;
 
   color: #fff;
 
-  font-size: clamp(3.4rem, 6vw, 5.3rem);
+  font-size:
+    clamp(
+      3.4rem,
+      6vw,
+      5.3rem
+    );
 
   line-height: 0.96;
 
@@ -294,12 +1011,15 @@ a:focus-visible {
 }
 
 
-.subtitol {
+.pagina-portada .subtitol {
+
   max-width: 650px;
 
-  margin: 22px 0 0;
+  margin:
+    22px 0 0;
 
-  color: rgba(255, 255, 255, 0.88);
+  color:
+    rgba(255, 255, 255, 0.88);
 
   font-size: 1.05rem;
 
@@ -307,40 +1027,57 @@ a:focus-visible {
 }
 
 
-/* =========================================================
-   INFORMACIÓN DEL ALUMNO
-   ========================================================= */
 
-.fitxa-alumne {
+/* ---------------------------------------------------------
+   FITXA ALUMNE
+   --------------------------------------------------------- */
+
+.pagina-portada .fitxa-alumne {
+
   display: grid;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
-  gap: 12px 35px;
+  gap:
+    9px 35px;
 
-  width: min(100%, 500px);
+  width:
+    min(
+      100%,
+      500px
+    );
 
-  margin: 28px 0;
+  margin:
+    28px 0;
 
   padding: 0;
+
+  color:
+    rgba(255, 255, 255, 0.76);
 
   background: transparent;
 
   border: 0;
 
-  color: rgba(255, 255, 255, 0.76);
+  border-radius: 0;
 }
 
 
-.fitxa-alumne p {
-  margin: 0 0 13px;
+.pagina-portada .fitxa-alumne p {
+
+  margin:
+    0 0 13px;
 
   font-size: 0.91rem;
 }
 
 
-.fitxa-alumne strong {
+.pagina-portada .fitxa-alumne strong {
+
   display: block;
 
   margin-bottom: 2px;
@@ -353,11 +1090,13 @@ a:focus-visible {
 }
 
 
-/* =========================================================
-   BOTONES
-   ========================================================= */
+
+/* ---------------------------------------------------------
+   BOTONES PORTADA
+   --------------------------------------------------------- */
 
 .accessos-sistemes {
+
   display: flex;
 
   flex-wrap: wrap;
@@ -368,71 +1107,42 @@ a:focus-visible {
 }
 
 
-.boto {
+.accessos-sistemes .boto {
+
+  margin: 0;
+
+  min-height: 58px;
+
+  padding:
+    0 25px;
+
+  border-radius: 13px;
+
+  font-size: 1rem;
+}
+
+
+.boto-icona {
+
   display: inline-flex;
 
   align-items: center;
 
   justify-content: center;
 
-  gap: 10px;
-
-  min-height: 58px;
-
-  padding: 0 25px;
-
-  border-radius: 13px;
-
-  color: #fff !important;
-
-  font-size: 1rem;
-
-  font-weight: 700;
-
-  text-decoration: none !important;
-
-  box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.16);
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    filter 0.18s ease;
-}
-
-
-.boto:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 15px 27px rgba(0, 0, 0, 0.22);
-
-  filter: brightness(1.06);
-}
-
-
-.boto-ubuntu {
-  background: #ed5b20;
-}
-
-
-.boto-windows {
-  background: #1976d2;
-}
-
-
-.boto-icona {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 
   line-height: 1;
 }
 
 
-/* =========================================================
+
+/* ---------------------------------------------------------
    TERMINAL
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .terminal-portada {
+
   width: 100%;
 
   margin: 0;
@@ -454,20 +1164,24 @@ a:focus-visible {
   box-shadow:
     0 25px 50px rgba(3, 16, 35, 0.26);
 
-  backdrop-filter: blur(10px);
+  backdrop-filter:
+    blur(10px);
 }
+
 
 
 /* CABECERA TERMINAL */
 
 .terminal-cap {
+
   display: flex;
 
   align-items: center;
 
   gap: 16px;
 
-  padding: 27px 22px 22px;
+  padding:
+    27px 22px 22px;
 
   border-bottom:
     1px solid rgba(255, 255, 255, 0.05);
@@ -475,6 +1189,7 @@ a:focus-visible {
 
 
 .terminal-punts {
+
   display: flex;
 
   gap: 7px;
@@ -482,6 +1197,7 @@ a:focus-visible {
 
 
 .terminal-punts span {
+
   display: block;
 
   width: 10px;
@@ -490,12 +1206,15 @@ a:focus-visible {
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.55);
+  background:
+    rgba(255, 255, 255, 0.55);
 }
 
 
 .terminal-titol {
-  color: rgba(255, 255, 255, 0.76);
+
+  color:
+    rgba(255, 255, 255, 0.76);
 
   font-family:
     Consolas,
@@ -506,14 +1225,18 @@ a:focus-visible {
 }
 
 
+
 /* CONTENIDO TERMINAL */
 
 .terminal-contingut {
-  padding: 25px 21px 30px;
+
+  padding:
+    25px 21px 30px;
 }
 
 
 .terminal-comanda {
+
   display: flex;
 
   gap: 12px;
@@ -532,13 +1255,16 @@ a:focus-visible {
 
 
 .terminal-comanda span:first-child {
+
   color: #75d7d0;
 }
+
 
 
 /* CARPETAS */
 
 .terminal-carpeta {
+
   display: flex;
 
   align-items: center;
@@ -551,14 +1277,16 @@ a:focus-visible {
 
   margin-bottom: 14px;
 
-  padding: 0 16px;
+  padding:
+    0 16px;
 
-  border-radius: 12px;
+  color:
+    rgba(255, 255, 255, 0.88);
 
   background:
     rgba(255, 255, 255, 0.10);
 
-  color: rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
 
   font-family:
     Consolas,
@@ -572,18 +1300,21 @@ a:focus-visible {
 
 
 .terminal-carpeta:hover {
-  background:
-    rgba(255, 255, 255, 0.16);
 
   color: #fff;
 
-  transform: translateX(3px);
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  transform:
+    translateX(3px);
 
   text-decoration: none;
 }
 
 
 .carpeta-icona {
+
   display: flex;
 
   align-items: center;
@@ -592,37 +1323,41 @@ a:focus-visible {
 
   width: 20px;
 
+  color: #dff9f7;
+
   font-size: 1.25rem;
 
   line-height: 1;
 }
 
 
-.carpeta-ubuntu .carpeta-icona {
-  color: #dff9f7;
-}
-
-
 .carpeta-windows {
-  color: #ffd1b4;
+
+  color:
+    #ffd1b4;
 }
 
 
 .carpeta-windows .carpeta-icona {
-  color: #ffbd91;
+
+  color:
+    #ffbd91;
 }
 
 
-/* PROMPT FINAL */
+
+/* PROMPT */
 
 .terminal-prompt {
+
   display: flex;
 
   gap: 10px;
 
   margin-top: 19px;
 
-  color: #75d7d0;
+  color:
+    #75d7d0;
 
   font-family:
     Consolas,
@@ -634,45 +1369,68 @@ a:focus-visible {
 
 
 .terminal-prompt span:last-child {
+
   color: #fff;
 }
 
 
+
 /* =========================================================
-   LLICÈNCIA
+   FRANJA DE LICENCIA
    ========================================================= */
 
 .contingut-portada {
+
   width: 100%;
 
-  background: #17233d;
+  padding: 0;
+
+  background:
+    #17233d;
 }
 
 
-.bloc-llicencia {
+.pagina-portada .bloc-llicencia {
+
   display: grid;
 
   grid-template-columns:
-    minmax(250px, 0.9fr)
-    minmax(0, 1.1fr);
+    minmax(250px, 0.72fr)
+    minmax(0, 1.28fr);
 
   align-items: center;
 
-  gap: 60px;
+  gap:
+    55px;
 
-  width: min(1120px, calc(100% - 40px));
+  width:
+    min(
+      1120px,
+      calc(100% - 40px)
+    );
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  padding: 35px 0;
+  padding:
+    35px 0;
 
-  color: rgba(255, 255, 255, 0.76);
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  background: transparent;
+
+  border: 0;
+
+  border-radius: 0;
 }
+
 
 
 /* ESQUERRA */
 
 .llicencia-esquerra {
+
   display: flex;
 
   align-items: center;
@@ -682,6 +1440,7 @@ a:focus-visible {
 
 
 .llicencia-icona {
+
   display: flex;
 
   align-items: center;
@@ -696,20 +1455,25 @@ a:focus-visible {
 
   border-radius: 14px;
 
-  background: #dff5f5;
+  background:
+    #dff5f5;
 
-  color: #0b7884;
+  color:
+    #0b7884;
 
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 
   font-weight: 800;
 }
 
 
 .llicencia-esquerra h3 {
-  margin: 0 0 3px;
 
-  color: rgba(255, 255, 255, 0.75);
+  margin:
+    0 0 3px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
 
   font-size: 0.82rem;
 
@@ -718,48 +1482,64 @@ a:focus-visible {
 
 
 .llicencia-esquerra strong {
+
   color: #fff;
 
   font-size: 0.92rem;
 }
 
 
+
 /* DRETA */
 
 .llicencia-text {
+
   text-align: right;
 }
 
 
 .llicencia-text p {
-  margin: 0 0 8px;
 
-  color: rgba(255, 255, 255, 0.75);
+  margin:
+    0 0 9px;
 
-  font-size: 0.87rem;
+  color:
+    rgba(255, 255, 255, 0.75);
 
-  line-height: 1.6;
+  font-size: 0.82rem;
+
+  line-height: 1.55;
 }
 
 
-.llicencia-text p:first-child {
-  display: none;
+.llicencia-text p:last-child {
+
+  margin-bottom: 0;
 }
 
 
-.llicencia-text p:nth-child(2) {
-  display: none;
+.llicencia-text strong {
+
+  color: #fff;
 }
 
 
 .llicencia-text a {
-  color: #8dd7d5;
+
+  color:
+    #8dd7d5;
+
+  text-decoration: none;
 }
 
 
-.badge-cc {
-  display: none;
+.llicencia-text a:hover {
+
+  color: #b7eeec;
+
+  text-decoration: underline;
 }
+
 
 
 /* =========================================================
@@ -767,21 +1547,28 @@ a:focus-visible {
    ========================================================= */
 
 footer.peu {
+
   width: 100%;
 
-  padding: 25px 20px 35px;
+  margin: 0;
+
+  padding:
+    30px 20px 46px;
+
+  color:
+    var(--tinta-suau);
+
+  background:
+    var(--fons);
 
   text-align: center;
 
-  color: #60708a;
-
   font-size: 0.85rem;
-
-  background: #edf2f8;
 }
 
 
 .peu-llicencia {
+
   display: flex;
 
   align-items: center;
@@ -792,23 +1579,29 @@ footer.peu {
 
   flex-wrap: wrap;
 
-  margin: 0 0 8px;
+  margin:
+    0 0 8px;
 }
 
 
 .peu-llicencia img {
+
   display: block;
 }
 
 
 footer.peu .autoria {
+
   margin: 0;
 }
 
 
 footer.peu .autoria strong {
-  color: #17233a;
+
+  color:
+    var(--accent-fosc);
 }
+
 
 
 /* =========================================================
@@ -817,7 +1610,9 @@ footer.peu .autoria strong {
 
 @media (max-width: 850px) {
 
-  .capcalera-portada {
+
+  .pagina-portada .capcalera-portada {
+
     align-items: flex-start;
 
     flex-direction: column;
@@ -826,14 +1621,17 @@ footer.peu .autoria strong {
   }
 
 
-  .hero-nav {
+  .pagina-portada .hero-nav {
+
     justify-content: flex-start;
 
-    gap: 18px;
+    gap:
+      10px 18px;
   }
 
 
-  .portada-capcalera {
+  .pagina-portada .portada-capcalera {
+
     grid-template-columns: 1fr;
 
     gap: 45px;
@@ -843,49 +1641,71 @@ footer.peu .autoria strong {
 
 
   .terminal-portada {
+
     max-width: 520px;
   }
 
 
-  .bloc-llicencia {
+  .pagina-portada .bloc-llicencia {
+
     grid-template-columns: 1fr;
 
     gap: 25px;
+
+    padding:
+      35px 0;
   }
 
 
   .llicencia-text {
+
     text-align: left;
   }
 
 }
 
 
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
 @media (max-width: 560px) {
 
-  .capcalera-portada,
-  .portada-capcalera,
-  .bloc-llicencia {
-    width: min(100% - 28px, 1120px);
+
+  .pagina-portada .capcalera-portada,
+  .pagina-portada .portada-capcalera,
+  .pagina-portada .bloc-llicencia {
+
+    width:
+      min(
+        100% - 28px,
+        1120px
+      );
   }
 
 
-  .hero-nav {
-    gap: 10px 16px;
+  .pagina-portada .hero-nav {
+
+    gap:
+      8px 15px;
   }
 
 
-  .hero-nav a {
+  .pagina-portada .hero-nav a {
+
     font-size: 0.82rem;
   }
 
 
   .presentacio-portada h1 {
+
     font-size: 3.3rem;
   }
 
 
-  .fitxa-alumne {
+  .pagina-portada .fitxa-alumne {
+
     grid-template-columns: 1fr;
 
     gap: 0;
@@ -893,29 +1713,88 @@ footer.peu .autoria strong {
 
 
   .accessos-sistemes {
+
     display: grid;
 
     grid-template-columns: 1fr;
   }
 
 
-  .boto {
+  .accessos-sistemes .boto {
+
     width: 100%;
   }
 
 
+  .terminal-portada {
+
+    border-radius: 18px;
+  }
+
+
   .terminal-cap {
-    padding: 22px 18px 18px;
+
+    padding:
+      22px 18px 18px;
   }
 
 
   .terminal-contingut {
-    padding: 22px 17px 25px;
+
+    padding:
+      22px 17px 25px;
   }
 
 
-  .bloc-llicencia {
-    padding: 30px 0;
+  .pagina-portada .bloc-llicencia {
+
+    padding:
+      30px 0;
+  }
+
+
+  .llicencia-text p {
+
+    font-size: 0.82rem;
+  }
+
+}
+
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 460px) {
+
+
+  .hero-nav {
+
+    gap: 7px;
+  }
+
+
+  .hero-nav a {
+
+    padding:
+      7px 10px;
+
+    font-size: 0.77rem;
+  }
+
+
+  .accessos-sistemes {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .accessos-sistemes .boto {
+
+    text-align: center;
   }
 
 }
