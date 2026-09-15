@@ -2220,13 +2220,13 @@ footer.peu .autoria strong {
 /* Quan passem per sobre d'un enllaç */
 
 .cursor-personalitzat.actiu {
-  width: 34px;
-  height: 34px;
+  width: 16px;
+  height: 16px;
 
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.9);
 
-  transform: translate(-50%, -50%) scale(1.05);
+  transform: translate(-50%, -50%);
 }
 
 
