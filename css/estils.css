@@ -222,7 +222,6 @@ a:focus-visible {
 /* Icono terminal */
 
 .marca-icon {
-
   display: flex;
 
   align-items: center;
@@ -235,26 +234,19 @@ a:focus-visible {
 
   border-radius: 12px;
 
-  background:
-    rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.13);
 
-  border:
-    1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   color: #fff;
 
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
+  font-family: Consolas, monospace;
 
   font-size: 1.1rem;
 
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.12);
-
 }
-
 
 /* =========================================================
    NAVEGACIÓN
