@@ -792,6 +792,36 @@ a:focus-visible {
 
 
 /* =========================================================
+   COLORS DE LES CARPETES DE LA PORTADA
+   Ubuntu = taronja · Windows = blau
+   ========================================================= */
+
+.pagina-portada .carpeta-ubuntu {
+  color: #e85d25;
+}
+
+.pagina-portada .carpeta-ubuntu .carpeta-icona {
+  color: #e85d25;
+}
+
+.pagina-portada .carpeta-ubuntu:hover {
+  background: rgba(232, 93, 37, 0.14);
+}
+
+.pagina-portada .carpeta-windows {
+  color: #1976d2;
+}
+
+.pagina-portada .carpeta-windows .carpeta-icona {
+  color: #1976d2;
+}
+
+.pagina-portada .carpeta-windows:hover {
+  background: rgba(25, 118, 210, 0.14);
+}
+
+
+/* =========================================================
    PROMPT FINAL
    ========================================================= */
 
@@ -1301,9 +1331,7 @@ footer.peu .autoria strong {
   background: rgba(232, 93, 37, 0.14);
 }
 
-.pagina-sprint.pagina-ubuntu .sprint-terminal {
-  border-color: rgba(232, 93, 37, 0.30);
-}
+
 
 .pagina-sprint.pagina-ubuntu .sprint-terminal .terminal-titol {
   color: rgba(232, 93, 37, 0.90);
@@ -1332,9 +1360,7 @@ footer.peu .autoria strong {
   background: rgba(25, 118, 210, 0.14);
 }
 
-.pagina-sprint.pagina-windows .sprint-terminal {
-  border-color: rgba(25, 118, 210, 0.30);
-}
+
 
 .pagina-sprint.pagina-windows .sprint-terminal .terminal-titol {
   color: rgba(25, 118, 210, 0.90);
