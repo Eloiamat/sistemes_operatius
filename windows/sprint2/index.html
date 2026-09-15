@@ -418,77 +418,7 @@
 </footer>
 <div class="cursor-personalitzat"></div>
 
-<script>
-
-const cursor = document.querySelector(".cursor-personalitzat");
-
-let mouseX = 0;
-let mouseY = 0;
-
-let cursorX = 0;
-let cursorY = 0;
-
-
-/* Moviment */
-
-document.addEventListener("mousemove", function(e) {
-
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-
-});
-
-
-/* Animació */
-
-function animarCursor() {
-
-  cursorX += (mouseX - cursorX) * 0.30;
-  cursorY += (mouseY - cursorY) * 0.30;
-
-  cursor.style.left = cursorX + "px";
-  cursor.style.top = cursorY + "px";
-
-  requestAnimationFrame(animarCursor);
-
-}
-
-animarCursor();
-
-
-/* Elements interactius */
-
-document.querySelectorAll(
-  "a, button, input, textarea, select"
-).forEach(function(element) {
-
-  element.addEventListener("mouseenter", function() {
-    cursor.classList.add("actiu");
-  });
-
-  element.addEventListener("mouseleave", function() {
-    cursor.classList.remove("actiu");
-  });
-
-});
-
-
-/* Click */
-
-document.addEventListener("mousedown", function() {
-  cursor.classList.add("click");
-});
-
-document.addEventListener("mouseup", function() {
-  cursor.classList.remove("click");
-});
-
-
-/* Activar cursor */
-
-document.body.classList.add("cursor-actiu");
-
-</script>
+<script src="js/cursor.js"></script>
 
 </body>
 </html>
