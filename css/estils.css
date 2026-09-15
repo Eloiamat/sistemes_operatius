@@ -2160,41 +2160,42 @@ footer.peu .autoria strong {
   }
 }
 
-@media (max-width: 560px) {
-  .index-hero {
-    width: min(calc(100% - 28px), 1120px);
-    padding-top: 45px;
-    padding-bottom: 50px;
-  }
-
-  .index-presentacio h1 {
-    font-size: 3.4rem;
-  }
-
-  .index-terminal-item {
-    grid-template-columns: 22px 85px minmax(0, 1fr);
-    gap: 9px;
-    padding: 0 12px;
-    font-size: 0.84rem;
-  }
-
-  .index-terminal-item .terminal-nom {
-    font-size: 0.72rem;
-  }
+@media (max-width: 560px) { 
+  .index-hero { 
+    width: min(calc(100% - 28px), 1120px); 
+    padding-top: 45px; 
+    padding-bottom: 50px; 
+  } 
+ 
+  .index-presentacio h1 { 
+    font-size: 3.4rem; 
+  } 
+ 
+  .index-terminal-item { 
+    grid-template-columns: 22px 85px minmax(0, 1fr); 
+    gap: 9px; 
+    padding: 0 12px; 
+    font-size: 0.84rem; 
+  } 
+ 
+  .index-terminal-item .terminal-nom { 
+    font-size: 0.72rem; 
+  } 
 }
 
-teixa mida */
 
-.cursor-personalitzat {
-    position: fixed;
-    width: 16px;
-    height: 16px;
+/* Cursor personalitzat */
 
-    border: 2px solid white;
-    border-radius: 50%;
+.cursor-personalitzat { 
+  position: fixed; 
+  width: 16px; 
+  height: 16px; 
 
-    pointer-events: none;
-    z-index: 999999;
+  border: 2px solid white; 
+  border-radius: 50%; 
 
-    transform: translate(-50%, -50%);
+  pointer-events: none; 
+  z-index: 999999; 
+
+  transform: translate(-50%, -50%); 
 }
