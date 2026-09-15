@@ -2185,42 +2185,16 @@ footer.peu .autoria strong {
 
 teixa mida */
 
-.cursor-personalitzat.actiu {
+.cursor-personalitzat {
+    position: fixed;
+    width: 16px;
+    height: 16px;
 
-  width: 16px;
-  height: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
 
-  background:
-    rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    z-index: 999999;
 
-  border-color:
-    rgba(255, 255, 255, 0.9);
-
-  transform:
-    translate(-50%, -50%);
-
-}
-
-
-/* Click */
-
-.cursor-personalitzat.click {
-
-  transform:
-    translate(-50%, -50%) scale(0.7);
-
-}
-
-
-/* Ocultar cursor original */
-
-body.cursor-actiu,
-body.cursor-actiu a,
-body.cursor-actiu button,
-body.cursor-actiu input,
-body.cursor-actiu textarea,
-body.cursor-actiu select {
-
-  cursor: none !important;
-
+    transform: translate(-50%, -50%);
 }
