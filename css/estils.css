@@ -2184,20 +2184,24 @@ footer.peu .autoria strong {
 }
 
 
-/* Cursor personalitzat */
+/* =========================================================
+   CURSOR PERSONALITZAT
+   ========================================================= */
 
-.cursor-personalitzat { 
-  position: fixed; 
-  width: 16px; 
-  height: 16px; 
+.cursor-personalitzat {
+  position: fixed;
 
-  border: 2px solid white; 
-  border-radius: 50%; 
+  width: 16px;
+  height: 16px;
 
-  pointer-events: none; 
-  z-index: 999999; 
+  border: 2px solid white;
+  border-radius: 50%;
 
-  transform: translate(-50%, -50%); 
+  pointer-events: none;
+
+  z-index: 999999;
+
+  transform: translate(-50%, -50%);
 }
 
 * =========================================================
