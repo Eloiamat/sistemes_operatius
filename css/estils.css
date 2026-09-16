@@ -2249,13 +2249,13 @@ body *::after {
 }
 
 /* =========================================================
-   MENOS ESPAI ABANS DEL FOOTER
+   AJUSTE FINAL DEL CONTENIDO DEL SPRINT
    ========================================================= */
 
-.pagina-index .hero {
-  padding-bottom: 20px;
+.pagina-sprint .sprint-contingut {
+  padding-bottom: 30px;
 }
 
-.pagina-sprint main {
-  padding-bottom: 10px;
+.pagina-sprint .sprint-apartat:last-child {
+  margin-bottom: 0;
 }
