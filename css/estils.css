@@ -1,1069 +1,392 @@
-/* =========================================================
-   SISTEMES OPERATIUS
-   Estils comuns
-   ========================================================= */
-
-
-/* =========================================================
-   VARIABLES
-   ========================================================= */
+/* Full de estils comu per a tot el lloc.
+   Enllaça-la sempre igual:
+   <link rel="stylesheet" href="../css/estils.css">  (des d'una carpeta de sprint)
+   <link rel="stylesheet" href="css/estils.css">      (des de l'arrel) */
 
 :root {
-
   --mari: #0e1f3e;
-  --mari-fosc: #091a35;
-
   --teal: #0b7884;
-  --teal-clar: #2a8f99;
-
   --ambre: #e86c31;
-
-  --blanc: #ffffff;
-  --blanc-suau: rgba(255, 255, 255, 0.82);
-
   --tinta: #17233a;
   --tinta-suau: #60708a;
   --fons: #edf2f8;
-  --vora: #dce5f0;
-
+  --blanc: #ffffff;
+  --vora: #dbe4f0;
   --radi: 16px;
-
 }
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 * {
   box-sizing: border-box;
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
-
-
 body {
-
   margin: 0;
-
-  font-family:
-    "Aptos",
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
-
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--tinta);
-
   background: var(--fons);
-
   line-height: 1.55;
-
-  letter-spacing: 0.005em;
-
 }
-
 
 a {
-
   color: var(--teal);
-
   text-decoration: none;
-
-  transition:
-    color 0.18s ease,
-    background-color 0.18s ease,
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-
 }
-
 
 a:hover {
   text-decoration: underline;
 }
 
-
-a:focus-visible {
-
-  outline:
-    3px solid #f5b44c;
-
-  outline-offset: 3px;
-
+.contenidor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 
 /* =========================================================
-   HERO
+   CAPÇALERA / HERO
    ========================================================= */
 
 .hero {
-
-  position: relative;
-
-  overflow: hidden;
-
-  color: var(--blanc);
-
   background:
-
-    radial-gradient(
-      circle at 88% -8%,
-      rgba(122, 223, 221, 0.34),
-      transparent 25rem
-    ),
-
-    radial-gradient(
-      circle at 6% 115%,
-      rgba(232, 108, 49, 0.24),
-      transparent 24rem
-    ),
-
     linear-gradient(
-      128deg,
-      #0b1e3d 0%,
-      #0d6472 61%,
-      #133352 100%
+      125deg,
+      var(--mari) 0%,
+      var(--teal) 55%,
+      var(--ambre) 100%
     );
 
+  padding-bottom: 60px;
+  color: var(--blanc);
 }
-
-
-/* Decoración */
-
-.hero::after {
-
-  content: "";
-
-  position: absolute;
-
-  right: -90px;
-  bottom: -130px;
-
-  width: 360px;
-  height: 360px;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.10);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-}
-
-
-/* =========================================================
-   CAPÇALERA
-   ========================================================= */
-
-.capcalera-portada {
-
-  position: relative;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 30px;
-
-  width:
-    min(
-      1120px,
-      calc(100% - 40px)
-    );
-
-  margin: 0 auto;
-
-  padding:
-    30px 0 0;
-
-}
-
-
-/* =========================================================
-   MARCA
-   ========================================================= */
-
-/* MARCA */
-
-.marca-portada {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 11px;
-
-  color: #fff;
-
-  font-size: 0.92rem;
-
-  font-weight: 700;
-
-  white-space: nowrap;
-}
-
-
-.marca-portada:hover {
-  color: #fff;
-
-  text-decoration: none;
-}
-
-
-.marca-icon {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 45px;
-
-  height: 45px;
-
-  border-radius: 12px;
-
-  background: rgba(255, 255, 255, 0.13);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  color: #fff;
-
-  font-family: Consolas, monospace;
-
-  font-size: 1.1rem;
-
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.12);
-}
-
-
-/* =========================================================
-   NAVEGACIÓN
-   ========================================================= */
 
 .hero-nav {
-
   display: flex;
-
-  align-items: center;
-
-  justify-content: flex-end;
-
-  gap: 26px;
-
+  justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
-
+  padding: 18px 20px 0;
 }
-
 
 .hero-nav a {
+  color: rgba(255, 255, 255, 0.95);
 
-  padding: 4px 0;
+  background: rgba(255, 255, 255, 0.12);
 
-  color:
-    rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 
-  font-size: 0.92rem;
+  padding: 7px 16px;
 
-  font-weight: 500;
+  border-radius: 999px;
 
-  background: transparent;
-
-  border: 0;
+  font-size: 0.85rem;
 
   text-decoration: none;
-
 }
 
-
 .hero-nav a:hover {
-
-  color: #fff;
-
-  transform:
-    translateY(-1px);
-
+  background: rgba(255, 255, 255, 0.24);
   text-decoration: none;
+}
 
+.hero-titol {
+  text-align: center;
+  padding: 30px 20px 0;
+}
+
+.hero-titol .miguetes {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin: 0 0 10px;
+}
+
+.hero-titol .miguetes a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hero-titol h1 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  color: #fff;
+}
+
+.hero-titol p.subtitol {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 1.05rem;
 }
 
 
 /* =========================================================
-   CONTENIDO PRINCIPAL
+   PANELL BLANC
    ========================================================= */
 
-.portada-capcalera {
+main {
+  padding-bottom: 50px;
+}
+
+.panell {
+  background: var(--blanc);
+
+  border-radius: var(--radi);
+
+  box-shadow:
+    0 12px 32px rgba(18, 37, 66, 0.16);
+
+  margin-top: -42px;
+
+  padding: 32px 34px;
 
   position: relative;
 
   z-index: 1;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.15fr)
-    minmax(310px, 0.85fr);
-
-  align-items: center;
-
-  gap:
-    clamp(
-      45px,
-      7vw,
-      90px
-    );
-
-  width:
-    min(
-      1120px,
-      calc(100% - 40px)
-    );
-
-  margin: 0 auto;
-
-  padding:
-    72px 0 65px;
-
 }
 
 
 /* =========================================================
-   PRESENTACIÓN
+   PORTADA
    ========================================================= */
 
-.presentacio-portada {
-
-  min-width: 0;
-
+.portada-hero {
+  text-align: center;
 }
 
-
-.etiqueta-curs {
-
-  margin:
-    0 0 20px;
-
-  color:
-    rgba(255, 255, 255, 0.78);
-
-  font-size: 0.78rem;
-
-  font-weight: 800;
-
-  letter-spacing: 0.09em;
-
+.portada-hero img.imatge-portada {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 22px;
 }
-
-
-.presentacio-portada h1 {
-
-  margin: 0;
-
-  color: #fff;
-
-  font-size:
-    clamp(
-      3.4rem,
-      6vw,
-      5.3rem
-    );
-
-  line-height: 0.96;
-
-  letter-spacing: -0.055em;
-
-  font-weight: 700;
-
-}
-
-
-.subtitol {
-
-  max-width: 650px;
-
-  margin:
-    22px 0 0;
-
-  color:
-    rgba(255, 255, 255, 0.88);
-
-  font-size: 1.05rem;
-
-  line-height: 1.55;
-
-}
-
-
-/* =========================================================
-   INFORMACIÓN
-   ========================================================= */
 
 .fitxa-alumne {
+  display: inline-block;
 
-  display: grid;
+  background: var(--fons);
 
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0, 1fr)
-    );
+  border: 1px solid var(--vora);
 
-  gap:
-    12px 35px;
+  border-radius: var(--radi);
 
-  width:
-    min(
-      100%,
-      500px
-    );
+  padding: 14px 22px;
 
-  margin:
-    28px 0;
+  margin: 20px 0;
 
-  padding: 0;
-
-  background: transparent;
-
-  border: 0;
-
-  color:
-    rgba(255, 255, 255, 0.76);
-
+  text-align: left;
 }
-
 
 .fitxa-alumne p {
-
-  margin:
-    0 0 13px;
-
-  font-size: 0.91rem;
-
+  margin: 3px 0;
 }
-
 
 .fitxa-alumne strong {
-
-  display: block;
-
-  margin-bottom: 2px;
-
-  color: #fff;
-
-  font-size: 0.82rem;
-
-  font-weight: 700;
-
+  color: var(--mari);
 }
-
-
-/* =========================================================
-   BOTONES
-   ========================================================= */
-
-.accessos-sistemes {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 14px;
-
-  margin-top: 5px;
-
-}
-
 
 .boto {
+  display: inline-block;
 
-  display: inline-flex;
+  background: var(--teal);
 
-  align-items: center;
+  color: var(--blanc) !important;
 
-  justify-content: center;
+  padding: 12px 26px;
 
-  gap: 10px;
+  border-radius: var(--radi);
 
-  min-height: 58px;
-
-  padding:
-    0 25px;
-
-  border-radius: 13px;
-
-  color: #fff !important;
-
-  font-size: 1rem;
-
-  font-weight: 700;
+  font-weight: 600;
 
   text-decoration: none !important;
 
-  box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.16);
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    filter 0.18s ease;
-
+  margin-top: 8px;
 }
-
 
 .boto:hover {
-
-  transform:
-    translateY(-3px);
-
-  box-shadow:
-    0 15px 27px rgba(0, 0, 0, 0.22);
-
-  filter:
-    brightness(1.06);
-
-}
-
-
-.boto-ubuntu {
-
-  background:
-    #ed5b20;
-
-}
-
-
-.boto-windows {
-
-  background:
-    #1976d2;
-
-}
-
-
-.boto-icona {
-
-  font-size: 1.2rem;
-
-  line-height: 1;
-
+  background: var(--mari);
 }
 
 
 /* =========================================================
-   TERMINAL
+   GRAELLA DE TARGETES
    ========================================================= */
 
-.terminal-portada {
-
-  width: 100%;
-
-  margin: 0;
-
-  overflow: hidden;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.20);
-
-  border-radius: 22px;
-
-  background:
-
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.09),
-      rgba(4, 20, 40, 0.28)
-    );
-
-  box-shadow:
-    0 25px 50px rgba(3, 16, 35, 0.26);
-
-  backdrop-filter:
-    blur(10px);
-
-}
-
-
-/* =========================================================
-   CABECERA TERMINAL
-   ========================================================= */
-
-.terminal-cap {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-  padding:
-    27px 22px 22px;
-
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.05);
-
-}
-
-
-.terminal-punts {
-
-  display: flex;
-
-  gap: 7px;
-
-}
-
-
-.terminal-punts span {
-
-  display: block;
-
-  width: 10px;
-
-  height: 10px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(255, 255, 255, 0.55);
-
-}
-
-
-.terminal-titol {
-
-  color:
-    rgba(255, 255, 255, 0.76);
-
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
-
-  font-size: 0.76rem;
-
-}
-
-
-/* =========================================================
-   CONTENIDO TERMINAL
-   ========================================================= */
-
-.terminal-contingut {
-
-  padding:
-    25px 21px 30px;
-
-}
-
-
-.terminal-comanda {
-
-  display: flex;
-
-  gap: 12px;
-
-  margin-bottom: 22px;
-
-  color: #fff;
-
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
-
-  font-size: 0.95rem;
-
-}
-
-
-.terminal-comanda span:first-child {
-
-  color:
-    #75d7d0;
-
-}
-
-
-/* =========================================================
-   CARPETAS
-   ========================================================= */
-
-.terminal-carpeta {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-
-  width: 100%;
-
-  min-height: 51px;
-
-  margin-bottom: 14px;
-
-  padding:
-    0 16px;
-
-  border-radius: 12px;
-
-  background:
-    rgba(5, 25, 45, 0.42);
-
-  color:
-    rgba(255, 255, 255, 0.88);
-
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
-
-  font-size: 0.92rem;
-
-  text-decoration: none;
-
-}
-
-
-.terminal-carpeta:hover {
-
-  background:
-    rgba(255, 255, 255, 0.16);
-
-  color: #fff;
-
-  transform:
-    translateX(3px);
-
-  text-decoration: none;
-
-}
-
-
-.carpeta-icona {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 20px;
-
-  font-size: 1.25rem;
-
-  line-height: 1;
-
-}
-
-
-.carpeta-ubuntu .carpeta-icona {
-
-  color:
-    #dff9f7;
-
-}
-
-
-.carpeta-windows {
-
-  color:
-    #42a5f5;
-
-}
-
-
-.carpeta-windows .carpeta-icona {
-
-  color:
-    #42a5f5;
-
-}
-
-
-/* =========================================================
-   COLORS DE LES CARPETES DE LA PORTADA
-   Ubuntu = taronja · Windows = blau
-   ========================================================= */
-
-.pagina-portada .carpeta-ubuntu {
-  color: #e85d25;
-}
-
-.pagina-portada .carpeta-ubuntu .carpeta-icona {
-  color: #e85d25;
-}
-
-.pagina-portada .carpeta-ubuntu:hover {
-  background: rgba(232, 93, 37, 0.14);
-}
-
-.pagina-portada .carpeta-windows {
-  color: #42a5f5;
-}
-
-.pagina-portada .carpeta-windows .carpeta-icona {
-  color: #42a5f5;
-}
-
-.pagina-portada .carpeta-windows:hover {
-  background: rgba(66, 165, 245, 0.14);
-}
-
-
-/* =========================================================
-   PROMPT FINAL
-   ========================================================= */
-
-.terminal-prompt {
-
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 19px;
-
-  color:
-    #75d7d0;
-
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
-
-  font-size: 0.95rem;
-
-}
-
-
-.terminal-prompt span:last-child {
-
-  color: #fff;
-
-}
-
-
-/* =========================================================
-   LLICÈNCIA
-   ========================================================= */
-
-.contingut-portada {
-
-  width: 100%;
-
-  background:
-    #17233d;
-
-}
-
-
-.bloc-llicencia {
-
+.rejilla-targetes {
   display: grid;
 
   grid-template-columns:
-    minmax(220px, 0.65fr)
-    minmax(0, 1.35fr);
-
-  align-items: center;
-
-  gap: 15px;
-
-  width:
-    min(
-      1120px,
-      calc(100% - 40px)
-    );
-
-  margin: 0 auto;
-
-  padding:
-    35px 0;
-
-  color:
-    rgba(255, 255, 255, 0.76);
-
-}
-
-
-/* =========================================================
-   LLICÈNCIA - ESQUERRA
-   ========================================================= */
-
-.llicencia-esquerra {
-
-  display: flex;
-
-  align-items: center;
+    repeat(auto-fit, minmax(220px, 1fr));
 
   gap: 16px;
 
+  margin: 24px 0 6px;
 }
 
-
-.llicencia-icona {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex: 0 0 60px;
-
-  width: 60px;
-
-  height: 60px;
-
-  border-radius: 15px;
-
-  background:
-    #dff5f5;
-
-  color:
-    #0b7884;
-
-  font-family:
-    Consolas,
-    "Courier New",
-    monospace;
-
-  font-size: 1.15rem;
-
-  font-weight: 500;
-
-}
-
-
-.llicencia-esquerra h3 {
-
-  margin:
-    0 0 4px;
-
-  color:
-    rgba(255, 255, 255, 0.72);
-
-  font-size: 0.82rem;
-
-  letter-spacing: 0.08em;
-
-}
-
-
-.llicencia-esquerra strong {
-
-  color: #fff;
-
-  font-size: 0.92rem;
-
-}
-
-
-/* =========================================================
-   LLICÈNCIA - DRETA
-   ========================================================= */
-
-.llicencia-text {
-
-  text-align: right;
-
-  margin-left: 0;
-
-}
-
-
-.llicencia-text p {
-
-  margin:
-    0 0 9px;
-
-  color:
-    rgba(255, 255, 255, 0.75);
-
-  font-size: 0.7rem;
-
-  line-height: 1.55;
-
-}
-
-
-.llicencia-text p:last-child {
-
-  margin-bottom: 0;
-
-}
-
-
-.llicencia-text strong {
-
-  color: #fff;
-
-}
-
-
-.llicencia-text a {
-
-  color:
-    #8dd7d5;
-
-  text-decoration: none;
-
-}
-
-
-.llicencia-text a:hover {
-
-  color:
-    #b7eeec;
-
-  text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   INSÍGNIA CREATIVE COMMONS
-   ========================================================= */
-
-.badge-cc {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: flex-end;
-
-  gap: 10px;
-
-  margin-top: 14px;
-
-}
-
-
-.badge-cc img {
-
+.targeta {
   display: block;
 
+  background: var(--fons);
+
+  border: 1px solid var(--vora);
+
+  border-radius: var(--radi);
+
+  padding: 18px 20px;
+
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+.targeta:hover {
+  box-shadow:
+    0 4px 14px rgba(12, 110, 115, 0.18);
+
+  transform: translateY(-2px);
+
+  text-decoration: none;
+}
+
+.targeta .numero {
+  display: inline-block;
+
+  background: var(--teal);
+
+  color: var(--blanc);
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  padding: 2px 9px;
+
+  border-radius: 999px;
+
+  margin-bottom: 8px;
+}
+
+.targeta h3 {
+  margin: 0 0 4px;
+
+  color: var(--tinta);
+
+  font-size: 1.05rem;
+}
+
+.targeta p {
+  margin: 0;
+
+  color: var(--tinta-suau);
+
+  font-size: 0.9rem;
+}
+
+h1,
+h2 {
+  color: var(--mari);
+}
+
+.consell {
+  color: var(--tinta-suau);
+
+  font-size: 0.9rem;
+
+  margin-top: 18px;
+}
+
+.consell code {
+  background: var(--fons);
+
+  padding: 1px 5px;
+
+  border-radius: 4px;
 }
 
 
-.badge-cc span {
+/* =========================================================
+   TAULA D'APARTATS
+   ========================================================= */
 
-  color:
-    rgba(255, 255, 255, 0.75);
+.taula-apartats {
+  width: 100%;
 
-  font-size: 0.82rem;
+  border-collapse: collapse;
 
+  margin: 6px 0 8px;
+}
+
+.taula-apartats th,
+.taula-apartats td {
+  text-align: left;
+
+  padding: 10px 12px;
+
+  border-bottom: 1px solid var(--vora);
+}
+
+.taula-apartats th {
+  font-size: 0.72rem;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  color: var(--tinta-suau);
+}
+
+.taula-apartats td:first-child,
+.taula-apartats th:first-child {
+  width: 46px;
+
+  color: var(--tinta-suau);
+}
+
+.taula-apartats tr:hover td {
+  background: var(--fons);
+}
+
+.taula-apartats a {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTINGUT D'UN APARTAT
+   ========================================================= */
+
+.apartat {
+  scroll-margin-top: 20px;
+
+  padding-top: 26px;
+
+  margin-top: 26px;
+
+  border-top: 1px solid var(--vora);
+}
+
+.apartat h2 {
+  margin-top: 0;
+}
+
+.apartat img {
+  max-width: 100%;
+
+  border-radius: var(--radi);
+
+  border: 1px solid var(--vora);
+
+  margin: 14px 0;
+}
+
+.apartat ul {
+  padding-left: 22px;
+}
+
+.apartat li {
+  margin: 4px 0;
+}
+
+.tornar-index {
+  font-size: 0.85rem;
 }
 
 
@@ -1072,27 +395,16 @@ a:focus-visible {
    ========================================================= */
 
 footer.peu {
-
-  width: 100%;
-
-  padding:
-    25px 20px 35px;
-
   text-align: center;
 
-  color:
-    #60708a;
+  color: var(--tinta-suau);
 
   font-size: 0.85rem;
 
-  background:
-    #edf2f8;
-
+  padding: 30px 20px 46px;
 }
 
-
 .peu-llicencia {
-
   display: flex;
 
   align-items: center;
@@ -1103,1147 +415,862 @@ footer.peu {
 
   flex-wrap: wrap;
 
-  margin:
-    0 0 8px;
-
+  margin: 0 0 8px;
 }
-
 
 .peu-llicencia img {
-
   display: block;
-
 }
-
 
 footer.peu .autoria {
-
   margin: 0;
-
 }
-
 
 footer.peu .autoria strong {
-
-  color:
-    #17233a;
-
+  color: var(--tinta);
 }
 
 
 /* =========================================================
-   COLORES UBUNTU
+   BLOC DE LLICÈNCIA
    ========================================================= */
 
-.pagina-ubuntu {
+.bloc-llicencia {
+  border: 1px solid var(--vora);
 
-  --accent:
-    #e85d25;
+  border-radius: var(--radi);
 
-  --accent-fosc:
-    #b94318;
+  padding: 18px 20px;
 
-  --accent-suau:
-    #fff0e9;
+  margin-top: 22px;
 
-}
+  text-align: left;
 
-
-/* Elementos que utilicen accent */
-
-
-
-
-
-.pagina-ubuntu .apartat h2 {
-
-  color:
-    var(--accent-fosc);
-
-}
-
-
-.pagina-ubuntu .consell {
-
-  border-left-color:
-    var(--accent);
-
-  background:
-    var(--accent-suau);
-
-}
-
-
-/* =========================================================
-   COLORES WINDOWS
-   ========================================================= */
-
-.pagina-windows {
-
-  --accent:
-    #42a5f5;
-
-  --accent-fosc:
-    #1976d2;
-
-  --accent-suau:
-    #e8f2ff;
-
-}
-
-
-
-
-
-
-.pagina-windows .apartat h2 {
-
-  color:
-    var(--accent-fosc);
-
-}
-
-
-.pagina-windows .consell {
-
-  border-left-color:
-    var(--accent);
-
-  background:
-    var(--accent-suau);
-
-}
-
-
-/* =========================================================
-   PÁGINAS DE SPRINT
-   ========================================================= */
-
-.pagina-sprint {
   background: var(--fons);
 }
 
+.bloc-llicencia h3 {
+  margin: 0 0 8px;
+
+  font-size: 1rem;
+
+  color: var(--mari);
+}
+
+.bloc-llicencia p {
+  margin: 6px 0;
+
+  font-size: 0.92rem;
+}
+
+.bloc-llicencia .badge-cc {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
 
 /* =========================================================
-   HERO DEL SPRINT
+   IDENTITAT VISUAL
    ========================================================= */
 
-.pagina-sprint .sprint-hero {
+:root {
+  --accent: var(--teal);
+  --accent-fosc: #075a63;
+  --accent-suau: #dff3f4;
+}
+
+.pagina-ubuntu {
+  --accent: #dc5d28;
+  --accent-fosc: #aa401b;
+  --accent-suau: #fff0e9;
+}
+
+.pagina-windows {
+  --accent: #1976d2;
+  --accent-fosc: #115aa4;
+  --accent-suau: #e8f2ff;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(13, 120, 132, 0.08),
+      transparent 24rem
+    ),
+    var(--fons);
+
+  font-family:
+    "Aptos",
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  letter-spacing: 0.005em;
+}
+
+a {
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+a:focus-visible {
+  outline: 3px solid #f5b44c;
+  outline-offset: 3px;
+}
+
+.contenidor {
+  max-width: 1040px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
   position: relative;
+
+  overflow: hidden;
+
+  padding-bottom: 72px;
+
+  background:
+    radial-gradient(
+      circle at 88% -8%,
+      rgba(122, 223, 221, 0.34),
+      transparent 25rem
+    ),
+    radial-gradient(
+      circle at 6% 115%,
+      rgba(232, 108, 49, 0.24),
+      transparent 24rem
+    ),
+    linear-gradient(
+      128deg,
+      #0b1e3d 0%,
+      #0d6472 61%,
+      #133352 100%
+    );
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: auto -90px -130px auto;
+
+  width: 360px;
+  height: 360px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NAVEGACIÓ
+   ========================================================= */
+
+.hero-nav {
+  position: relative;
+
   z-index: 1;
 
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.85fr);
-  align-items: center;
+  max-width: 1040px;
 
-  gap: 70px;
-
-  width: min(1120px, calc(100% - 40px));
-  max-width: 1120px;
   margin: 0 auto;
 
-  padding: 70px 0 75px;
+  justify-content: flex-start;
+
+  gap: 9px;
+
+  padding: 20px 20px 0;
 }
 
-.sprint-presentacio {
-  min-width: 0;
+.hero-nav a {
+  padding: 8px 13px;
+
+  border-color:
+    rgba(255, 255, 255, 0.24);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.01em;
 }
 
-.sprint-presentacio h1 {
-  margin: 0;
+.hero-nav a:hover {
+  background:
+    rgba(255, 255, 255, 0.2);
+
+  border-color:
+    rgba(255, 255, 255, 0.44);
+
+  transform: translateY(-1px);
+}
+
+.hero-nav::before {
+  content: "";
+
+  flex: 0 0 31px;
+
+  width: 31px;
+  height: 31px;
+
+  margin: 0 2px 0 0;
+
+  border-radius: 9px;
+
+  background:
+    url("../img/logo-sistemes-operatius.png")
+    center / contain
+    no-repeat;
+
+  filter:
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+
+/* =========================================================
+   HERO TÍTOL
+   ========================================================= */
+
+.hero-titol {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 1040px;
+
+  margin: 0 auto;
+
+  padding: 42px 20px 0;
+}
+
+.hero-titol h1 {
   color: #fff;
 
-  font-size: clamp(3.2rem, 5.5vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  font-weight: 700;
+  font-size:
+    clamp(2.3rem, 5vw, 3.85rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
 }
 
-.sprint-presentacio .subtitol {
-  margin: 22px 0 0;
-  color: rgba(255, 255, 255, 0.86);
+.hero-titol p.subtitol {
+  max-width: 650px;
+
   font-size: 1.05rem;
+
+  line-height: 1.6;
+}
+
+.hero-titol .miguetes {
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
 }
 
 
 /* =========================================================
-   TERMINAL DEL SPRINT
+   PANELLS I TARGETES
    ========================================================= */
 
-.pagina-sprint .sprint-terminal {
-  display: block;
+.panell {
+  padding:
+    34px clamp(23px, 4vw, 42px);
 
-  width: 100%;
-  max-width: 500px;
+  border:
+    1px solid rgba(219, 228, 240, 0.9);
 
-  justify-self: end;
-  margin: 0;
-}
-
-.sprint-terminal .terminal-contingut {
-  padding: 24px 21px 28px;
-}
-
-
-/* =========================================================
-   LÍNIES DEL TERMINAL
-   ========================================================= */
-
-.terminal-sprint-line {
-  display: grid;
-  grid-template-columns: 35px minmax(0, 1fr);
-  align-items: center;
-
-  gap: 12px;
-
-  min-height: 46px;
-  margin-bottom: 7px;
-  padding: 0 13px;
-
-  border-radius: 10px;
-
-  /* Targetes més fosques per millorar el contrast */
-  background: rgba(5, 25, 45, 0.42);
-
-  color: rgba(255, 255, 255, 0.92);
-
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 0.88rem;
-
-  transition:
-    transform 0.18s ease,
-    background-color 0.18s ease;
-}
-
-.terminal-sprint-line:hover {
-  transform: translateX(4px);
-}
-
-.terminal-accent {
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   UBUNTU - SPRINT
-   ========================================================= */
-
-.pagina-sprint.pagina-ubuntu .terminal-accent {
-  color: #e85d25;
-}
-
-.pagina-sprint.pagina-ubuntu .terminal-sprint-line:hover {
-  background: rgba(232, 93, 37, 0.14);
-}
-
-
-
-.pagina-sprint.pagina-ubuntu .sprint-terminal .terminal-titol {
-  color: rgba(232, 93, 37, 0.90);
-}
-
-.pagina-sprint.pagina-ubuntu
-.sprint-terminal .terminal-comanda span:first-child {
-  color: #e85d25;
-}
-
-.pagina-sprint.pagina-ubuntu
-.sprint-terminal .terminal-prompt span:first-child {
-  color: #e85d25;
-}
-
-
-/* =========================================================
-   WINDOWS - SPRINT
-   ========================================================= */
-
-.pagina-sprint.pagina-windows .terminal-accent {
-  color: #42a5f5;
-}
-
-.pagina-sprint.pagina-windows .terminal-sprint-line:hover {
-  background: rgba(66, 165, 245, 0.14);
-}
-
-
-
-.pagina-sprint.pagina-windows .sprint-terminal .terminal-titol {
-  color: rgba(66, 165, 245, 0.90);
-}
-
-.pagina-sprint.pagina-windows
-.sprint-terminal .terminal-comanda span:first-child {
-  color: #42a5f5;
-}
-
-.pagina-sprint.pagina-windows
-.sprint-terminal .terminal-prompt span:first-child {
-  color: #42a5f5;
-}
-
-
-/* =========================================================
-   CONTENIDO DEL SPRINT
-   ========================================================= */
-
-.pagina-sprint .sprint-contingut {
-  width: min(1050px, calc(100% - 40px));
-  max-width: 1050px;
-
-  margin: 0 auto;
-
-  padding: 70px 0 100px;
-}
-
-
-/* =========================================================
-   APARTATS DEL SPRINT
-   ========================================================= */
-
-.sprint-apartat {
-  margin-bottom: 70px;
-  padding: 40px;
-
-  background: #fff;
-
-  border: 1px solid var(--vora);
-  border-radius: var(--radi);
+  border-radius: 20px;
 
   box-shadow:
-    0 12px 35px rgba(9, 26, 53, 0.06);
-
-  scroll-margin-top: 30px;
+    0 18px 45px rgba(20, 43, 79, 0.13);
 }
 
-.apartat-cap {
-  display: flex;
-  align-items: flex-start;
+.rejilla-targetes {
+  gap: 18px;
 
-  gap: 20px;
-
-  margin-bottom: 30px;
-  padding-bottom: 25px;
-
-  border-bottom: 1px solid var(--vora);
+  margin-top: 26px;
 }
 
-.apartat-numero {
-  padding-top: 5px;
+.targeta {
+  position: relative;
 
-  color: var(--accent);
+  min-height: 166px;
 
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 18px;
-  font-weight: 700;
+  padding: 21px;
+
+  overflow: hidden;
+
+  border-color: #dce5f0;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(145deg, #fff, #f7faff);
 }
 
-.apartat-etiqueta {
-  margin: 0 0 6px;
+.targeta::after {
+  content: "";
 
-  color: var(--accent);
+  position: absolute;
 
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  top: 0;
+  right: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: var(--accent);
+
+  opacity: 0.85;
 }
 
-.apartat-cap h2 {
-  margin: 0;
+.targeta:hover {
+  border-color:
+    color-mix(
+      in srgb,
+      var(--accent) 42%,
+      #dce5f0
+    );
 
-  color: var(--tinta);
+  box-shadow:
+    0 13px 25px rgba(23, 50, 88, 0.15);
 
-  font-size: clamp(25px, 3vw, 34px);
-  line-height: 1.15;
+  transform: translateY(-4px);
 }
 
+.targeta .numero {
+  background: var(--accent);
 
-/* =========================================================
-   TEXTO DE LOS APARTADOS
-   ========================================================= */
+  padding: 4px 10px;
 
-.apartat-cos {
-  color: #39465a;
-
-  font-size: 16px;
-  line-height: 1.8;
+  letter-spacing: 0.055em;
 }
 
-.apartat-cos p {
-  margin: 0 0 22px;
+.targeta h3 {
+  font-size: 1.1rem;
+
+  margin-top: 3px;
 }
 
-.apartat-cos ul {
-  margin: 0 0 28px;
-  padding-left: 25px;
-}
+.targeta p {
+  color: var(--accent-fosc);
 
-.apartat-cos li {
-  margin-bottom: 10px;
-  padding-left: 5px;
-}
-
-.apartat-cos strong {
-  color: var(--tinta);
-}
-
-.apartat-cos em {
-  color: var(--accent);
-}
-
-
-/* =========================================================
-   CÓDIGO
-   ========================================================= */
-
-.apartat-cos code {
-  padding: 3px 7px;
-
-  border-radius: 6px;
-
-  background: #edf2f8;
-  color: var(--accent);
-
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 0.9em;
   font-weight: 600;
 }
 
 
 /* =========================================================
-   CAPTURAS
+   BOTONS
    ========================================================= */
 
-.captura-sprint {
-  margin: 32px 0;
-  padding: 15px;
+.boto {
+  min-height: 47px;
 
-  background: #f5f7fa;
-
-  border: 1px solid var(--vora);
-  border-radius: 12px;
-}
-
-.captura-sprint img {
-  display: block;
-
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-
-  margin: 0 auto;
-
-  border-radius: 8px;
-}
-
-.captura-sprint figcaption {
-  margin-top: 12px;
-
-  color: var(--tinta-suau);
-
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 12px;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   VOLVER AL ÍNDICE
-   ========================================================= */
-
-.pagina-sprint .tornar-index {
-  display: inline-block;
-
-  margin-top: 25px;
-
-  color: var(--accent);
-
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 13px;
-  font-weight: 700;
-
-  text-decoration: none;
-}
-
-.pagina-sprint .tornar-index:hover {
-  color: var(--accent-fosc);
-
-  transform: translateX(-3px);
-
-  text-decoration: none;
-}
-
-
-/* =========================================================
-   RESPONSIVE SPRINT
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .pagina-sprint .sprint-hero {
-    grid-template-columns: 1fr;
-    gap: 45px;
-
-    padding-top: 60px;
-  }
-
-  .pagina-sprint .sprint-terminal {
-    justify-self: start;
-    max-width: 560px;
-  }
-
-}
-
-
-@media (max-width: 560px) {
-
-  .pagina-sprint .sprint-hero,
-  .pagina-sprint .sprint-contingut {
-    width: min(calc(100% - 28px), 1050px);
-  }
-
-  .pagina-sprint .sprint-hero {
-    padding-top: 45px;
-    padding-bottom: 50px;
-  }
-
-  .sprint-presentacio h1 {
-    font-size: 3.2rem;
-  }
-
-  .sprint-index,
-  .sprint-apartat {
-    padding: 24px;
-  }
-
-  .sprint-index-cap {
-    gap: 14px;
-  }
-
-  .sprint-index-numero {
-    width: 48px;
-    height: 48px;
-    font-size: 16px;
-  }
-
-  .sprint-index h2 {
-    font-size: 21px;
-  }
-
-  .sprint-index-taula a {
-    grid-template-columns: 40px minmax(0, 1fr) 20px;
-    gap: 10px;
-
-    font-size: 14px;
-  }
-
-  .apartat-cap {
-    gap: 13px;
-  }
-
-  .apartat-cap h2 {
-    font-size: 24px;
-  }
-
-  .terminal-sprint-line {
-    grid-template-columns: 30px minmax(0, 1fr);
-    font-size: 12px;
-  }
-
-}
-
-
-/* =========================================================
-   TABLAS
-   ========================================================= */
-
-
-   ========================================================= */
-
-.taula-apartats {
-
-  width: 100%;
-
-  overflow: hidden;
-
-  border:
-    1px solid var(--vora);
+  padding: 12px 20px;
 
   border-radius: 12px;
 
-  border-collapse: collapse;
+  background: var(--accent);
 
+  box-shadow:
+    0 9px 18px rgba(7, 90, 99, 0.18);
 }
 
+.boto:hover {
+  background: var(--accent-fosc);
 
-.taula-apartats th,
-.taula-apartats td {
+  box-shadow:
+    0 12px 21px rgba(7, 90, 99, 0.25);
 
-  padding:
-    12px 14px;
-
-  text-align: left;
-
-  border-bottom:
-    1px solid var(--vora);
-
-}
-
-
-.taula-apartats th {
-
-  color:
-    var(--accent-fosc);
-
-  background:
-    var(--accent-suau);
-
-  font-size: 0.72rem;
-
-  letter-spacing: 0.06em;
-
-  text-transform: uppercase;
-
-}
-
-
-.taula-apartats tr:hover td {
-
-  background:
-    #f7faff;
-
+  transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   APARTATS
-   ========================================================= */
-
-.apartat {
-
-  scroll-margin-top: 20px;
-
-  padding-top: 26px;
-
-  margin-top: 26px;
-
-  border-top:
-    1px solid var(--vora);
-
-}
-
-
-.apartat h2 {
-
-  color:
-    var(--accent-fosc);
-
-}
-
-
-.apartat img {
-
-  max-width: 100%;
-
-  margin:
-    14px 0;
-
-  border:
-    1px solid var(--vora);
-
-  border-radius:
-    var(--radi);
-
-}
-
-
-.tornar-index {
-
-  font-size: 0.85rem;
-
-}
-
-
-/* =========================================================
-   CONSELLS
+   CONSELL
    ========================================================= */
 
 .consell {
-
-  padding:
-    11px 13px;
-
-  color:
-    var(--tinta-suau);
-
-  font-size: 0.9rem;
+  padding: 11px 13px;
 
   border-left:
     3px solid var(--accent);
 
-  border-radius:
-    0 9px 9px 0;
+  border-radius: 0 9px 9px 0;
 
-  background:
-    var(--accent-suau);
-
+  background: var(--accent-suau);
 }
 
 
 /* =========================================================
-   RESPONSIVE - TABLET
+   TAULES I CONTINGUT DELS SPRINTS
    ========================================================= */
 
-@media (max-width: 850px) {
+.taula-apartats {
+  overflow: hidden;
 
+  border:
+    1px solid var(--vora);
 
-  .capcalera-portada {
-
-    align-items:
-      flex-start;
-
-    flex-direction:
-      column;
-
-    padding-top:
-      22px;
-
-  }
-
-
-  .hero-nav {
-
-    justify-content:
-      flex-start;
-
-    gap:
-      18px;
-
-  }
-
-
-  .portada-capcalera {
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      45px;
-
-    padding-top:
-      55px;
-
-  }
-
-
-  .terminal-portada {
-
-    max-width:
-      520px;
-
-  }
-
-
-  .bloc-llicencia {
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      25px;
-
-  }
-
-
-  .llicencia-text {
-
-    text-align:
-      left;
-
-  }
-
-
-  .badge-cc {
-
-    justify-content:
-      flex-start;
-
-  }
-
+  border-radius: 12px;
 }
 
-
-/* =========================================================
-   RESPONSIVE - MÓVIL
-   ========================================================= */
-
-@media (max-width: 560px) {
-
-
-  .capcalera-portada,
-  .portada-capcalera,
-  .bloc-llicencia {
-
-    width:
-      min(
-        calc(100% - 28px),
-        1120px
-      );
-
-  }
-
-
-  .hero-nav {
-
-    gap:
-      10px 16px;
-
-  }
-
-
-  .hero-nav a {
-
-    font-size:
-      0.82rem;
-
-  }
-
-
-  .presentacio-portada h1 {
-
-    font-size:
-      3.3rem;
-
-  }
-
-
-  .fitxa-alumne {
-
-    grid-template-columns:
-      1fr;
-
-    gap: 0;
-
-  }
-
-
-  .accessos-sistemes {
-
-    display: grid;
-
-    grid-template-columns:
-      1fr;
-
-  }
-
-
-  .boto {
-
-    width: 100%;
-
-  }
-
-
-  .terminal-cap {
-
-    padding:
-      22px 18px 18px;
-
-  }
-
-
-  .terminal-contingut {
-
-    padding:
-      22px 17px 25px;
-
-  }
-
-
-  .bloc-llicencia {
-
-    padding:
-      30px 0;
-
-  }
-
-
-  .llicencia-esquerra {
-
-    align-items:
-      flex-start;
-
-  }
-
-
-  .llicencia-text {
-
-    font-size:
-      0.85rem;
-
-  }
-
-
-  .llicencia-text p {
-
-    font-size:
-      0.82rem;
-
-  }
-
+.taula-apartats th,
+.taula-apartats td {
+  padding: 12px 14px;
 }
 
-/* =========================================================
-   ÍNDICES UBUNTU / WINDOWS
-   ========================================================= */
+.taula-apartats th {
+  background: var(--accent-suau);
 
-.pagina-index .hero {
-  min-height: auto;
+  color: var(--accent-fosc);
 }
 
-/* =========================================================
-   HERO DEL ÍNDEX
-   ========================================================= */
-
-.index-hero {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  align-items: center;
-  gap: clamp(45px, 7vw, 90px);
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 75px 0 70px;
+.taula-apartats tr:hover td {
+  background: #f7faff;
 }
 
-.index-presentacio {
-  min-width: 0;
+.taula-apartats a {
+  color: var(--accent-fosc);
 }
 
-.index-presentacio .etiqueta-curs {
-  margin-bottom: 24px;
+.apartat {
+  border-top-color: var(--vora);
 }
 
-.index-presentacio h1 {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(3.6rem, 6vw, 5.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+.apartat h2 {
+  color: var(--accent-fosc);
+}
+
+.apartat img {
+  box-shadow:
+    0 7px 20px rgba(19, 42, 79, 0.11);
+}
+
+.tornar-index a {
+  color: var(--accent-fosc);
+
   font-weight: 700;
 }
 
-.index-descripcio {
-  max-width: 650px;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.94rem;
+
+/* =========================================================
+   FOOTER COMÚ
+   ========================================================= */
+
+footer.peu {
+  max-width: 1040px;
+
+  margin: 0 auto;
+
+  padding-top: 35px;
+}
+
+footer.peu .autoria strong {
+  color: var(--accent-fosc);
+}
+
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+
+.pagina-portada .hero-portada {
+  padding-bottom: 68px;
+}
+
+.capcalera-portada {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 18px 20px 0;
+}
+
+.marca-portada {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #fff;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.marca-portada:hover {
+  color: #fff;
+
+  text-decoration: none;
+}
+
+.marca-portada-logo {
+  display: block;
+
+  width: 39px;
+  height: 39px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 4px 7px rgba(0, 0, 0, 0.22));
+}
+
+.pagina-portada .hero-nav {
+  margin: 0;
+
+  padding: 0;
+}
+
+.pagina-portada .hero-nav::before {
+  display: none;
+}
+
+.pagina-portada .portada-capcalera {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 0.78fr);
+
+  align-items: center;
+
+  gap:
+    clamp(32px, 7vw, 92px);
+
+  max-width: 1120px;
+
+  padding: 54px 20px 0;
+
+  text-align: left;
+}
+
+.pagina-portada .hero-titol h1 {
+  max-width: 570px;
+
+  font-size:
+    clamp(3rem, 6vw, 5.1rem);
+}
+
+.pagina-portada .hero-titol p.subtitol {
+  margin: 17px 0 0;
+}
+
+
+/* =========================================================
+   FITXA ALUMNE
+   ========================================================= */
+
+.pagina-portada .fitxa-alumne {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px 22px;
+
+  width: min(100%, 480px);
+
+  margin: 25px 0;
+
+  padding: 15px 18px;
+
+  border-color:
+    rgba(255, 255, 255, 0.21);
+
+  border-radius: 14px;
+
+  background:
+    rgba(7, 20, 43, 0.22);
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  backdrop-filter: blur(8px);
+}
+
+.pagina-portada .fitxa-alumne p {
+  margin: 0;
+
+  font-size: 0.86rem;
+}
+
+.pagina-portada .fitxa-alumne strong {
+  display: block;
+
+  color: #fff;
+
+  font-size: 0.77rem;
+
+  letter-spacing: 0.025em;
+}
+
+
+/* =========================================================
+   BOTONS SISTEMES
+   ========================================================= */
+
+.accessos-sistemes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.accessos-sistemes .boto {
+  margin: 0;
+}
+
+.boto-ubuntu {
+  --accent: #dc5d28;
+  --accent-fosc: #aa401b;
+}
+
+.boto-windows {
+  --accent: #1976d2;
+  --accent-fosc: #115aa4;
+}
+
+
+/* =========================================================
+   TERMINAL PORTADA
+   ========================================================= */
+
+.terminal-portada {
+  position: relative;
+
+  margin: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 21px;
+
+  background:
+    rgba(6, 17, 37, 0.34);
+
+  box-shadow:
+    0 23px 46px rgba(4, 14, 31, 0.27);
+
+  backdrop-filter: blur(9px);
+}
+
+.terminal-portada::before {
+  content: "sistemes_operatius";
+
+  display: block;
+
+  margin: 0 0 12px 4px;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font:
+    0.76rem Consolas,
+    monospace;
+}
+
+.pagina-portada .imatge-portada {
+  display: block;
+
+  width: 100%;
+
+  max-width: none;
+
+  height: auto;
+
+  margin: 0;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   CONTINGUT PORTADA
+   ========================================================= */
+
+.contingut-portada {
+  max-width: 940px;
+}
+
+.pagina-portada .portada-hero {
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  text-align: left;
+}
+
+.pagina-portada .bloc-llicencia {
+  margin: 0;
+
+  padding:
+    clamp(24px, 5vw, 38px);
+
+  border: 0;
+
+  border-left:
+    5px solid var(--teal);
+
+  border-radius: 0;
+
+  background:
+    linear-gradient(100deg, #fff, #f3fbfc);
+}
+
+.pagina-portada .bloc-llicencia h3 {
+  color: var(--mari);
+
+  font-size: 1.12rem;
+}
+
+.pagina-portada .bloc-llicencia p {
+  max-width: 790px;
+
   line-height: 1.65;
 }
 
-/* =========================================================
-   TERMINAL DE L'ÍNDEX
-   ========================================================= */
-
-.index-terminal {
-  max-width: 520px;
-  justify-self: end;
+.pagina-portada .bloc-llicencia .badge-cc {
+  margin-top: 15px;
 }
 
-.index-terminal .terminal-contingut {
-  padding-bottom: 24px;
-}
-
-.index-terminal-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 24px 105px minmax(0, 1fr);
-  align-items: center;
-  gap: 12px;
-  min-height: 58px;
-  margin-bottom: 14px;
-  padding: 0 16px;
-  border-radius: 13px;
-  background: rgba(5, 25, 45, 0.42);
-  color: rgba(255, 255, 255, 0.9);
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 0.92rem;
-  text-decoration: none;
-  transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-}
-
-.index-terminal-item:hover {
-  transform: translateX(4px);
-  color: #fff;
-  text-decoration: none;
-}
-
-.index-terminal-item .carpeta-icona {
-  width: 24px;
-  color: var(--accent);
-}
-
-.index-terminal-item .terminal-nom {
-  overflow: hidden;
-  color: rgba(255, 255, 255, 0.62);
-  font-family: "Aptos", "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 0.82rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.pagina-ubuntu .index-terminal-item:hover {
-  background: rgba(232, 93, 37, 0.18);
-  box-shadow: inset 3px 0 0 var(--accent);
-}
-
-.pagina-windows .index-terminal-item:hover {
-  background: rgba(66, 165, 245, 0.18);
-  box-shadow: inset 3px 0 0 var(--accent);
-}
-
-.pagina-ubuntu .index-terminal .terminal-comanda span:first-child,
-.pagina-ubuntu .index-terminal .terminal-prompt span:first-child {
-  color: var(--accent);
-}
-
-.pagina-windows .index-terminal .terminal-comanda span:first-child,
-.pagina-windows .index-terminal .terminal-prompt span:first-child {
-  color: var(--accent);
-}
-
-.pagina-ubuntu .index-terminal .terminal-titol {
-  color: rgba(232, 93, 37, 0.9);
-}
-
-.pagina-windows .index-terminal .terminal-titol {
-  color: rgba(25, 118, 210, 0.9);
-}
 
 /* =========================================================
-   COLOR UBUNTU
+   REDUCCIÓ D'ESPAI AL FINAL DELS SPRINTS
    ========================================================= */
 
-.pagina-ubuntu {
-  --accent: #e85d25;
-  --accent-fosc: #b94318;
-  --accent-suau: #fff0e9;
+.pagina-sprint main {
+  padding-bottom: 10px;
 }
 
-/* =========================================================
-   COLOR WINDOWS
-   ========================================================= */
-
-.pagina-windows {
-  --accent: #42a5f5;
-  --accent-fosc: #1976d2;
-  --accent-suau: #e8f2ff;
-}
 
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 900px) {
-  .index-hero {
+@media (max-width: 760px) {
+
+  .hero {
+    padding-bottom: 58px;
+  }
+
+  .hero-nav {
+    justify-content: flex-start;
+
+    padding-top: 16px;
+  }
+
+  .hero-titol {
+    padding-top: 32px;
+  }
+
+  .panell {
+    padding: 26px 20px;
+
+    border-radius: 16px;
+  }
+
+  .targeta {
+    min-height: auto;
+  }
+
+  .capcalera-portada {
+    display: block;
+
+    padding-top: 17px;
+  }
+
+  .pagina-portada .hero-nav {
+    margin-top: 15px;
+  }
+
+  .pagina-portada .portada-capcalera {
     grid-template-columns: 1fr;
-    gap: 45px;
-    padding-top: 60px;
+
+    gap: 31px;
+
+    padding-top: 38px;
   }
 
-  .index-terminal {
-    width: 100%;
-    max-width: 560px;
-    justify-self: start;
+  .pagina-portada .fitxa-alumne {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-portada {
+    max-width: 450px;
   }
 }
 
-@media (max-width: 560px) { 
-  .index-hero { 
-    width: min(calc(100% - 28px), 1120px); 
-    padding-top: 45px; 
-    padding-bottom: 50px; 
-  } 
- 
-  .index-presentacio h1 { 
-    font-size: 3.4rem; 
-  } 
- 
-  .index-terminal-item { 
-    grid-template-columns: 22px 85px minmax(0, 1fr); 
-    gap: 9px; 
-    padding: 0 12px; 
-    font-size: 0.84rem; 
-  } 
- 
-  .index-terminal-item .terminal-nom { 
-    font-size: 0.72rem; 
-  } 
-}
 
+@media (max-width: 460px) {
 
-/* =========================================================
-   CURSOR PERSONALITZAT - OCULTAR CURSOR ORIGINAL
-   ========================================================= */
+  .hero-nav {
+    gap: 7px;
+  }
 
-html,
-body,
-body *,
-body *::before,
-body *::after {
-  cursor: none !important;
-}
+  .hero-nav a {
+    padding: 7px 10px;
 
+    font-size: 0.77rem;
+  }
 
-.cursor-personalitzat {
-    position: fixed;
+  .accessos-sistemes {
+    display: grid;
 
-    width: 16px;
-    height: 16px;
+    grid-template-columns: 1fr;
+  }
 
-    border: 2px solid white;
-    border-radius: 50%;
-
-    pointer-events: none;
-    z-index: 999999;
-
-    transform: translate(-50%, -50%);
-}
-
-/* =========================================================
-   TRANSICIÓ ENTRE PÀGINES
-   ========================================================= */
-
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-old(root) {
-    animation: sortir-pagina 0.18s ease-out both;
-}
-
-::view-transition-new(root) {
-    animation: entrar-pagina 0.22s ease-out both;
-}
-
-@keyframes sortir-pagina {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes entrar-pagina {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+  .accessos-sistemes .boto {
+    text-align: center;
+  }
 }
