@@ -2277,3 +2277,7 @@ body {
 footer.peu {
   margin-top: auto;
 }
+
+.pagina-index .hero {
+  min-height: calc(100vh - 130px);
+}
