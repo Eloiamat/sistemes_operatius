@@ -2210,10 +2210,4 @@ body *::after {
     z-index: 999999;
 
     transform: translate(-50%, -50%);
-
-    opacity: 0;
-}
-
-body.cursor-actiu .cursor-personalitzat {
-    opacity: 1;
 }
