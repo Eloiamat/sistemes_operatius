@@ -2259,3 +2259,21 @@ body *::after {
 .pagina-sprint .sprint-apartat:last-child {
   margin-bottom: 0;
 }
+/* =========================================================
+   FOOTER AL FINAL DE LA PÀGINA
+   ========================================================= */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer.peu {
+  margin-top: auto;
+}
