@@ -2252,7 +2252,10 @@ body *::after {
    MENOS ESPAI ABANS DEL FOOTER
    ========================================================= */
 
-.pagina-sprint main,
-.pagina-index main {
+.pagina-index .hero {
+  padding-bottom: 20px;
+}
+
+.pagina-sprint main {
   padding-bottom: 10px;
 }
