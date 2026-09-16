@@ -2211,3 +2211,39 @@ body *::after {
 
     transform: translate(-50%, -50%);
 }
+
+/* =========================================================
+   TRANSICIÓ ENTRE PÀGINES
+   ========================================================= */
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: sortir-pagina 0.18s ease-out both;
+}
+
+::view-transition-new(root) {
+    animation: entrar-pagina 0.22s ease-out both;
+}
+
+@keyframes sortir-pagina {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes entrar-pagina {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
