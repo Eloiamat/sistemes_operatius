@@ -2188,15 +2188,17 @@ footer.peu .autoria strong {
    CURSOR PERSONALITZAT - OCULTAR CURSOR ORIGINAL
    ========================================================= */
 
-html,
-body,
-body *,
-body *::before,
-body *::after {
-  cursor: none !important;
-}
+@media (hover: hover) and (pointer: fine) {
 
-    .cursor-personalitzat {
+  html,
+  body,
+  body *,
+  body *::before,
+  body *::after {
+    cursor: none !important;
+  }
+
+  .cursor-personalitzat {
     position: fixed;
 
     width: 16px;
@@ -2210,8 +2212,21 @@ body *::after {
     z-index: 999999;
 
     transform: translate(-50%, -50%);
+  }
+
 }
 
+/* =========================================================
+   MÓVIL / PANTALLA TÁCTIL
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .cursor-personalitzat {
+    display: none !important;
+  }
+
+}
 /* =========================================================
    TRANSICIÓ ENTRE PÀGINES
    ========================================================= */
