@@ -2247,3 +2247,12 @@ body *::after {
         opacity: 1;
     }
 }
+
+/* =========================================================
+   MENOS ESPAI ABANS DEL FOOTER
+   ========================================================= */
+
+.pagina-sprint main,
+.pagina-index main {
+  padding-bottom: 10px;
+}
