@@ -79,19 +79,16 @@
 
   <div class="sprint-hero">
 
-
     <div class="sprint-presentacio">
 
       <p class="etiqueta-curs">
         UBUNTU · SPRINT 1
       </p>
 
-
       <h1>
         Instal·lació i<br>
         configuració inicial
       </h1>
-
 
       <p class="subtitol">
         Sprint 1 · Sistemes Operatius
@@ -101,7 +98,7 @@
 
 
     <!-- =====================================================
-         TERMINAL / ÍNDEX
+         ÍNDEX DEL SPRINT
          ===================================================== -->
 
     <figure class="terminal-portada sprint-terminal">
@@ -140,15 +137,13 @@
           class="terminal-sprint-line"
           href="#apartat1"
         >
-
           <span class="terminal-accent">
             01
           </span>
 
           <span>
-            Instal·lació del sistema operatiu
+            Instal·lació d'un SO
           </span>
-
         </a>
 
 
@@ -156,15 +151,13 @@
           class="terminal-sprint-line"
           href="#apartat2"
         >
-
           <span class="terminal-accent">
             02
           </span>
 
           <span>
-            Configuració de xarxa bàsica
+            Punts de restauració
           </span>
-
         </a>
 
 
@@ -172,15 +165,13 @@
           class="terminal-sprint-line"
           href="#apartat3"
         >
-
           <span class="terminal-accent">
             03
           </span>
 
           <span>
-            Creació d'usuaris i grups
+            Particions
           </span>
-
         </a>
 
 
@@ -188,15 +179,69 @@
           class="terminal-sprint-line"
           href="#apartat4"
         >
-
           <span class="terminal-accent">
             04
           </span>
 
           <span>
-            Comprovació final
+            Virtualització
+          </span>
+        </a>
+
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat5"
+        >
+          <span class="terminal-accent">
+            05
           </span>
 
+          <span>
+            Gestor d'arrencada
+          </span>
+        </a>
+
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat6"
+        >
+          <span class="terminal-accent">
+            06
+          </span>
+
+          <span>
+            Xarxa bàsica
+          </span>
+        </a>
+
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat7"
+        >
+          <span class="terminal-accent">
+            07
+          </span>
+
+          <span>
+            Comandes generals
+          </span>
+        </a>
+
+
+        <a
+          class="terminal-sprint-line"
+          href="#apartat8"
+        >
+          <span class="terminal-accent">
+            08
+          </span>
+
+          <span>
+            Instal·lació d'aplicacions
+          </span>
         </a>
 
 
@@ -226,7 +271,7 @@
 
 
   <!-- =======================================================
-       APARTAT 1
+       APARTAT 1 · INSTAL·LACIÓ D'UN SO
        ======================================================= -->
 
   <section
@@ -240,7 +285,6 @@
         01
       </span>
 
-
       <div>
 
         <p class="apartat-etiqueta">
@@ -248,7 +292,7 @@
         </p>
 
         <h2>
-          Instal·lació del sistema operatiu
+          Instal·lació d'un SO
         </h2>
 
       </div>
@@ -258,34 +302,96 @@
 
     <div class="apartat-cos">
 
+
+      <!-- PAS 1 -->
+
+      <h3>
+        1. Crear una màquina virtual
+      </h3>
+
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Per crear una màquina virtual, haurem de prémer el botó blau
+        <strong>«Nueva»</strong>, situat a la part dreta de VirtualBox.
       </p>
 
 
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/1Sprint1Ubuntu.png"
+          alt="Creació d'una màquina virtual a VirtualBox"
+        >
+
+        <figcaption>
+          Creació d'una nova màquina virtual.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 2 -->
+
+      <h3>
+        2. Configurar el nom i la ISO
+      </h3>
+
       <p>
-        Per instal·lar el sistema operatiu Ubuntu seguirem els
-        passos indicats durant el procés d'instal·lació.
+        Un cop dins de la configuració de la màquina virtual, haurem
+        d'introduir el <strong>nom</strong> que volem assignar-li i
+        seleccionar la <strong>ISO d'instal·lació d'Ubuntu</strong>.
       </p>
 
+      <p>
+        La ISO haurà d'estar descarregada prèviament i la podrem
+        seleccionar des de la ubicació on l'hàgim desat.
+      </p>
+
+      <p>
+        Un cop seleccionada, VirtualBox identificarà automàticament
+        la versió del sistema operatiu. En aquest punt, és important
+        <strong>desmarcar l'opció indicada a la captura</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/2Sprint1Ubuntu.png"
+          alt="Configuració del nom i la ISO d'Ubuntu"
+        >
+
+        <figcaption>
+          Configuració del nom i selecció de la ISO d'Ubuntu.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 3 -->
+
+      <h3>
+        3. Assignar la memòria i els processadors
+      </h3>
+
+      <p>
+        A continuació, seleccionarem
+        <strong>«Specify virtual hardware»</strong>.
+      </p>
+
+      <p>
+        Assignarem a la màquina virtual:
+      </p>
 
       <ul>
 
         <li>
-          Arrencar l'equip des de la imatge ISO.
+          <strong>4 GB de memòria RAM</strong>
         </li>
 
         <li>
-          Seleccionar l'idioma del sistema.
-        </li>
-
-        <li>
-          Configurar les opcions d'instal·lació.
-        </li>
-
-        <li>
-          Completar la instal·lació del sistema.
+          <strong>2 processadors (CPU)</strong>
         </li>
 
       </ul>
@@ -294,12 +400,394 @@
       <figure class="captura-sprint">
 
         <img
-          src="../../img/exemple.svg"
-          alt="Exemple de la instal·lació d'Ubuntu"
+          src="../../img/ubuntu/sprint1Ubuntu/3Sprint1Ubuntu.png"
+          alt="Assignació de memòria RAM i processadors"
         >
 
         <figcaption>
-          Exemple de la instal·lació del sistema operatiu.
+          Assignació de 4 GB de RAM i 2 processadors.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 4 -->
+
+      <h3>
+        4. Crear el disc dur virtual
+      </h3>
+
+      <p>
+        Accedirem a <strong>«Specify virtual hard disk»</strong> i
+        assignarem <strong>50 GB d'espai</strong> al disc virtual.
+      </p>
+
+      <p>
+        Aquest espai serà <strong>dinàmic</strong>, és a dir, la màquina
+        virtual no ocuparà els 50 GB immediatament, sinó que anirà
+        utilitzant espai a mesura que el necessiti.
+      </p>
+
+      <p>
+        Un cop configurat, podrem prémer <strong>«Terminar»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/4Sprint1Ubuntu.png"
+          alt="Configuració del disc dur virtual"
+        >
+
+        <figcaption>
+          Assignació de 50 GB al disc dur virtual.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 5 -->
+
+      <h3>
+        5. Iniciar la instal·lació d'Ubuntu
+      </h3>
+
+      <p>
+        Quan la màquina virtual s'hagi creat, iniciarem el procés
+        d'instal·lació i seleccionarem l'opció
+        <strong>«Try or Install Ubuntu»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/5Sprint1Ubuntu.png"
+          alt="Inici de la instal·lació d'Ubuntu"
+        >
+
+        <figcaption>
+          Inici del procés d'instal·lació d'Ubuntu.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 6 -->
+
+      <h3>
+        6. Configuració inicial d'Ubuntu
+      </h3>
+
+      <p>
+        Durant la configuració inicial, podrem seleccionar les opcions
+        segons les nostres preferències fins arribar a l'apartat
+        <strong>«¿Qué quieres hacer con Ubuntu?»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/6Sprint1Ubuntu.png"
+          alt="Configuració inicial d'Ubuntu"
+        >
+
+        <figcaption>
+          Configuració inicial del sistema operatiu.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 7 -->
+
+      <h3>
+        7. Iniciar la instal·lació
+      </h3>
+
+      <p>
+        En aquest apartat seleccionarem l'opció
+        <strong>«Instalar Ubuntu»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/7Sprint1Ubuntu.png"
+          alt="Opció per instal·lar Ubuntu"
+        >
+
+        <figcaption>
+          Selecció de l'opció d'instal·lació d'Ubuntu.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 8 -->
+
+      <h3>
+        8. Seleccionar el tipus d'instal·lació
+      </h3>
+
+      <p>
+        A continuació, seleccionarem l'opció
+        <strong>«Instal·lació interactiva»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/8Sprint1Ubuntu.png"
+          alt="Selecció de la instal·lació interactiva"
+        >
+
+        <figcaption>
+          Selecció de la instal·lació interactiva.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 9 -->
+
+      <h3>
+        9. Seleccionar la instal·lació manual
+      </h3>
+
+      <p>
+        En el següent apartat, seleccionarem l'opció
+        <strong>«Instal·lació manual»</strong>, ja que volem configurar
+        les particions del sistema manualment.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/9Sprint1Ubuntu.png"
+          alt="Selecció de la instal·lació manual"
+        >
+
+        <figcaption>
+          Selecció de la instal·lació manual.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 10 -->
+
+      <h3>
+        10. Configurar les particions
+      </h3>
+
+      <p>
+        Ara configurarem manualment les particions del sistema operatiu.
+        Per crear-les, haurem de prémer el botó <strong>«+»</strong>.
+      </p>
+
+      <p>
+        Les particions es configuraran de la següent manera:
+      </p>
+
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Espai</th>
+            <th>Punt de muntatge</th>
+            <th>Format</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>8 GB</td>
+            <td>Swap</td>
+            <td>Swap</td>
+          </tr>
+
+          <tr>
+            <td>12 GB</td>
+            <td>/home</td>
+            <td>Ext4</td>
+          </tr>
+
+          <tr>
+            <td>Espai restant</td>
+            <td>/</td>
+            <td>Ext4</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+      <p>
+        La partició <strong>Swap</strong> s'utilitzarà com a espai
+        d'intercanvi, mentre que <strong>/home</strong> serà on es
+        guardarà la informació dels usuaris. L'espai restant es
+        destinarà a la partició arrel del sistema, representada pel
+        punt de muntatge <strong>/</strong>.
+      </p>
+
+      <p>
+        Un cop creades totes les particions, seleccionarem
+        <strong>«Siguiente»</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/10Sprint1Ubuntu.png"
+          alt="Configuració de les particions d'Ubuntu"
+        >
+
+        <figcaption>
+          Configuració de les particions del sistema.
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/11Sprint1Ubuntu.png"
+          alt="Configuració de la partició Swap"
+        >
+
+        <figcaption>
+          Configuració de la partició Swap.
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/12Sprint1Ubuntu.png"
+          alt="Configuració de les particions d'Ubuntu"
+        >
+
+        <figcaption>
+          Configuració de les particions del sistema.
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/13Sprint1Ubuntu.png"
+          alt="Configuració final de les particions"
+        >
+
+        <figcaption>
+          Configuració final de les particions abans de continuar.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 11 -->
+
+      <h3>
+        11. Crear el compte d'usuari
+      </h3>
+
+      <p>
+        A continuació, crearem el nostre <strong>compte d'usuari</strong>
+        i continuarem amb la configuració fins arribar a la pantalla de
+        finalització de la instal·lació.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/14Sprint1Ubuntu.png"
+          alt="Creació del compte d'usuari d'Ubuntu"
+        >
+
+        <figcaption>
+          Creació del compte d'usuari.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 12 -->
+
+      <h3>
+        12. Reiniciar Ubuntu
+      </h3>
+
+      <p>
+        Quan la instal·lació hagi finalitzat, seleccionarem
+        <strong>«Reiniciar Ubuntu»</strong> per reiniciar la màquina
+        virtual.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/15Sprint1Ubuntu.png"
+          alt="Reinici d'Ubuntu després de la instal·lació"
+        >
+
+        <figcaption>
+          Reinici de la màquina virtual després de la instal·lació.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- PAS 13 -->
+
+      <h3>
+        13. Instal·lació finalitzada
+      </h3>
+
+      <p>
+        Un cop reiniciada la màquina virtual, ja tindrem
+        <strong>Ubuntu instal·lat i funcionant dins de VirtualBox</strong>.
+      </p>
+
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/16Sprint1Ubuntu.png"
+          alt="Ubuntu instal·lat i funcionant dins de VirtualBox"
+        >
+
+        <figcaption>
+          Ubuntu instal·lat i funcionant correctament dins de VirtualBox.
         </figcaption>
 
       </figure>
@@ -319,7 +807,7 @@
 
 
   <!-- =======================================================
-       APARTAT 2
+       APARTAT 2 · PUNTS DE RESTAURACIÓ
        ======================================================= -->
 
   <section
@@ -333,7 +821,6 @@
         02
       </span>
 
-
       <div>
 
         <p class="apartat-etiqueta">
@@ -341,7 +828,7 @@
         </p>
 
         <h2>
-          Configuració de xarxa bàsica
+          Punts de restauració
         </h2>
 
       </div>
@@ -352,38 +839,14 @@
     <div class="apartat-cos">
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.
+        En aquest apartat es documentaran els procediments relacionats
+        amb els punts de restauració del sistema.
       </p>
 
 
       <p>
-        Una vegada instal·lat el sistema operatiu, comprovarem
-        la configuració de xarxa i verificarem que l'equip té
-        connectivitat.
+        <strong>Contingut pendent de realitzar.</strong>
       </p>
-
-
-      <ul>
-
-        <li>
-          Comprovar la connexió de xarxa.
-        </li>
-
-        <li>
-          Consultar la configuració IP.
-        </li>
-
-        <li>
-          Comprovar la porta d'enllaç.
-        </li>
-
-        <li>
-          Realitzar una prova de connectivitat.
-        </li>
-
-      </ul>
 
 
       <a
@@ -400,7 +863,7 @@
 
 
   <!-- =======================================================
-       APARTAT 3
+       APARTAT 3 · PARTICIONS
        ======================================================= -->
 
   <section
@@ -414,7 +877,6 @@
         03
       </span>
 
-
       <div>
 
         <p class="apartat-etiqueta">
@@ -422,7 +884,7 @@
         </p>
 
         <h2>
-          Creació d'usuaris i grups
+          Particions
         </h2>
 
       </div>
@@ -433,51 +895,14 @@
     <div class="apartat-cos">
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
+        En aquest apartat es documentarà la gestió i configuració de
+        particions del sistema operatiu.
       </p>
 
 
       <p>
-        En aquest apartat crearem els usuaris i grups necessaris
-        per treballar amb el sistema operatiu.
+        <strong>Contingut pendent de realitzar.</strong>
       </p>
-
-
-      <ul>
-
-        <li>
-          Crear un nou usuari.
-        </li>
-
-        <li>
-          Crear un grup.
-        </li>
-
-        <li>
-          Afegir l'usuari al grup.
-        </li>
-
-        <li>
-          Comprovar els permisos corresponents.
-        </li>
-
-      </ul>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/exemple.svg"
-          alt="Exemple de creació d'usuaris i grups"
-        >
-
-        <figcaption>
-          Exemple de configuració d'usuaris i grups.
-        </figcaption>
-
-      </figure>
 
 
       <a
@@ -494,7 +919,7 @@
 
 
   <!-- =======================================================
-       APARTAT 4
+       APARTAT 4 · VIRTUALITZACIÓ
        ======================================================= -->
 
   <section
@@ -508,7 +933,6 @@
         04
       </span>
 
-
       <div>
 
         <p class="apartat-etiqueta">
@@ -516,7 +940,7 @@
         </p>
 
         <h2>
-          Comprovació final
+          Virtualització
         </h2>
 
       </div>
@@ -527,37 +951,238 @@
     <div class="apartat-cos">
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
+        En aquest apartat es documentaran els conceptes i procediments
+        relacionats amb la virtualització.
       </p>
 
 
       <p>
-        Finalment realitzarem una comprovació general per verificar
-        que el sistema operatiu funciona correctament.
+        <strong>Contingut pendent de realitzar.</strong>
       </p>
 
 
-      <ul>
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
 
-        <li>
-          Comprovar que el sistema arrenca correctament.
-        </li>
+    </div>
 
-        <li>
-          Comprovar la connexió de xarxa.
-        </li>
+  </section>
 
-        <li>
-          Comprovar els usuaris i grups creats.
-        </li>
 
-        <li>
-          Verificar el funcionament general del sistema.
-        </li>
 
-      </ul>
+  <!-- =======================================================
+       APARTAT 5 · GESTOR D'ARRENCADA
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat5"
+  >
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        05
+      </span>
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 05
+        </p>
+
+        <h2>
+          Gestor d'arrencada
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+      <p>
+        En aquest apartat es documentarà el funcionament i la
+        configuració del gestor d'arrencada.
+      </p>
+
+
+      <p>
+        <strong>Contingut pendent de realitzar.</strong>
+      </p>
+
+
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       APARTAT 6 · XARXA BÀSICA
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat6"
+  >
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        06
+      </span>
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 06
+        </p>
+
+        <h2>
+          Xarxa bàsica
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+      <p>
+        En aquest apartat es documentaran les configuracions i
+        comprovacions bàsiques de xarxa.
+      </p>
+
+
+      <p>
+        <strong>Contingut pendent de realitzar.</strong>
+      </p>
+
+
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       APARTAT 7 · COMANDES GENERALS
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat7"
+  >
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        07
+      </span>
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 07
+        </p>
+
+        <h2>
+          Comandes generals
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+      <p>
+        En aquest apartat es documentaran les principals comandes
+        generals utilitzades en Ubuntu.
+      </p>
+
+
+      <p>
+        <strong>Contingut pendent de realitzar.</strong>
+      </p>
+
+
+      <a
+        class="tornar-index"
+        href="#index-apartats"
+      >
+        ↑ Tornar a l'índex
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       APARTAT 8 · INSTAL·LACIÓ D'APLICACIONS
+       ======================================================= -->
+
+  <section
+    class="sprint-apartat"
+    id="apartat8"
+  >
+
+    <div class="apartat-cap">
+
+      <span class="apartat-numero">
+        08
+      </span>
+
+      <div>
+
+        <p class="apartat-etiqueta">
+          APARTAT 08
+        </p>
+
+        <h2>
+          Instal·lació d'aplicacions
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="apartat-cos">
+
+      <p>
+        En aquest apartat es documentarà el procés d'instal·lació
+        d'aplicacions en Ubuntu.
+      </p>
+
+
+      <p>
+        <strong>Contingut pendent de realitzar.</strong>
+      </p>
 
 
       <a
@@ -580,7 +1205,7 @@
      FOOTER
      ========================================================= -->
 
-  <footer class="peu">
+<footer class="peu">
 
   <p class="peu-llicencia">
 
@@ -599,6 +1224,7 @@
 
     </a>
 
+
     <span>
 
       Contingut sota llicència
@@ -616,12 +1242,12 @@
   </p>
 
 
-  <!-- ENLLAÇ A LA PÀGINA DE LA LLICÈNCIA -->
-
   <p>
+
     <a href="../../llicencia.html">
       Veure informació de la llicència →
     </a>
+
   </p>
 
 
@@ -633,11 +1259,12 @@
       Eloi Amat Farrerons
     </strong>
 
-    · Pràctica 0 · Sistemes Operatius (ISOPJ1)
+    · Sprint 1 · Sistemes Operatius (ISOPJ1)
 
   </p>
 
 </footer>
+
 
 
 <div class="cursor-personalitzat"></div>
@@ -645,4 +1272,5 @@
 <script src="../../js/cursor.js"></script>
 
 </body>
+
 </html>
