@@ -1526,13 +1526,10 @@ footer.peu .autoria strong {
 
 .captura-sprint img {
   display: block;
-
-  width: 100%;
-  max-width: 800px;
+  width: 600px;
+  max-width: 100%;
   height: auto;
-
   margin: 0 auto;
-
   border-radius: 8px;
 }
 
