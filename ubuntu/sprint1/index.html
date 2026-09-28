@@ -1062,15 +1062,246 @@
 
     <div class="apartat-cos">
 
+      <!-- PAS 1 -->
+
+      <h3>
+        1. Comprovar la connexió a Internet
+      </h3>
+
       <p>
-        En aquest apartat es documentaran les configuracions i
-        comprovacions bàsiques de xarxa.
+        Per comprovar la nostra connexió a Internet, obrirem una terminal
+        amb la combinació de tecles <strong>Ctrl + Alt + T</strong> i
+        escriurem la comanda:
       </p>
 
+      <pre><code>ping 8.8.8.8</code></pre>
 
       <p>
-        <strong>Contingut pendent de realitzar.</strong>
+        Aquesta adreça IP correspon a un servidor DNS públic de Google.
+        Si rebem resposta als paquets enviats, significa que tenim
+        connexió a Internet.
       </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/1Sprint1P06Ubuntu.png"
+          alt="Comprovació de la connexió a Internet amb ping"
+        >
+
+        <figcaption>
+          Comprovació de la connexió a Internet amb la comanda ping.
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 2 -->
+
+      <h3>
+        2. Comprovar el funcionament del DNS
+      </h3>
+
+      <p>
+        Per comprovar si el DNS funciona correctament, utilitzarem la
+        següent comanda:
+      </p>
+
+      <pre><code>ping www.google.es</code></pre>
+
+      <p>
+        El <strong>DNS (Domain Name System)</strong> és el sistema
+        encarregat de traduir els noms de domini, com ara
+        <strong>www.google.es</strong>, a adreces IP que els ordinadors
+        poden utilitzar per comunicar-se. D'aquesta manera, podem
+        utilitzar noms de domini fàcils de recordar en lloc d'adreces IP.
+      </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/2Sprint1P06Ubuntu.png"
+          alt="Comprovació del funcionament del DNS amb ping"
+        >
+
+        <figcaption>
+          Comprovació de la resolució DNS amb la comanda ping.
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 3 -->
+
+      <h3>
+        3. Accedir a la configuració de xarxa
+      </h3>
+
+      <p>
+        Per poder configurar la connexió des de la interfície gràfica,
+        accedirem a la <strong>icona de xarxa</strong> situada a la
+        barra superior i entrarem a <strong>«Configuració de cable»</strong>.
+      </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/3Sprint1P06Ubuntu.png"
+          alt="Accés a la configuració de cable d'Ubuntu"
+        >
+
+        <figcaption>
+          Accés a la configuració de la connexió de xarxa.
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 4 -->
+
+      <h3>
+        4. Obrir els paràmetres de xarxa
+      </h3>
+
+      <p>
+        Un cop dins de la configuració de cable, entrarem a la
+        <strong>icona de paràmetres (engranatge)</strong> indicada a la
+        imatge per accedir al menú de configuració de la xarxa.
+      </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/4Sprint1P06Ubuntu.png"
+          alt="Icona d'accés als paràmetres de xarxa"
+        >
+
+        <figcaption>
+          Accés als paràmetres de la connexió de xarxa.
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 5 -->
+
+      <h3>
+        5. Configurar la IP, el DNS i altres paràmetres
+      </h3>
+
+      <p>
+        Un cop dins dels paràmetres de xarxa, podem configurar diferents
+        aspectes de la connexió, com ara l'<strong>adreça IP</strong>,
+        el <strong>DNS</strong>, la <strong>màscara de xarxa</strong>
+        i altres paràmetres.
+      </p>
+
+      <p>
+        En aquest cas, deixarem la configuració en
+        <strong>automàtic (DHCP)</strong> perquè la xarxa assigni
+        aquests paràmetres automàticament.
+      </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/5Sprint1P06Ubuntu.png"
+          alt="Configuració automàtica de la IP i el DNS"
+        >
+
+        <figcaption>
+          Configuració de la connexió en mode automàtic (DHCP).
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 6 -->
+
+      <h3>
+        6. Configurar la xarxa des de terminal amb Netplan
+      </h3>
+
+      <p>
+        Si no poguéssim accedir a la configuració de xarxa mitjançant
+        la interfície gràfica, també podríem configurar-la des de la
+        terminal.
+      </p>
+
+      <p>
+        Per fer-ho, accedirem al directori de <strong>Netplan</strong>
+        amb la següent comanda:
+      </p>
+
+      <pre><code>cd /etc/netplan/</code></pre>
+
+      <p>
+        Un cop dins del directori, utilitzarem la comanda
+        <strong>ls</strong> per veure els fitxers de configuració
+        disponibles.
+      </p>
+
+      <pre><code>ls</code></pre>
+
+      <p>
+        Després, obrirem el fitxer de configuració amb:
+      </p>
+
+      <pre><code>sudo nano 01-network-manager-all.yaml</code></pre>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/6Sprint1P06Ubuntu.png"
+          alt="Accés al directori Netplan i edició del fitxer de configuració"
+        >
+
+        <figcaption>
+          Accés al directori Netplan i edició del fitxer de configuració.
+        </figcaption>
+
+      </figure>
+
+
+      <!-- PAS 7 -->
+
+      <h3>
+        7. Exemple de configuració amb Netplan
+      </h3>
+
+      <p>
+        Un cop dins del fitxer, podrem configurar els diferents
+        paràmetres de xarxa segons les nostres necessitats.
+        A continuació es mostra un exemple de configuració:
+      </p>
+
+      <pre><code>network:
+  version: 2
+  renderer: NetworkManager
+
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      dhcp6: true</code></pre>
+
+      <p>
+        En aquest exemple, la interfície <strong>enp0s3</strong> obté
+        automàticament la configuració de xarxa mitjançant
+        <strong>DHCP</strong>.
+      </p>
+
+      <figure class="captura-sprint">
+
+        <img
+          src="../../img/ubuntu/sprint1Ubuntu/P6/7Sprint1P06Ubuntu.png"
+          alt="Exemple de configuració de xarxa amb Netplan"
+        >
+
+        <figcaption>
+          Exemple de configuració de la xarxa mitjançant Netplan.
+        </figcaption>
+
+      </figure>
 
 
       <a
