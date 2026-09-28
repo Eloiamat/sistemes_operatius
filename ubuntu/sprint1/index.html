@@ -2,1491 +2,351 @@
 <html lang="ca">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Sprint 1 · Ubuntu</title>
-
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="../../img/logo.svg"
-  >
-
-  <link
-    rel="stylesheet"
-    href="../../css/estils.css"
-  >
-
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <link rel="stylesheet" href="../../css/estils.css">
 </head>
-
 
 <body class="pagina-ubuntu pagina-sprint">
 
-
-<!-- =========================================================
-     CAPÇALERA
-     ========================================================= -->
-
 <header class="hero" id="index-apartats">
-
   <div class="capcalera-portada">
-
-    <a
-      class="marca-portada"
-      href="../../index.html"
-    >
-
+    <a class="marca-portada" href="../../index.html">
       <span class="marca-icon">›_</span>
-
       <span>sistemes_operatius</span>
-
     </a>
-
-
     <nav class="hero-nav">
-
-      <a href="../../index.html">
-        Home
-      </a>
-
-      <a href="../index.html">
-        Índex Ubuntu
-      </a>
-
-      <a href="../../windows/index.html">
-        Índex Windows
-      </a>
-
-      <a
-        href="https://github.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Codi a GitHub ↗
-      </a>
-
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Índex Ubuntu</a>
+      <a href="../../windows/index.html">Índex Windows</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
     </nav>
-
   </div>
-
-
-  <!-- =======================================================
-       HERO DEL SPRINT
-       ======================================================= -->
 
   <div class="sprint-hero">
-
     <div class="sprint-presentacio">
-
-      <p class="etiqueta-curs">
-        UBUNTU · SPRINT 1
-      </p>
-
-      <h1>
-        Instal·lació i<br>
-        configuració inicial
-      </h1>
-
-      <p class="subtitol">
-        Sprint 1 · Sistemes Operatius
-      </p>
-
+      <p class="etiqueta-curs">UBUNTU · SPRINT 1</p>
+      <h1>Instal·lació i<br>configuració inicial</h1>
+      <p class="subtitol">Sprint 1 · Sistemes Operatius</p>
     </div>
 
-
-    <!-- =====================================================
-         ÍNDEX DEL SPRINT
-         ===================================================== -->
-
     <figure class="terminal-portada sprint-terminal">
-
       <div class="terminal-cap">
-
-        <div class="terminal-punts">
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
-
-        <span class="terminal-titol">
-          ubuntu/sprint1
-        </span>
-
+        <div class="terminal-punts"><span></span><span></span><span></span></div>
+        <span class="terminal-titol">ubuntu/sprint1</span>
       </div>
-
 
       <div class="terminal-contingut">
+        <div class="terminal-comanda"><span>$</span><span>cat index.md</span></div>
 
-        <div class="terminal-comanda">
+        <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Instal·lació d'un SO</span></a>
+        <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Punts de restauració</span></a>
+        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Particions</span></a>
+        <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Virtualització</span></a>
+        <a class="terminal-sprint-line" href="#apartat5"><span class="terminal-accent">05</span><span>Gestor d'arrencada</span></a>
+        <a class="terminal-sprint-line" href="#apartat6"><span class="terminal-accent">06</span><span>Xarxa bàsica</span></a>
+        <a class="terminal-sprint-line" href="#apartat7"><span class="terminal-accent">07</span><span>Comandes generals</span></a>
+        <a class="terminal-sprint-line" href="#apartat8"><span class="terminal-accent">08</span><span>Instal·lació d'aplicacions</span></a>
 
-          <span>$</span>
-
-          <span>
-            cat index.md
-          </span>
-
-        </div>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat1"
-        >
-          <span class="terminal-accent">
-            01
-          </span>
-
-          <span>
-            Instal·lació d'un SO
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat2"
-        >
-          <span class="terminal-accent">
-            02
-          </span>
-
-          <span>
-            Punts de restauració
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat3"
-        >
-          <span class="terminal-accent">
-            03
-          </span>
-
-          <span>
-            Particions
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat4"
-        >
-          <span class="terminal-accent">
-            04
-          </span>
-
-          <span>
-            Virtualització
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat5"
-        >
-          <span class="terminal-accent">
-            05
-          </span>
-
-          <span>
-            Gestor d'arrencada
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat6"
-        >
-          <span class="terminal-accent">
-            06
-          </span>
-
-          <span>
-            Xarxa bàsica
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat7"
-        >
-          <span class="terminal-accent">
-            07
-          </span>
-
-          <span>
-            Comandes generals
-          </span>
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat8"
-        >
-          <span class="terminal-accent">
-            08
-          </span>
-
-          <span>
-            Instal·lació d'aplicacions
-          </span>
-        </a>
-
-
-        <div class="terminal-prompt">
-
-          <span>$</span>
-
-          <span>_</span>
-
-        </div>
-
+        <div class="terminal-prompt"><span>$</span><span>_</span></div>
       </div>
-
     </figure>
-
   </div>
-
 </header>
-
-
-
-<!-- =========================================================
-     CONTINGUT
-     ========================================================= -->
 
 <main class="sprint-contingut">
 
+<!-- APARTAT 1 -->
+<section class="sprint-apartat" id="apartat1">
+  <div class="apartat-cap">
+    <span class="apartat-numero">01</span>
+    <div><p class="apartat-etiqueta">APARTAT 01</p><h2>Instal·lació d'un SO</h2></div>
+  </div>
+  <div class="apartat-cos">
+    <h3>1. Crear una màquina virtual</h3>
+    <p>Per crear una màquina virtual, haurem de prémer el botó blau <strong>«Nueva»</strong>, situat a la part dreta de VirtualBox.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/1Sprint1Ubuntu.png" alt="Creació d'una màquina virtual a VirtualBox"><figcaption>Creació d'una nova màquina virtual.</figcaption></figure>
 
-  <!-- =======================================================
-       APARTAT 1 · INSTAL·LACIÓ D'UN SO
-       ======================================================= -->
+    <h3>2. Configurar el nom i la ISO</h3>
+    <p>Un cop dins de la configuració de la màquina virtual, haurem d'introduir el <strong>nom</strong> que volem assignar-li i seleccionar la <strong>ISO d'instal·lació d'Ubuntu</strong>.</p>
+    <p>La ISO haurà d'estar descarregada prèviament i la podrem seleccionar des de la ubicació on l'hàgim desat.</p>
+    <p>Un cop seleccionada, VirtualBox identificarà automàticament la versió del sistema operatiu. En aquest punt, és important <strong>desmarcar l'opció indicada a la captura</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/2Sprint1Ubuntu.png" alt="Configuració del nom i la ISO d'Ubuntu"><figcaption>Configuració del nom i selecció de la ISO d'Ubuntu.</figcaption></figure>
 
-  <section
-    class="sprint-apartat"
-    id="apartat1"
-  >
+    <h3>3. Assignar la memòria i els processadors</h3>
+    <p>A continuació, seleccionarem <strong>«Specify virtual hardware»</strong>.</p>
+    <p>Assignarem a la màquina virtual:</p>
+    <ul><li><strong>4 GB de memòria RAM</strong></li><li><strong>2 processadors (CPU)</strong></li></ul>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/3Sprint1Ubuntu.png" height="200" alt="Assignació de memòria RAM i processadors"><figcaption>Assignació de 4 GB de RAM i 2 processadors.</figcaption></figure>
 
-    <div class="apartat-cap">
+    <h3>4. Crear el disc dur virtual</h3>
+    <p>Accedirem a <strong>«Specify virtual hard disk»</strong> i assignarem <strong>50 GB d'espai</strong> al disc virtual.</p>
+    <p>Aquest espai serà <strong>dinàmic</strong>, és a dir, la màquina virtual no ocuparà els 50 GB immediatament, sinó que anirà utilitzant espai a mesura que el necessiti.</p>
+    <p>Un cop configurat, podrem prémer <strong>«Terminar»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/4Sprint1Ubuntu.png" alt="Configuració del disc dur virtual"><figcaption>Assignació de 50 GB al disc dur virtual.</figcaption></figure>
 
-      <span class="apartat-numero">
-        01
-      </span>
+    <h3>5. Iniciar la instal·lació d'Ubuntu</h3>
+    <p>Quan la màquina virtual s'hagi creat, iniciarem el procés d'instal·lació i seleccionarem l'opció <strong>«Try or Install Ubuntu»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/5Sprint1Ubuntu.png" alt="Inici de la instal·lació d'Ubuntu"><figcaption>Inici del procés d'instal·lació d'Ubuntu.</figcaption></figure>
 
-      <div>
+    <h3>6. Configuració inicial d'Ubuntu</h3>
+    <p>Durant la configuració inicial, podrem seleccionar les opcions segons les nostres preferències fins arribar a l'apartat <strong>«¿Qué quieres hacer con Ubuntu?»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/6Sprint1Ubuntu.png" alt="Configuració inicial d'Ubuntu"><figcaption>Configuració inicial del sistema operatiu.</figcaption></figure>
 
-        <p class="apartat-etiqueta">
-          APARTAT 01
-        </p>
+    <h3>7. Iniciar la instal·lació</h3>
+    <p>En aquest apartat seleccionarem l'opció <strong>«Instalar Ubuntu»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/7Sprint1Ubuntu.png" alt="Opció per instal·lar Ubuntu"><figcaption>Selecció de l'opció d'instal·lació d'Ubuntu.</figcaption></figure>
 
-        <h2>
-          Instal·lació d'un SO
-        </h2>
+    <h3>8. Seleccionar el tipus d'instal·lació</h3>
+    <p>A continuació, seleccionarem l'opció <strong>«Instal·lació interactiva»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/8Sprint1Ubuntu.png" alt="Selecció de la instal·lació interactiva"><figcaption>Selecció de la instal·lació interactiva.</figcaption></figure>
 
-      </div>
+    <h3>9. Seleccionar la instal·lació manual</h3>
+    <p>En el següent apartat, seleccionarem l'opció <strong>«Instal·lació manual»</strong>, ja que volem configurar les particions del sistema manualment.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/9Sprint1Ubuntu.png" alt="Selecció de la instal·lació manual"><figcaption>Selecció de la instal·lació manual.</figcaption></figure>
 
+    <h3>10. Configurar les particions</h3>
+    <p>Ara configurarem manualment les particions del sistema operatiu. Per crear-les, haurem de prémer el botó <strong>«+»</strong>.</p>
+    <p>Les particions es configuraran de la següent manera:</p>
+    <table><thead><tr><th>Espai</th><th>Punt de muntatge</th><th>Format</th></tr></thead><tbody><tr><td>8 GB</td><td>Swap</td><td>Swap</td></tr><tr><td>12 GB</td><td>/home</td><td>Ext4</td></tr><tr><td>Espai restant</td><td>/</td><td>Ext4</td></tr></tbody></table>
+    <p>La partició <strong>Swap</strong> s'utilitzarà com a espai d'intercanvi, mentre que <strong>/home</strong> serà on es guardarà la informació dels usuaris. L'espai restant es destinarà a la partició arrel del sistema, representada pel punt de muntatge <strong>/</strong>.</p>
+    <p>Un cop creades totes les particions, seleccionarem <strong>«Siguiente»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/10Sprint1Ubuntu.png" alt="Configuració de les particions d'Ubuntu"><figcaption>Configuració de les particions del sistema.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/11Sprint1Ubuntu.png" alt="Configuració de la partició Swap"><figcaption>Configuració de la partició Swap.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/12Sprint1Ubuntu.png" alt="Configuració de les particions d'Ubuntu"><figcaption>Configuració de les particions del sistema.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/13Sprint1Ubuntu.png" alt="Configuració final de les particions"><figcaption>Configuració final de les particions abans de continuar.</figcaption></figure>
+
+    <h3>11. Crear el compte d'usuari</h3>
+    <p>A continuació, crearem el nostre <strong>compte d'usuari</strong> i continuarem amb la configuració fins arribar a la pantalla de finalització de la instal·lació.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/14Sprint1Ubuntu.png" alt="Creació del compte d'usuari d'Ubuntu"><figcaption>Creació del compte d'usuari.</figcaption></figure>
+
+    <h3>12. Reiniciar Ubuntu</h3>
+    <p>Quan la instal·lació hagi finalitzat, seleccionarem <strong>«Reiniciar Ubuntu»</strong> per reiniciar la màquina virtual.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/15Sprint1Ubuntu.png" alt="Reinici d'Ubuntu després de la instal·lació"><figcaption>Reinici de la màquina virtual després de la instal·lació.</figcaption></figure>
+
+    <h3>13. Instal·lació finalitzada</h3>
+    <p>Un cop reiniciada la màquina virtual, ja tindrem <strong>Ubuntu instal·lat i funcionant dins de VirtualBox</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P1/16Sprint1Ubuntu.png" alt="Ubuntu instal·lat i funcionant dins de VirtualBox"><figcaption>Ubuntu instal·lat i funcionant correctament dins de VirtualBox.</figcaption></figure>
+
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 2 -->
+<section class="sprint-apartat" id="apartat2">
+  <div class="apartat-cap"><span class="apartat-numero">02</span><div><p class="apartat-etiqueta">APARTAT 02</p><h2>Punts de restauració</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat es documentaran els procediments relacionats amb els punts de restauració del sistema.</p>
+    <p><strong>Contingut pendent de realitzar.</strong></p>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 3 -->
+<section class="sprint-apartat" id="apartat3">
+  <div class="apartat-cap"><span class="apartat-numero">03</span><div><p class="apartat-etiqueta">APARTAT 03</p><h2>Particions</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat es documentarà la gestió i configuració de particions del sistema operatiu.</p>
+    <p><strong>Contingut pendent de realitzar.</strong></p>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 4 -->
+<section class="sprint-apartat" id="apartat4">
+  <div class="apartat-cap"><span class="apartat-numero">04</span><div><p class="apartat-etiqueta">APARTAT 04</p><h2>Virtualització</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat es documentaran els conceptes i procediments relacionats amb la virtualització.</p>
+    <p><strong>Contingut pendent de realitzar.</strong></p>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 5 -->
+<section class="sprint-apartat" id="apartat5">
+  <div class="apartat-cap"><span class="apartat-numero">05</span><div><p class="apartat-etiqueta">APARTAT 05</p><h2>Gestor d'arrencada</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat es documentarà el funcionament i la configuració del gestor d'arrencada.</p>
+    <p><strong>Contingut pendent de realitzar.</strong></p>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 6 -->
+<section class="sprint-apartat" id="apartat6">
+  <div class="apartat-cap"><span class="apartat-numero">06</span><div><p class="apartat-etiqueta">APARTAT 06</p><h2>Xarxa bàsica</h2></div></div>
+  <div class="apartat-cos">
+    <h3>1. Comprovar la connexió a Internet</h3>
+    <p>Per comprovar la nostra connexió a Internet, obrirem una terminal amb la combinació de tecles <strong>Ctrl + Alt + T</strong> i escriurem la comanda:</p>
+    <pre><code>ping 8.8.8.8</code></pre>
+    <p>Aquesta adreça IP correspon a un servidor DNS públic de Google. Si rebem resposta als paquets enviats, significa que tenim connexió a Internet.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/1Sprint1P06Ubuntu.png" alt="Comprovació de la connexió a Internet amb ping"><figcaption>Comprovació de la connexió a Internet amb la comanda ping.</figcaption></figure>
+
+    <h3>2. Comprovar el funcionament del DNS</h3>
+    <p>Per comprovar si el DNS funciona correctament, utilitzarem la següent comanda:</p>
+    <pre><code>ping www.google.es</code></pre>
+    <p>El <strong>DNS (Domain Name System)</strong> és el sistema encarregat de traduir els noms de domini, com ara <strong>www.google.es</strong>, a adreces IP que els ordinadors poden utilitzar per comunicar-se. D'aquesta manera, podem utilitzar noms de domini fàcils de recordar en lloc d'adreces IP.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/2Sprint1P06Ubuntu.png" alt="Comprovació del funcionament del DNS amb ping"><figcaption>Comprovació de la resolució DNS amb la comanda ping.</figcaption></figure>
+
+    <h3>3. Accedir a la configuració de xarxa</h3>
+    <p>Per poder configurar la connexió des de la interfície gràfica, accedirem a la <strong>icona de xarxa</strong> situada a la barra superior i entrarem a <strong>«Configuració de cable»</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/3Sprint1P06Ubuntu.png" alt="Accés a la configuració de cable d'Ubuntu"><figcaption>Accés a la configuració de la connexió de xarxa.</figcaption></figure>
+
+    <h3>4. Obrir els paràmetres de xarxa</h3>
+    <p>Un cop dins de la configuració de cable, entrarem a la <strong>icona de paràmetres (engranatge)</strong> indicada a la imatge per accedir al menú de configuració de la xarxa.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/4Sprint1P06Ubuntu.png" alt="Icona d'accés als paràmetres de xarxa"><figcaption>Accés als paràmetres de la connexió de xarxa.</figcaption></figure>
+
+    <h3>5. Configurar la IP, el DNS i altres paràmetres</h3>
+    <p>Un cop dins dels paràmetres de xarxa, podem configurar diferents aspectes de la connexió, com ara l'<strong>adreça IP</strong>, el <strong>DNS</strong>, la <strong>màscara de xarxa</strong> i altres paràmetres.</p>
+    <p>En aquest cas, deixarem la configuració en <strong>automàtic (DHCP)</strong> perquè la xarxa assigni aquests paràmetres automàticament.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/5Sprint1P06Ubuntu.png" alt="Configuració automàtica de la IP i el DNS"><figcaption>Configuració de la connexió en mode automàtic (DHCP).</figcaption></figure>
+
+    <h3>6. Configurar la xarxa des de terminal amb Netplan</h3>
+    <p>Si no poguéssim accedir a la configuració de xarxa mitjançant la interfície gràfica, també podríem configurar-la des de la terminal.</p>
+    <p>Per fer-ho, accedirem al directori de <strong>Netplan</strong> amb la següent comanda:</p>
+    <pre><code>cd /etc/netplan/</code></pre>
+    <p>Un cop dins del directori, utilitzarem la comanda <strong>ls</strong> per veure els fitxers de configuració disponibles.</p>
+    <pre><code>ls</code></pre>
+    <p>Després, obrirem el fitxer de configuració amb:</p>
+    <pre><code>sudo nano 01-network-manager-all.yaml</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/6Sprint1P06Ubuntu.png" alt="Accés al directori Netplan i edició del fitxer de configuració"><figcaption>Accés al directori Netplan i edició del fitxer de configuració.</figcaption></figure>
+
+    <h3>7. Exemple de configuració amb Netplan</h3>
+    <p>Un cop dins del fitxer, podrem configurar els diferents paràmetres de xarxa segons les nostres necessitats. A continuació es mostra un exemple de configuració:</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P6/7Sprint1P06Ubuntu.png" alt="Exemple de configuració de xarxa amb Netplan"><figcaption>Exemple de configuració de la xarxa mitjançant Netplan.</figcaption></figure>
+
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 7 -->
+<section class="sprint-apartat" id="apartat7">
+  <div class="apartat-cap">
+    <span class="apartat-numero">07</span>
+    <div>
+      <p class="apartat-etiqueta">APARTAT 07</p>
+      <h2>10 comandes bàsiques i necessàries de Linux</h2>
     </div>
-
-
-    <div class="apartat-cos">
-
-
-      <!-- PAS 1 -->
-
-      <h3>
-        1. Crear una màquina virtual
-      </h3>
-
-      <p>
-        Per crear una màquina virtual, haurem de prémer el botó blau
-        <strong>«Nueva»</strong>, situat a la part dreta de VirtualBox.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/1Sprint1Ubuntu.png"
-          alt="Creació d'una màquina virtual a VirtualBox"
-        >
-
-        <figcaption>
-          Creació d'una nova màquina virtual.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 2 -->
-
-      <h3>
-        2. Configurar el nom i la ISO
-      </h3>
-
-      <p>
-        Un cop dins de la configuració de la màquina virtual, haurem
-        d'introduir el <strong>nom</strong> que volem assignar-li i
-        seleccionar la <strong>ISO d'instal·lació d'Ubuntu</strong>.
-      </p>
-
-      <p>
-        La ISO haurà d'estar descarregada prèviament i la podrem
-        seleccionar des de la ubicació on l'hàgim desat.
-      </p>
-
-      <p>
-        Un cop seleccionada, VirtualBox identificarà automàticament
-        la versió del sistema operatiu. En aquest punt, és important
-        <strong>desmarcar l'opció indicada a la captura</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/2Sprint1Ubuntu.png"
-          alt="Configuració del nom i la ISO d'Ubuntu"
-        >
-
-        <figcaption>
-          Configuració del nom i selecció de la ISO d'Ubuntu.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 3 -->
-
-      <h3>
-        3. Assignar la memòria i els processadors
-      </h3>
-
-      <p>
-        A continuació, seleccionarem
-        <strong>«Specify virtual hardware»</strong>.
-      </p>
-
-      <p>
-        Assignarem a la màquina virtual:
-      </p>
-
-      <ul>
-
-        <li>
-          <strong>4 GB de memòria RAM</strong>
-        </li>
-
-        <li>
-          <strong>2 processadors (CPU)</strong>
-        </li>
-
-      </ul>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/3Sprint1Ubuntu.png" height="200"
-          alt="Assignació de memòria RAM i processadors"
-        >
-
-        <figcaption>
-          Assignació de 4 GB de RAM i 2 processadors.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 4 -->
-
-      <h3>
-        4. Crear el disc dur virtual
-      </h3>
-
-      <p>
-        Accedirem a <strong>«Specify virtual hard disk»</strong> i
-        assignarem <strong>50 GB d'espai</strong> al disc virtual.
-      </p>
-
-      <p>
-        Aquest espai serà <strong>dinàmic</strong>, és a dir, la màquina
-        virtual no ocuparà els 50 GB immediatament, sinó que anirà
-        utilitzant espai a mesura que el necessiti.
-      </p>
-
-      <p>
-        Un cop configurat, podrem prémer <strong>«Terminar»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/4Sprint1Ubuntu.png"
-          alt="Configuració del disc dur virtual"
-        >
-
-        <figcaption>
-          Assignació de 50 GB al disc dur virtual.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 5 -->
-
-      <h3>
-        5. Iniciar la instal·lació d'Ubuntu
-      </h3>
-
-      <p>
-        Quan la màquina virtual s'hagi creat, iniciarem el procés
-        d'instal·lació i seleccionarem l'opció
-        <strong>«Try or Install Ubuntu»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/5Sprint1Ubuntu.png"
-          alt="Inici de la instal·lació d'Ubuntu"
-        >
-
-        <figcaption>
-          Inici del procés d'instal·lació d'Ubuntu.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 6 -->
-
-      <h3>
-        6. Configuració inicial d'Ubuntu
-      </h3>
-
-      <p>
-        Durant la configuració inicial, podrem seleccionar les opcions
-        segons les nostres preferències fins arribar a l'apartat
-        <strong>«¿Qué quieres hacer con Ubuntu?»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/6Sprint1Ubuntu.png"
-          alt="Configuració inicial d'Ubuntu"
-        >
-
-        <figcaption>
-          Configuració inicial del sistema operatiu.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 7 -->
-
-      <h3>
-        7. Iniciar la instal·lació
-      </h3>
-
-      <p>
-        En aquest apartat seleccionarem l'opció
-        <strong>«Instalar Ubuntu»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/7Sprint1Ubuntu.png"
-          alt="Opció per instal·lar Ubuntu"
-        >
-
-        <figcaption>
-          Selecció de l'opció d'instal·lació d'Ubuntu.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 8 -->
-
-      <h3>
-        8. Seleccionar el tipus d'instal·lació
-      </h3>
-
-      <p>
-        A continuació, seleccionarem l'opció
-        <strong>«Instal·lació interactiva»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/8Sprint1Ubuntu.png"
-          alt="Selecció de la instal·lació interactiva"
-        >
-
-        <figcaption>
-          Selecció de la instal·lació interactiva.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 9 -->
-
-      <h3>
-        9. Seleccionar la instal·lació manual
-      </h3>
-
-      <p>
-        En el següent apartat, seleccionarem l'opció
-        <strong>«Instal·lació manual»</strong>, ja que volem configurar
-        les particions del sistema manualment.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/9Sprint1Ubuntu.png"
-          alt="Selecció de la instal·lació manual"
-        >
-
-        <figcaption>
-          Selecció de la instal·lació manual.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 10 -->
-
-      <h3>
-        10. Configurar les particions
-      </h3>
-
-      <p>
-        Ara configurarem manualment les particions del sistema operatiu.
-        Per crear-les, haurem de prémer el botó <strong>«+»</strong>.
-      </p>
-
-      <p>
-        Les particions es configuraran de la següent manera:
-      </p>
-
-
-      <table>
-
-        <thead>
-
-          <tr>
-            <th>Espai</th>
-            <th>Punt de muntatge</th>
-            <th>Format</th>
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>8 GB</td>
-            <td>Swap</td>
-            <td>Swap</td>
-          </tr>
-
-          <tr>
-            <td>12 GB</td>
-            <td>/home</td>
-            <td>Ext4</td>
-          </tr>
-
-          <tr>
-            <td>Espai restant</td>
-            <td>/</td>
-            <td>Ext4</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-
-      <p>
-        La partició <strong>Swap</strong> s'utilitzarà com a espai
-        d'intercanvi, mentre que <strong>/home</strong> serà on es
-        guardarà la informació dels usuaris. L'espai restant es
-        destinarà a la partició arrel del sistema, representada pel
-        punt de muntatge <strong>/</strong>.
-      </p>
-
-      <p>
-        Un cop creades totes les particions, seleccionarem
-        <strong>«Siguiente»</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/10Sprint1Ubuntu.png"
-          alt="Configuració de les particions d'Ubuntu"
-        >
-
-        <figcaption>
-          Configuració de les particions del sistema.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/11Sprint1Ubuntu.png"
-          alt="Configuració de la partició Swap"
-        >
-
-        <figcaption>
-          Configuració de la partició Swap.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/12Sprint1Ubuntu.png"
-          alt="Configuració de les particions d'Ubuntu"
-        >
-
-        <figcaption>
-          Configuració de les particions del sistema.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/13Sprint1Ubuntu.png"
-          alt="Configuració final de les particions"
-        >
-
-        <figcaption>
-          Configuració final de les particions abans de continuar.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 11 -->
-
-      <h3>
-        11. Crear el compte d'usuari
-      </h3>
-
-      <p>
-        A continuació, crearem el nostre <strong>compte d'usuari</strong>
-        i continuarem amb la configuració fins arribar a la pantalla de
-        finalització de la instal·lació.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/14Sprint1Ubuntu.png"
-          alt="Creació del compte d'usuari d'Ubuntu"
-        >
-
-        <figcaption>
-          Creació del compte d'usuari.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 12 -->
-
-      <h3>
-        12. Reiniciar Ubuntu
-      </h3>
-
-      <p>
-        Quan la instal·lació hagi finalitzat, seleccionarem
-        <strong>«Reiniciar Ubuntu»</strong> per reiniciar la màquina
-        virtual.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/15Sprint1Ubuntu.png"
-          alt="Reinici d'Ubuntu després de la instal·lació"
-        >
-
-        <figcaption>
-          Reinici de la màquina virtual després de la instal·lació.
-        </figcaption>
-
-      </figure>
-
-
-
-      <!-- PAS 13 -->
-
-      <h3>
-        13. Instal·lació finalitzada
-      </h3>
-
-      <p>
-        Un cop reiniciada la màquina virtual, ja tindrem
-        <strong>Ubuntu instal·lat i funcionant dins de VirtualBox</strong>.
-      </p>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P1/16Sprint1Ubuntu.png"
-          alt="Ubuntu instal·lat i funcionant dins de VirtualBox"
-        >
-
-        <figcaption>
-          Ubuntu instal·lat i funcionant correctament dins de VirtualBox.
-        </figcaption>
-
-      </figure>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 2 · PUNTS DE RESTAURACIÓ
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat2"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        02
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 02
-        </p>
-
-        <h2>
-          Punts de restauració
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentaran els procediments relacionats
-        amb els punts de restauració del sistema.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 3 · PARTICIONS
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat3"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        03
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 03
-        </p>
-
-        <h2>
-          Particions
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentarà la gestió i configuració de
-        particions del sistema operatiu.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 4 · VIRTUALITZACIÓ
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat4"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        04
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 04
-        </p>
-
-        <h2>
-          Virtualització
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentaran els conceptes i procediments
-        relacionats amb la virtualització.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 5 · GESTOR D'ARRENCADA
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat5"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        05
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 05
-        </p>
-
-        <h2>
-          Gestor d'arrencada
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentarà el funcionament i la
-        configuració del gestor d'arrencada.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 6 · XARXA BÀSICA
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat6"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        06
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 06
-        </p>
-
-        <h2>
-          Xarxa bàsica
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <!-- PAS 1 -->
-
-      <h3>
-        1. Comprovar la connexió a Internet
-      </h3>
-
-      <p>
-        Per comprovar la nostra connexió a Internet, obrirem una terminal
-        amb la combinació de tecles <strong>Ctrl + Alt + T</strong> i
-        escriurem la comanda:
-      </p>
-
-      <pre><code>ping 8.8.8.8</code></pre>
-
-      <p>
-        Aquesta adreça IP correspon a un servidor DNS públic de Google.
-        Si rebem resposta als paquets enviats, significa que tenim
-        connexió a Internet.
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/1Sprint1P06Ubuntu.png"
-          alt="Comprovació de la connexió a Internet amb ping"
-        >
-
-        <figcaption>
-          Comprovació de la connexió a Internet amb la comanda ping.
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 2 -->
-
-      <h3>
-        2. Comprovar el funcionament del DNS
-      </h3>
-
-      <p>
-        Per comprovar si el DNS funciona correctament, utilitzarem la
-        següent comanda:
-      </p>
-
-      <pre><code>ping www.google.es</code></pre>
-
-      <p>
-        El <strong>DNS (Domain Name System)</strong> és el sistema
-        encarregat de traduir els noms de domini, com ara
-        <strong>www.google.es</strong>, a adreces IP que els ordinadors
-        poden utilitzar per comunicar-se. D'aquesta manera, podem
-        utilitzar noms de domini fàcils de recordar en lloc d'adreces IP.
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/2Sprint1P06Ubuntu.png"
-          alt="Comprovació del funcionament del DNS amb ping"
-        >
-
-        <figcaption>
-          Comprovació de la resolució DNS amb la comanda ping.
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 3 -->
-
-      <h3>
-        3. Accedir a la configuració de xarxa
-      </h3>
-
-      <p>
-        Per poder configurar la connexió des de la interfície gràfica,
-        accedirem a la <strong>icona de xarxa</strong> situada a la
-        barra superior i entrarem a <strong>«Configuració de cable»</strong>.
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/3Sprint1P06Ubuntu.png"
-          alt="Accés a la configuració de cable d'Ubuntu"
-        >
-
-        <figcaption>
-          Accés a la configuració de la connexió de xarxa.
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 4 -->
-
-      <h3>
-        4. Obrir els paràmetres de xarxa
-      </h3>
-
-      <p>
-        Un cop dins de la configuració de cable, entrarem a la
-        <strong>icona de paràmetres (engranatge)</strong> indicada a la
-        imatge per accedir al menú de configuració de la xarxa.
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/4Sprint1P06Ubuntu.png"
-          alt="Icona d'accés als paràmetres de xarxa"
-        >
-
-        <figcaption>
-          Accés als paràmetres de la connexió de xarxa.
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 5 -->
-
-      <h3>
-        5. Configurar la IP, el DNS i altres paràmetres
-      </h3>
-
-      <p>
-        Un cop dins dels paràmetres de xarxa, podem configurar diferents
-        aspectes de la connexió, com ara l'<strong>adreça IP</strong>,
-        el <strong>DNS</strong>, la <strong>màscara de xarxa</strong>
-        i altres paràmetres.
-      </p>
-
-      <p>
-        En aquest cas, deixarem la configuració en
-        <strong>automàtic (DHCP)</strong> perquè la xarxa assigni
-        aquests paràmetres automàticament.
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/5Sprint1P06Ubuntu.png"
-          alt="Configuració automàtica de la IP i el DNS"
-        >
-
-        <figcaption>
-          Configuració de la connexió en mode automàtic (DHCP).
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 6 -->
-
-      <h3>
-        6. Configurar la xarxa des de terminal amb Netplan
-      </h3>
-
-      <p>
-        Si no poguéssim accedir a la configuració de xarxa mitjançant
-        la interfície gràfica, també podríem configurar-la des de la
-        terminal.
-      </p>
-
-      <p>
-        Per fer-ho, accedirem al directori de <strong>Netplan</strong>
-        amb la següent comanda:
-      </p>
-
-      <pre><code>cd /etc/netplan/</code></pre>
-
-      <p>
-        Un cop dins del directori, utilitzarem la comanda
-        <strong>ls</strong> per veure els fitxers de configuració
-        disponibles.
-      </p>
-
-      <pre><code>ls</code></pre>
-
-      <p>
-        Després, obrirem el fitxer de configuració amb:
-      </p>
-
-      <pre><code>sudo nano 01-network-manager-all.yaml</code></pre>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/6Sprint1P06Ubuntu.png"
-          alt="Accés al directori Netplan i edició del fitxer de configuració"
-        >
-
-        <figcaption>
-          Accés al directori Netplan i edició del fitxer de configuració.
-        </figcaption>
-
-      </figure>
-
-
-      <!-- PAS 7 -->
-
-      <h3>
-        7. Exemple de configuració amb Netplan
-      </h3>
-
-      <p>
-        Un cop dins del fitxer, podrem configurar els diferents
-        paràmetres de xarxa segons les nostres necessitats.
-        A continuació es mostra un exemple de configuració:
-      </p>
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/ubuntu/sprint1Ubuntu/P6/7Sprint1P06Ubuntu.png"
-          alt="Exemple de configuració de xarxa amb Netplan"
-        >
-
-        <figcaption>
-          Exemple de configuració de la xarxa mitjançant Netplan.
-        </figcaption>
-
-      </figure>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 7 · COMANDES GENERALS
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat7"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        07
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 07
-        </p>
-
-        <h2>
-          Comandes generals
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentaran les principals comandes
-        generals utilitzades en Ubuntu.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 8 · INSTAL·LACIÓ D'APLICACIONS
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat8"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        08
-      </span>
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 08
-        </p>
-
-        <h2>
-          Instal·lació d'aplicacions
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        En aquest apartat es documentarà el procés d'instal·lació
-        d'aplicacions en Ubuntu.
-      </p>
-
-
-      <p>
-        <strong>Contingut pendent de realitzar.</strong>
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
+  </div>
+
+  <div class="apartat-cos">
+
+    <h3>Pas inicial — Obrir el terminal</h3>
+    <p>Abans de començar, obrirem el terminal amb la combinació de tecles <strong>Ctrl + Alt + T</strong>.</p>
+    <p>Aquest pas no compta com una de les 10 comandes.</p>
+
+    <h3>1. <code>pwd</code></h3>
+    <p>La comanda <strong>pwd</strong> mostra la ruta absoluta del directori on ens trobem actualment.</p>
+    <p>És útil per saber exactament en quin directori estem treballant.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>pwd</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/1Sprint1P7Ubuntu.png" alt="Execució de la comanda pwd"><figcaption>Execució de la comanda pwd.</figcaption></figure>
+
+    <h3>2. <code>ls</code></h3>
+    <p>La comanda <strong>ls</strong> mostra el contingut del directori actual.</p>
+    <p>Permet veure ràpidament els fitxers i les carpetes que hi ha dins del directori.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>ls</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/2Sprint1P7Ubuntu.png" alt="Execució de la comanda ls"><figcaption>Execució de la comanda ls.</figcaption></figure>
+
+    <h3>3. <code>cd</code></h3>
+    <p>La comanda <strong>cd</strong> permet canviar de directori.</p>
+    <p>Per exemple, amb <strong>cd Documents</strong> podem entrar a la carpeta Documents.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>cd Documents</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/3Sprint1P7Ubuntu.png" alt="Execució de la comanda cd"><figcaption>Execució de la comanda cd.</figcaption></figure>
+
+    <h3>4. <code>mkdir</code></h3>
+    <p>La comanda <strong>mkdir</strong> serveix per crear una carpeta nova.</p>
+    <p>Per exemple, la següent comanda crea una carpeta anomenada <strong>proves</strong>.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>mkdir proves</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/4Sprint1P7Ubuntu.png" alt="Execució de la comanda mkdir"><figcaption>Creació d'una carpeta amb la comanda mkdir.</figcaption></figure>
+
+    <h3>5. <code>touch</code></h3>
+    <p>La comanda <strong>touch</strong> permet crear un fitxer buit.</p>
+    <p>Per exemple, podem crear un fitxer de text anomenat <strong>exemple.txt</strong>.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>touch exemple.txt</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/5Sprint1P7Ubuntu.png" alt="Execució de la comanda touch"><figcaption>Creació d'un fitxer buit amb la comanda touch.</figcaption></figure>
+
+    <h3>6. <code>cp</code></h3>
+    <p>La comanda <strong>cp</strong> serveix per copiar fitxers o directoris.</p>
+    <p>D'aquesta manera podem crear una còpia d'un fitxer i conservar l'original.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>cp exemple.txt copia.txt</code></pre>
+    <p>Aquesta comanda crea una còpia d'<strong>exemple.txt</strong> anomenada <strong>copia.txt</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/6Sprint1P7Ubuntu.png" alt="Execució de la comanda cp"><figcaption>Còpia d'un fitxer amb la comanda cp.</figcaption></figure>
+
+    <h3>7. <code>mv</code></h3>
+    <p>La comanda <strong>mv</strong> serveix per moure fitxers o directoris a una altra ubicació.</p>
+    <p>També es pot utilitzar per canviar el nom d'un fitxer.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>mv copia.txt Documents/</code></pre>
+    <p>Aquesta comanda mou <strong>copia.txt</strong> dins de la carpeta <strong>Documents</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/7Sprint1P7Ubuntu.png" alt="Execució de la comanda mv"><figcaption>Moviment d'un fitxer amb la comanda mv.</figcaption></figure>
+
+    <h3>8. <code>rm</code></h3>
+    <p>La comanda <strong>rm</strong> serveix per eliminar fitxers.</p>
+    <p>Cal utilitzar-la amb precaució, ja que un fitxer eliminat amb <strong>rm</strong> normalment no passa per la paperera.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>rm exemple.txt</code></pre>
+    <p>Aquesta comanda elimina el fitxer <strong>exemple.txt</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/8Sprint1P7Ubuntu.png" alt="Execució de la comanda rm"><figcaption>Eliminació d'un fitxer amb la comanda rm.</figcaption></figure>
+
+    <h3>9. <code>cat</code></h3>
+    <p>La comanda <strong>cat</strong> permet mostrar per pantalla el contingut d'un fitxer de text.</p>
+    <p>És útil per consultar ràpidament un fitxer sense necessitat d'obrir un editor de text.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>cat notes.txt</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/9Sprint1P7Ubuntu.png" alt="Execució de la comanda cat"><figcaption>Visualització del contingut d'un fitxer amb la comanda cat.</figcaption></figure>
+
+    <h3>10. <code>sudo</code></h3>
+    <p>La comanda <strong>sudo</strong> permet executar una altra comanda amb privilegis d'administrador.</p>
+    <p>És necessària per realitzar determinades tasques del sistema que un usuari normal no té permisos per executar.</p>
+    <p><strong>Comanda:</strong></p>
+    <pre><code>sudo comanda</code></pre>
+    <p>Per exemple:</p>
+    <pre><code>sudo ls /root</code></pre>
+    <p>Aquesta comanda intenta mostrar el contingut del directori <strong>/root</strong> utilitzant privilegis d'administrador.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P7/10Sprint1P7Ubuntu.png" alt="Execució de la comanda sudo"><figcaption>Execució d'una comanda amb privilegis d'administrador mitjançant sudo.</figcaption></figure>
+
+    <h3>Fitxer de la pràctica</h3>
+    <p>Al final de la pràctica es pot descarregar el fitxer amb les comandes i les explicacions.</p>
+    <p><strong>Enllaç per descarregar el fitxer:</strong></p>
+    <p><a href="downloads/comandes.txt" download>Descarregar el fitxer de la pràctica</a></p>
+
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 8 -->
+<section class="sprint-apartat" id="apartat8">
+  <div class="apartat-cap"><span class="apartat-numero">08</span><div><p class="apartat-etiqueta">APARTAT 08</p><h2>Instal·lació d'aplicacions</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat es documentarà el procés d'instal·lació d'aplicacions en Ubuntu.</p>
+    <p><strong>Contingut pendent de realitzar.</strong></p>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
 
 </main>
 
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
 <footer class="peu">
-
   <p class="peu-llicencia">
-
-    <a
-      href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-      target="_blank"
-      rel="license noopener"
-    >
-
-      <img
-        src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-        alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0"
-        width="88"
-        height="31"
-      >
-
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener">
+      <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0" width="88" height="31">
     </a>
-
-
-    <span>
-
-      Contingut sota llicència
-
-      <a
-        href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-        target="_blank"
-        rel="license noopener"
-      >
-        CC BY-NC-ND 4.0
-      </a>
-
-    </span>
-
+    <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a></span>
   </p>
-
-
-  <p>
-
-    <a href="../../llicencia.html">
-      Veure informació de la llicència →
-    </a>
-
-  </p>
-
-
-  <p class="autoria">
-
-    Autor:
-
-    <strong>
-      Eloi Amat Farrerons
-    </strong>
-
-    · Sprint 1 · Sistemes Operatius (ISOPJ1)
-
-  </p>
-
+  <p><a href="../../llicencia.html">Veure informació de la llicència →</a></p>
+  <p class="autoria">Autor: <strong>Eloi Amat Farrerons</strong> · Sprint 1 · Sistemes Operatius (ISOPJ1)</p>
 </footer>
 
-
-
 <div class="cursor-personalitzat"></div>
-
 <script src="../../js/cursor.js"></script>
 
 </body>
-
 </html>

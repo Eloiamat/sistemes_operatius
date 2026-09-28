@@ -1,0 +1,15 @@
+   87  una -a > repte/dades/sistema.txt
+   88  uname -a > repte/dades/sistema.txt
+   89  cat repte/dades/sistema.txt 
+   90  date >> repte/dades/sistema.txt 
+   91  who >> repte/dades/sistema.txt 
+   92  grep "Linux" repte/dades/sistema.txt
+   93  cd repte/dades/sistema.txt repte/backup/sistema_copia.txt
+   94  clear
+   95  cd repte/dades/
+   96  ls
+   97  clear
+   98  cd ~
+   99  cp repte/dades/sistema.txt repte/backup/sistema_copia.txt
+  100  ls repte/backup/
+  101  history 15 > comandes.txt
