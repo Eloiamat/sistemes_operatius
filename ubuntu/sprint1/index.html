@@ -322,8 +322,75 @@
 <section class="sprint-apartat" id="apartat8">
   <div class="apartat-cap"><span class="apartat-numero">08</span><div><p class="apartat-etiqueta">APARTAT 08</p><h2>Instal·lació d'aplicacions</h2></div></div>
   <div class="apartat-cos">
-    <p>En aquest apartat es documentarà el procés d'instal·lació d'aplicacions en Ubuntu.</p>
-    <p><strong>Contingut pendent de realitzar.</strong></p>
+
+    <p>En aquest apartat explicarem pas a pas com instal·lar una aplicació descarregant el paquet <strong>.deb</strong> des de la web i com instal·lar una aplicació directament des del terminal. Cal tenir en compte que, si volem disposar de l'última versió disponible, haurem d'utilitzar el primer mètode.</p>
+
+    <h3>1. Descarregar el paquet .deb des de la web</h3>
+    <p>En aquest cas instal·larem <strong>Pacman</strong>. Per començar, accedirem a la web de <a href="https://pkgs.org/download/pacman" target="_blank" rel="noopener">pkgs.org</a> i buscarem el paquet corresponent a la nostra distribució.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/1Sprint1P8Ubuntu.png" alt="Cerca del paquet Pacman a pkgs.org"><figcaption>Cerca del paquet Pacman a pkgs.org.</figcaption></figure>
+
+    <h3>2. Descarregar el paquet</h3>
+    <p>Un cop dins de la pàgina del paquet, copiarem l'enllaç que es mostra a la captura i l'obrirem en una nova pestanya. D'aquesta manera, començarà la descàrrega del paquet <strong>.deb</strong>.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/2Sprint1P8Ubuntu.png" alt="Enllaç de descàrrega del paquet Pacman"><figcaption>Enllaç per descarregar el paquet .deb.</figcaption></figure>
+
+    <h3>3. Accedir al directori de descàrregues</h3>
+    <p>Un cop descarregat el paquet, obrirem una terminal amb la combinació de tecles <strong>Ctrl + Alt + T</strong> i accedirem al directori on s'ha descarregat. En aquest cas, entrarem a la carpeta <strong>Descàrregues</strong> i utilitzarem la comanda <strong>ls</strong> per veure el nom del paquet descarregat.</p>
+    <pre><code>cd Descàrregues
+ls</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/3Sprint1P8Ubuntu.png" alt="Paquet Pacman dins del directori de descàrregues"><figcaption>Paquet .deb descarregat i visualitzat amb la comanda ls.</figcaption></figure>
+
+    <h3>4. Instal·lar el paquet amb dpkg</h3>
+    <p>Per instal·lar Pacman, utilitzarem la comanda <strong>dpkg</strong> amb l'opció <strong>-i</strong>, que permet instal·lar un paquet .deb.</p>
+    <pre><code>sudo dpkg -i "nom.deb"</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/4Sprint1P8Ubuntu.png" alt="Instal·lació de Pacman amb dpkg"><figcaption>Instal·lació del paquet .deb mitjançant dpkg.</figcaption></figure>
+
+    <h3>5. Comprovar la instal·lació</h3>
+    <p>Un cop finalitzada la instal·lació, escriurem <strong>pacman</strong> al terminal. Si la instal·lació s'ha completat correctament, el programa s'hauria d'executar.</p>
+    <pre><code>pacman</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/5Sprint1P8Ubuntu.png" alt="Execució de Pacman des del terminal"><figcaption>Execució de Pacman des del terminal.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/6Sprint1P8Ubuntu.png" alt="Aplicació Pacman oberta"><figcaption>Aplicació Pacman oberta després de la instal·lació.</figcaption></figure>
+
+    <h3>6. Instal·lar una aplicació des del terminal</h3>
+    <p>També podem instal·lar aplicacions directament des del terminal utilitzant els paquets disponibles als repositoris d'Ubuntu. Primer actualitzarem la informació dels paquets disponibles amb la comanda:</p>
+    <pre><code>sudo apt update</code></pre>
+    <p>Aquesta comanda actualitza la informació dels repositoris perquè Ubuntu disposi de la informació més recent dels paquets disponibles.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/7Sprint1P8Ubuntu.png" alt="Actualització dels repositoris amb apt update"><figcaption>Actualització de la informació dels paquets.</figcaption></figure>
+
+    <h3>7. Instal·lar Pacman amb apt</h3>
+    <p>Després d'actualitzar els repositoris, instal·larem Pacman amb la següent comanda:</p>
+    <pre><code>sudo apt install pacman</code></pre>
+    <p>Ubuntu cercarà el paquet als repositoris configurats i començarà la instal·lació si està disponible.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/8Sprint1P8Ubuntu.png" alt="Instal·lació de Pacman amb apt"><figcaption>Instal·lació de Pacman mitjançant apt.</figcaption></figure>
+
+    <h3>8. Comprovar la instal·lació des del terminal</h3>
+    <p>Un cop finalitzada la instal·lació, tornarem a escriure <strong>pacman</strong> al terminal per comprovar que l'aplicació funciona correctament.</p>
+    <pre><code>pacman</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/9Sprint1P8Ubuntu.png" alt="Comprovació de Pacman des del terminal"><figcaption>Comprovació de la instal·lació de Pacman.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/10Sprint1P8Ubuntu.png" alt="Pacman obert"><figcaption>Aplicació Pacman oberta.</figcaption></figure>
+
+    <h3>9. Desinstal·lar l'aplicació</h3>
+    <p>Per desinstal·lar una aplicació instal·lada mitjançant un paquet .deb, obrirem el terminal i utilitzarem la comanda <strong>dpkg -r</strong>. Cal indicar el nom del paquet, però no l'extensió <strong>.deb</strong>.</p>
+    <pre><code>sudo dpkg -r "nom-de-l'aplicació"</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/11Sprint1P8Ubuntu.png" alt="Desinstal·lació de Pacman amb dpkg"><figcaption>Desinstal·lació de l'aplicació mitjançant dpkg.</figcaption></figure>
+
+    <h3>10. Comprovar que l'aplicació s'ha desinstal·lat</h3>
+    <p>Finalment, podem intentar executar <strong>pacman</strong> de nou. Si l'aplicació s'ha desinstal·lat correctament, el sistema ja no hauria de trobar el programa.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/12Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de l'aplicació.</figcaption></figure>
+
+    <h3>Comandes addicionals</h3>
+
+    <h4>1. Reparar dependències</h4>
+    <p>La comanda <strong>sudo apt --fix-broken install</strong> serveix per intentar reparar dependències trencades o paquets que no s'han pogut instal·lar correctament.</p>
+    <pre><code>sudo apt --fix-broken install</code></pre>
+
+    <h4>2. Comprovar si Pacman està instal·lat</h4>
+    <p>La comanda <strong>dpkg -l | grep pacman</strong> permet buscar dins de la llista de paquets instal·lats si hi ha algun paquet relacionat amb <strong>Pacman</strong>.</p>
+    <pre><code>dpkg -l | grep pacman</code></pre>
+
+    <h4>3. Saber on es troba un programa</h4>
+    <p>La comanda <strong>which</strong> mostra la ruta de l'executable d'un programa quan aquest es troba disponible al <strong>PATH</strong> del sistema.</p>
+    <pre><code>which nom-del-programa</code></pre>
+
     <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
   </div>
 </section>
