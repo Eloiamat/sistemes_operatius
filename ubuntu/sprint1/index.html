@@ -368,56 +368,65 @@ ls</code></pre>
     <h3>6. Desinstal·lar l'aplicació amb dpkg</h3>
     <p>Per desinstal·lar una aplicació instal·lada mitjançant un paquet <strong>.deb</strong>, obrirem el terminal i utilitzarem la comanda <strong>dpkg -r</strong>. En aquest cas hem d'indicar el nom del paquet instal·lat, sense l'extensió <strong>.deb</strong>.</p>
     <pre><code>sudo dpkg -r "nom-del-paquet"</code></pre>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/11Sprint1P8Ubuntu.png" alt="Desinstal·lació de Pacman amb dpkg"><figcaption>Desinstal·lació de l'aplicació mitjançant dpkg.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/7Sprint1P8Ubuntu.png" alt="Desinstal·lació de Pacman amb dpkg"><figcaption>Desinstal·lació de l'aplicació mitjançant dpkg.</figcaption></figure>
 
     <h3>7. Comprovar que l'aplicació s'ha desinstal·lat</h3>
     <p>Per comprovar que l'aplicació ja no està disponible, intentarem executar de nou <strong>pacman</strong> des del terminal. Si s'ha desinstal·lat correctament, el sistema no hauria de trobar el programa.</p>
     <pre><code>pacman</code></pre>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/12Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de l'aplicació.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/8Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de l'aplicació.</figcaption></figure>
 
     <h3>8. Actualitzar la informació dels repositoris</h3>
     <p>Ara instal·larem Pacman mitjançant els repositoris d'Ubuntu. Primer actualitzarem la informació dels paquets disponibles amb:</p>
     <pre><code>sudo apt update</code></pre>
     <p>Aquesta comanda actualitza la informació local sobre els paquets disponibles als repositoris configurats al sistema. No actualitza, per si mateixa, els programes ja instal·lats.</p>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/7Sprint1P8Ubuntu.png" alt="Actualització dels repositoris amb apt update"><figcaption>Actualització de la informació dels paquets.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/9Sprint1P8Ubuntu.png" alt="Actualització dels repositoris amb apt update"><figcaption>Actualització de la informació dels paquets.</figcaption></figure>
 
     <h3>9. Instal·lar Pacman amb apt</h3>
     <p>Després d'actualitzar la informació dels repositoris, instal·larem Pacman amb:</p>
     <pre><code>sudo apt install pacman</code></pre>
     <p>El gestor de paquets <strong>apt</strong> cercarà el paquet als repositoris configurats i, si està disponible, iniciarà la instal·lació.</p>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/8Sprint1P8Ubuntu.png" alt="Instal·lació de Pacman amb apt"><figcaption>Instal·lació de Pacman mitjançant apt.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/10Sprint1P8Ubuntu.png" alt="Instal·lació de Pacman amb apt"><figcaption>Instal·lació de Pacman mitjançant apt.</figcaption></figure>
 
     <h3>10. Comprovar la instal·lació amb apt</h3>
     <p>Un cop finalitzada la instal·lació, tornarem a escriure <strong>pacman</strong> al terminal per comprovar que l'aplicació funciona correctament.</p>
     <pre><code>pacman</code></pre>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/9Sprint1P8Ubuntu.png" alt="Comprovació de Pacman des del terminal"><figcaption>Comprovació de la instal·lació de Pacman.</figcaption></figure>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/10Sprint1P8Ubuntu.png" alt="Pacman obert"><figcaption>Aplicació Pacman oberta.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/11Sprint1P8Ubuntu.png" alt="Comprovació de Pacman des del terminal"><figcaption>Comprovació de la instal·lació de Pacman.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/12Sprint1P8Ubuntu.png" alt="Pacman obert"><figcaption>Aplicació Pacman oberta.</figcaption></figure>
 
     <h3>11. Desinstal·lar Pacman amb apt</h3>
     <p>Per desinstal·lar Pacman mitjançant <strong>apt</strong>, utilitzarem:</p>
     <pre><code>sudo apt remove pacman</code></pre>
     <p>La comanda elimina el paquet, però no necessàriament elimina els fitxers de configuració associats.</p>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/11Sprint1P8Ubuntu.png" alt="Desinstal·lació de Pacman amb apt"><figcaption>Desinstal·lació de Pacman mitjançant apt.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/13Sprint1P8Ubuntu.png" alt="Desinstal·lació de Pacman amb apt"><figcaption>Desinstal·lació de Pacman mitjançant apt.</figcaption></figure>
+    
+    <h3>12. Comprovar que l'aplicació s'ha desinstal·lat</h3>
+    <p>Per comprovar que l'aplicació ja no està disponible, intentarem executar de nou <strong>pacman</strong> des del terminal. Si s'ha desinstal·lat correctament, el sistema no hauria de trobar el programa.</p>
+    <pre><code>pacman</code></pre>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/15Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de l'aplicació.</figcaption></figure>
 
-    <h3>12. Instal·lar Pacman amb aptitude</h3>
+    <h3>13. Instal·lar Pacman amb aptitude</h3>
     <p>Com a alternativa a <strong>apt</strong>, també podem utilitzar <strong>aptitude</strong>. Per instal·lar Pacman escriurem:</p>
     <pre><code>sudo aptitude install pacman</code></pre>
     <p><strong>aptitude</strong> és una eina de gestió de paquets que permet instal·lar, actualitzar i eliminar programari, i ofereix una gestió de dependències més interactiva.</p>
+    <p>El gestor de paquets <strong>apt</strong> cercarà el paquet als repositoris configurats i, si està disponible, iniciarà la instal·lació.</p>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/16Sprint1P8Ubuntu.png" alt="Instal·lació de Pacman amb apt"><figcaption>Instal·lació de Pacman mitjançant apt.</figcaption></figure>
 
-    <h3>13. Comprovar la instal·lació amb aptitude</h3>
+
+    <h3>14. Comprovar la instal·lació amb aptitude</h3>
     <p>Un cop instal·lat, tornarem a executar <strong>pacman</strong> per comprovar que el programa funciona correctament.</p>
     <pre><code>pacman</code></pre>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/9Sprint1P8Ubuntu.png" alt="Comprovació de Pacman amb aptitude"><figcaption>Comprovació de l'aplicació instal·lada amb aptitude.</figcaption></figure>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/10Sprint1P8Ubuntu.png" alt="Aplicació Pacman oberta després d'usar aptitude"><figcaption>Aplicació Pacman oberta.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/17Sprint1P8Ubuntu.png" alt="Comprovació de Pacman amb aptitude"><figcaption>Comprovació de l'aplicació instal·lada amb aptitude.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/18Sprint1P8Ubuntu.png" alt="Aplicació Pacman oberta després d'usar aptitude"><figcaption>Aplicació Pacman oberta.</figcaption></figure>
 
-    <h3>14. Desinstal·lar Pacman amb aptitude</h3>
+    <h3>15. Desinstal·lar Pacman amb aptitude</h3>
     <p>Per desinstal·lar Pacman amb <strong>aptitude</strong>, utilitzarem:</p>
     <pre><code>sudo aptitude remove pacman</code></pre>
-
-    <h3>15. Comprovar la desinstal·lació</h3>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/20Sprint1P8Ubuntu.png" alt="Aplicació Pacman oberta després d'usar aptitude"><figcaption>Desinstal·lació de Pacman mitjançant aptitude.</figcaption></figure>
+    
+    <h3>16. Comprovar la desinstal·lació</h3>
     <p>Finalment, podem executar <strong>pacman</strong> de nou per comprovar que el paquet ja no està instal·lat.</p>
     <pre><code>pacman</code></pre>
-    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/12Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de Pacman.</figcaption></figure>
+    <figure class="captura-sprint"><img src="../../img/ubuntu/sprint1Ubuntu/P8/19Sprint1P8Ubuntu.png" alt="Comprovació de la desinstal·lació de Pacman"><figcaption>Comprovació de la desinstal·lació de Pacman.</figcaption></figure>
 
     <h3>Comandes addicionals</h3>
 
