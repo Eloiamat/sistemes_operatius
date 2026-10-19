@@ -1,647 +1,254 @@
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Sprint 1 · Windows</title>
-
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="../../img/logo.svg"
-  >
-
-  <link
-    rel="stylesheet"
-    href="../../css/estils.css"
-  >
-
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <link rel="stylesheet" href="../../css/estils.css">
 </head>
-
-
 <body class="pagina-windows pagina-sprint">
-
-
-<!-- =========================================================
-     CAPÇALERA
-     ========================================================= -->
-
 <header class="hero" id="index-apartats">
-
   <div class="capcalera-portada">
-
-    <a
-      class="marca-portada"
-      href="../../index.html"
-    >
-
-      <span class="marca-icon">›_</span>
-
-      <span>sistemes_operatius</span>
-
-    </a>
-
-
+    <a class="marca-portada" href="../../index.html"><span class="marca-icon">›_</span><span>sistemes_operatius</span></a>
     <nav class="hero-nav">
-
-      <a href="../../index.html">
-        Home
-      </a>
-
-      <a href="../../ubuntu/index.html">
-        Índex Ubuntu
-      </a>
-
-      <a href="../index.html">
-        Índex Windows
-      </a>
-
-      <a
-        href="https://github.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Codi a GitHub ↗
-      </a>
-
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Índex Windows</a>
+      <a href="../../ubuntu/index.html">Índex Ubuntu</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
     </nav>
-
   </div>
-
-
-  <!-- =======================================================
-       HERO DEL SPRINT
-       ======================================================= -->
-
   <div class="sprint-hero">
-
-
     <div class="sprint-presentacio">
-
-      <p class="etiqueta-curs">
-        WINDOWS · SPRINT 1
-      </p>
-
-
-      <h1>
-        Instal·lació i<br>
-        configuració inicial
-      </h1>
-
-
-      <p class="subtitol">
-        Sprint 1 · Sistemes Operatius
-      </p>
-
+      <p class="etiqueta-curs">WINDOWS · SPRINT 1</p>
+      <h1>Instal·lació i<br>configuració inicial</h1>
+      <p class="subtitol">Sprint 1 · Sistemes Operatius</p>
     </div>
-
-
-    <!-- =====================================================
-         TERMINAL / ÍNDEX
-         ===================================================== -->
-
     <figure class="terminal-portada sprint-terminal">
-
-      <div class="terminal-cap">
-
-        <div class="terminal-punts">
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
-
-        <span class="terminal-titol">
-          windows/sprint1
-        </span>
-
-      </div>
-
-
+      <div class="terminal-cap"><div class="terminal-punts"><span></span><span></span><span></span></div><span class="terminal-titol">windows/sprint1</span></div>
       <div class="terminal-contingut">
-
-        <div class="terminal-comanda">
-
-          <span>&gt;</span>
-
-          <span>
-            dir sprints
-          </span>
-
-        </div>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat1"
-        >
-
-          <span class="terminal-accent">
-            01
-          </span>
-
-          <span>
-            Instal·lació del sistema operatiu
-          </span>
-
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat2"
-        >
-
-          <span class="terminal-accent">
-            02
-          </span>
-
-          <span>
-            Configuració de xarxa bàsica
-          </span>
-
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat3"
-        >
-
-          <span class="terminal-accent">
-            03
-          </span>
-
-          <span>
-            Creació d'usuaris i grups
-          </span>
-
-        </a>
-
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat4"
-        >
-
-          <span class="terminal-accent">
-            04
-          </span>
-
-          <span>
-            Comprovació final
-          </span>
-
-        </a>
-
-
-        <div class="terminal-prompt">
-
-          <span>&gt;</span>
-
-          <span>_</span>
-
-        </div>
-
+        <div class="terminal-comanda"><span>$</span><span>cat index.md</span></div>
+        <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Màquina virtual, instal·lació i particions</span></a>
+        <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Llicències</span></a>
+        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Comandes bàsiques</span></a>
+        <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Aplicacions i punts de restauració</span></a>
+        <a class="terminal-sprint-line" href="#apartat5"><span class="terminal-accent">05</span><span>Xarxa</span></a>
+        <div class="terminal-prompt"><span>$</span><span>_</span></div>
       </div>
-
     </figure>
-
   </div>
-
 </header>
-
-
-
-<!-- =========================================================
-     CONTINGUT
-     ========================================================= -->
-
 <main class="sprint-contingut">
 
-
-  <!-- =======================================================
-       APARTAT 1
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat1"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        01
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 01
-        </p>
-
-        <h2>
-          Instal·lació del sistema operatiu
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-
-      <p>
-        Per instal·lar el sistema operatiu Windows seguirem els
-        passos indicats durant el procés d'instal·lació.
-      </p>
-
-
-      <ul>
-
-        <li>
-          Arrencar l'equip des de la imatge d'instal·lació.
-        </li>
-
-        <li>
-          Seleccionar l'idioma del sistema.
-        </li>
-
-        <li>
-          Configurar les opcions d'instal·lació.
-        </li>
-
-        <li>
-          Completar la instal·lació del sistema.
-        </li>
-
-      </ul>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/exemple.svg"
-          alt="Exemple de la instal·lació de Windows"
-        >
-
-        <figcaption>
-          Exemple de la instal·lació del sistema operatiu.
-        </figcaption>
-
-      </figure>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 2
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat2"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        02
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 02
-        </p>
-
-        <h2>
-          Configuració de xarxa bàsica
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-
-
-      <p>
-        Una vegada instal·lat el sistema operatiu, comprovarem
-        la configuració de xarxa i verificarem que l'equip té
-        connectivitat.
-      </p>
-
-
-      <ul>
-
-        <li>
-          Comprovar la connexió de xarxa.
-        </li>
-
-        <li>
-          Consultar la configuració IP.
-        </li>
-
-        <li>
-          Comprovar la porta d'enllaç.
-        </li>
-
-        <li>
-          Realitzar una prova de connectivitat.
-        </li>
-
-      </ul>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 3
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat3"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        03
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 03
-        </p>
-
-        <h2>
-          Creació d'usuaris i grups
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-
-
-      <p>
-        En aquest apartat crearem els usuaris i grups necessaris
-        per treballar amb el sistema operatiu.
-      </p>
-
-
-      <ul>
-
-        <li>
-          Crear un nou usuari.
-        </li>
-
-        <li>
-          Crear un grup.
-        </li>
-
-        <li>
-          Afegir l'usuari al grup.
-        </li>
-
-        <li>
-          Comprovar els permisos corresponents.
-        </li>
-
-      </ul>
-
-
-      <figure class="captura-sprint">
-
-        <img
-          src="../../img/exemple.svg"
-          alt="Exemple de creació d'usuaris i grups"
-        >
-
-        <figcaption>
-          Exemple de configuració d'usuaris i grups.
-        </figcaption>
-
-      </figure>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 4
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat4"
-  >
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        04
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 04
-        </p>
-
-        <h2>
-          Comprovació final
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-
-      <p>
-        Finalment realitzarem una comprovació general per verificar
-        que el sistema operatiu funciona correctament.
-      </p>
-
-
-      <ul>
-
-        <li>
-          Comprovar que el sistema arrenca correctament.
-        </li>
-
-        <li>
-          Comprovar la connexió de xarxa.
-        </li>
-
-        <li>
-          Comprovar els usuaris i grups creats.
-        </li>
-
-        <li>
-          Verificar el funcionament general del sistema.
-        </li>
-
-      </ul>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-    </div>
-
-  </section>
-
+<!-- APARTAT 1 -->
+<section class="sprint-apartat" id="apartat1">
+  <div class="apartat-cap"><span class="apartat-numero">01</span><div><p class="apartat-etiqueta">APARTAT 01</p><h2>Màquina virtual, instal·lació i particions</h2></div></div>
+  <div class="apartat-cos">
+    <h3>1. Crear la màquina virtual i seleccionar la ISO</h3>
+    <p>En primer lloc, crearem una màquina virtual a VirtualBox. Li assignarem un nom i seleccionarem la imatge ISO de Windows, que haurem descarregat prèviament. És important <strong>desmarcar l'opció «Proceed with Unattended Installation»</strong> per poder fer la instal·lació manualment.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/1Sprint1P1Windows.png" alt="Creació de la màquina virtual i selecció de la ISO de Windows"><figcaption>Creació de la màquina virtual i selecció de la ISO.</figcaption></figure>
+    <h3>2. Assignar la memòria RAM i els processadors</h3>
+    <p>A continuació, configurarem els recursos de maquinari de la màquina virtual. Hi assignarem <strong>4 GB de memòria RAM</strong> i <strong>2 processadors (CPU)</strong>, tal com es mostra a la captura.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/2Sprint1P1Windows.png" alt="Assignació de memòria RAM i processadors"><figcaption>Assignació de 4 GB de RAM i 2 CPU.</figcaption></figure>
+    <h3>3. Assignar l'espai del disc virtual</h3>
+    <p>Per continuar, assignarem <strong>50 GB d'espai</strong> al disc dur virtual. Aquest serà l'espai màxim disponible per al disc de la màquina virtual.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/3Sprint1P1Windows.png" alt="Assignació de 50 GB al disc virtual"><figcaption>Assignació de 50 GB al disc dur virtual.</figcaption></figure>
+    <h3>4. Comprovar la configuració de xarxa</h3>
+    <p>Abans d'iniciar la màquina virtual, entrarem a la configuració i comprovarem que l'<strong>Adaptador 1</strong> estigui habilitat i configurat en mode <strong>NAT</strong>. Aquesta configuració permet que Windows utilitzi la connexió a Internet de l'ordinador amfitrió.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/4Sprint1P1Windows.png" alt="Configuració de l'adaptador de xarxa en mode NAT"><figcaption>Comprovació de l'adaptador de xarxa en mode NAT.</figcaption></figure>
+
+    <h3>Instal·lació de Windows i configuració de les particions</h3>
+
+    <h3>1. Crear la partició durant la instal·lació</h3>
+    <p>Quan iniciem la instal·lació de Windows, arribarem a la pantalla de gestió de les particions del disc. Seleccionarem l'espai disponible i farem clic a <strong>«Nou»</strong>. Hi indicarem una mida de <strong>30 GB</strong> per crear la partició on s'instal·larà el sistema operatiu, i deixarem els <strong>20 GB restants</strong> sense assignar per utilitzar-los posteriorment.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/5Sprint1P1Windows.png" alt="Creació d'una partició de 30 GB durant la instal·lació"><figcaption>Creació de la partició de 30 GB per instal·lar Windows.</figcaption></figure>
+    <h3>2. Comprovar el resultat de la partició</h3>
+    <p>Després de crear-la, comprovarem que la partició de 30 GB aparegui a la llista i que quedi espai sense assignar al disc. Aquesta distribució ens permetrà crear una segona partició un cop Windows estigui instal·lat.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/6Sprint1P1Windows.png" alt="Resultat de la partició creada durant la instal·lació"><figcaption>Resultat de la partició després de crear-la.</figcaption></figure>
+    <h3>3. Obrir l'eina de gestió de discs</h3>
+    <p>Un cop dins de Windows, obrirem la finestra <strong>Executar</strong> amb la combinació de tecles <strong>Windows + R</strong>. Hi escriurem <code>diskmgmt.msc</code> i premem Retorn per obrir l'eina de gestió de discs.</p>
+    <pre><code>diskmgmt.msc</code></pre>
+    <p>A continuació, farem clic amb el botó dret sobre l'espai no assignat i seleccionarem <strong>«Nou volum simple»</strong> per iniciar l'assistent de creació de la partició.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/7Sprint1P1Windows.png" alt="Creació d'un volum simple amb la gestió de discs"><figcaption>Creació d'un volum simple a partir de l'espai no assignat.</figcaption></figure>
+    <h3>4. Assignar la lletra i l'etiqueta del volum</h3>
+    <p>Durant l'assistent, assignarem la lletra d'unitat <strong>E:</strong> a la nova partició. També n'establirem l'etiqueta com a <strong>DADES</strong>, per identificar fàcilment que aquest volum està destinat a emmagatzemar fitxers personals.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/8Sprint1P1Windows.png" alt="Assignació de la lletra E i l'etiqueta DADES"><figcaption>Assignació de la lletra E: i del nom DADES.</figcaption></figure>
+    <h3>5. Comprovar la nova partició</h3>
+    <p>Per acabar, comprovarem que la nova partició aparegui a la gestió de discs amb la lletra <strong>E:</strong> i l'etiqueta <strong>DADES</strong>. Així tindrem el sistema operatiu i les dades separats en dos volums.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P1/9Sprint1P1Windows.png" alt="Resultat final de la partició DADES"><figcaption>Resultat final de la nova partició DADES.</figcaption></figure>
+
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 2 -->
+<section class="sprint-apartat" id="apartat2">
+  <div class="apartat-cap"><span class="apartat-numero">02</span><div><p class="apartat-etiqueta">APARTAT 02</p><h2>Llicències</h2></div></div>
+  <div class="apartat-cos">
+    <h3>1. Consultar l'estat d'activació de Windows</h3>
+    <p>En primer lloc, comprovarem quina edició de Windows tenim instal·lada i si està activada. Per fer-ho, accedirem a <strong>Configuració → Actualització i seguretat → Activació</strong>. En aquesta pantalla podrem consultar l'estat de l'activació del sistema.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/1Sprint1P2Windows.png" alt="Consulta de l'estat d'activació de Windows a Configuració"><figcaption>Consulta de l'edició i de l'estat d'activació de Windows.</figcaption></figure>
+    <h3>2. Consultar l'estat de la llicència amb PowerShell</h3>
+    <p>Després, obrirem PowerShell i executarem la comanda següent per consultar si l'activació de Windows és permanent o si té una data de caducitat.</p>
+    <pre><code>slmgr /xpr</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/2Sprint1P2Windows.png" alt="Consulta de l'estat d'activació amb slmgr xpr"><figcaption>Consulta de l'estat de l'activació amb <code>slmgr /xpr</code>.</figcaption></figure>
+    <h3>3. Consultar la informació de la llicència</h3>
+    <p>A continuació, executarem una segona comanda per consultar informació detallada sobre la llicència instal·lada, incloent-hi el canal o tipus de llicència que mostra el sistema.</p>
+    <pre><code>slmgr /dli</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/3Sprint1P2Windows.png" alt="Informació de la llicència amb slmgr dli"><figcaption>Informació de la llicència amb <code>slmgr /dli</code>.</figcaption></figure>
+    <h3>4. Consultar el preu de Windows 11 Home</h3>
+    <p>Per comparar les edicions, accedirem a la <a href="https://www.microsoft.com/es-es/store/b/sale" target="_blank" rel="noopener">botiga de Microsoft</a> i cercarem Windows 11 Home. A la captura es mostra la informació del producte consultat.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/4Sprint1P2Windows.png" alt="Pàgina de Microsoft amb informació de Windows 11 Home"><figcaption>Consulta del producte Windows 11 Home a la botiga de Microsoft.</figcaption></figure>
+    <h3>5. Consultar el preu de Windows 11 Pro</h3>
+    <p>Farem la mateixa consulta per a <strong>Windows 11 Pro</strong> i observarem la informació i el preu que mostra la botiga. El preu pot variar segons la regió, les promocions i el tipus de llicència disponible.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/5Sprint1P2Windows.png" alt="Pàgina de Microsoft amb informació de Windows 11 Pro"><figcaption>Consulta del producte Windows 11 Pro a la botiga de Microsoft.</figcaption></figure>
+    <h3>6. Què és una CAL?</h3>
+    <p>Finalment, consultarem la pàgina de <a href="https://www.microsoft.com/es-es/licensing/product-licensing/client-access-license#tab-cal-y-ml" target="_blank" rel="noopener">llicències d'accés de client de Microsoft</a>. Una <strong>CAL (Client Access License)</strong> és una llicència que autoritza un usuari o dispositiu a accedir a determinats serveis de Microsoft, com ara els serveis d'un servidor Windows. Les CAL no són el mateix que una llicència del sistema operatiu d'escriptori.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P2/6Sprint1P2Windows.png" alt="Informació de Microsoft sobre les llicències CAL"><figcaption>Informació de Microsoft sobre les llicències d'accés de client (CAL).</figcaption></figure>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 3 -->
+<section class="sprint-apartat" id="apartat3">
+  <div class="apartat-cap"><span class="apartat-numero">03</span><div><p class="apartat-etiqueta">APARTAT 03</p><h2>Comandes bàsiques</h2></div></div>
+  <div class="apartat-cos">
+    <p>En aquest apartat utilitzarem les ordres bàsiques del símbol del sistema (CMD) per navegar entre directoris, crear carpetes i fitxers, copiar i moure elements, canviar-ne el nom i eliminar fitxers.</p>
+    <h3>1. Accedir a l'escriptori i crear una carpeta</h3>
+    <p>Primer, entrarem a l'escriptori amb <code>cd Desktop</code>. Després, crearem una carpeta anomenada <code>practica</code> amb <code>mkdir practica</code> i hi entrarem amb <code>cd practica</code>.</p>
+    <pre><code>cd Desktop
+mkdir practica
+cd practica</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/1Sprint1P3Windows.png" alt="Accés a l'escriptori i creació de la carpeta practica"><figcaption>Accés a l'escriptori i creació de la carpeta de pràctiques.</figcaption></figure>
+    <h3>2. Crear un fitxer i comprovar que existeix</h3>
+    <p>Crearem el fitxer de text <code>nota.txt</code> amb el contingut «hola» mitjançant la comanda <code>echo hola &gt; nota.txt</code>. Després, executarem <code>dir</code> per comprovar que el fitxer apareix al directori actual.</p>
+    <pre><code>echo hola &gt; nota.txt
+dir</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/2Sprint1P3Windows.png" alt="Creació de nota.txt i comprovació amb dir"><figcaption>Creació del fitxer nota.txt i comprovació del contingut del directori.</figcaption></figure>
+    <h3>3. Copiar el fitxer</h3>
+    <p>Farem una còpia de <code>nota.txt</code> amb la comanda <code>copy nota.txt copia.txt</code>. A continuació, utilitzarem <code>dir</code> per comprovar que ara hi ha el fitxer original i la còpia.</p>
+    <pre><code>copy nota.txt copia.txt
+dir</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/3Sprint1P3Windows.png" alt="Còpia del fitxer nota.txt"><figcaption>Còpia de nota.txt amb el nom copia.txt.</figcaption></figure>
+    <h3>4. Crear una carpeta i moure-hi la còpia</h3>
+    <p>Crearem la carpeta <code>arxiu</code> amb <code>mkdir arxiu</code>. Tot seguit, hi mourem el fitxer copiat amb <code>move copia.txt arxiu</code>.</p>
+    <pre><code>mkdir arxiu
+move copia.txt arxiu</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/4Sprint1P3Windows.png" alt="Creació de la carpeta arxiu i moviment de copia.txt"><figcaption>Creació de la carpeta arxiu i moviment de la còpia.</figcaption></figure>
+    <h3>5. Canviar el nom d'un fitxer i d'una carpeta</h3>
+    <p>Canviarem el nom del fitxer <code>nota.txt</code> a <code>notes.txt</code> amb <code>ren nota.txt notes.txt</code>. Després, canviarem el nom de la carpeta <code>arxiu</code> a <code>backup</code> amb <code>ren arxiu backup</code>. Amb <code>dir</code> comprovarem els canvis.</p>
+    <pre><code>ren nota.txt notes.txt
+ren arxiu backup
+dir</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/5Sprint1P3Windows.png" alt="Canvi de nom del fitxer i de la carpeta"><figcaption>Canvi de nom del fitxer i de la carpeta.</figcaption></figure>
+    <h3>6. Entrar a la carpeta, consultar-ne el contingut i sortir-ne</h3>
+    <p>Entrarem a la carpeta <code>backup</code> amb <code>cd backup</code>. Amb <code>dir</code> comprovarem que conté el fitxer mogut anteriorment. Finalment, executarem <code>cd ..</code> per tornar al directori pare.</p>
+    <pre><code>cd backup
+dir
+cd ..</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/6Sprint1P3Windows.png" alt="Consulta del contingut de backup i retorn al directori pare"><figcaption>Consulta del contingut de backup i retorn al directori anterior.</figcaption></figure>
+    <h3>7. Mostrar l'estructura de directoris</h3>
+    <p>Executarem <code>tree /f</code> per mostrar l'arbre de carpetes i fitxers del directori actual. L'opció <code>/f</code> fa que també es mostrin els noms dels fitxers.</p>
+    <pre><code>tree /f</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/7Sprint1P3Windows.png" alt="Estructura de carpetes i fitxers amb tree /f"><figcaption>Estructura de directoris mostrada amb tree /f.</figcaption></figure>
+    <h3>8. Eliminar un fitxer i comprovar-ho</h3>
+    <p>Per acabar, eliminarem el fitxer <code>notes.txt</code> amb <code>del notes.txt</code>. Després, executarem <code>dir</code> per comprovar que el fitxer ja no apareix al directori actual.</p>
+    <pre><code>del notes.txt
+dir</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P3/8Sprint1P3Windows.png" alt="Eliminació de notes.txt i comprovació amb dir"><figcaption>Eliminació de notes.txt i comprovació del resultat.</figcaption></figure>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 4 -->
+<section class="sprint-apartat" id="apartat4">
+  <div class="apartat-cap"><span class="apartat-numero">04</span><div><p class="apartat-etiqueta">APARTAT 04</p><h2>Aplicacions i punts de restauració</h2></div></div>
+  <div class="apartat-cos">
+    <h3>1. Activar la protecció del sistema</h3>
+    <p>Primer, cercarem <strong>«Crear un punt de restauració»</strong> al menú Inici. A la finestra de propietats del sistema, seleccionarem el disc <strong>C:</strong> i entrarem a <strong>«Configura»</strong> per activar-ne la protecció del sistema.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/1Sprint1P4Windows.png" alt="Configuració de la protecció del sistema per al disc C"><figcaption>Activació de la protecció del sistema al disc C:.</figcaption></figure>
+    <h3>2. Crear un punt de restauració</h3>
+    <p>Un cop activada la protecció, farem clic a <strong>«Crea»</strong> per generar un punt de restauració. Com a descripció, hi escriurem <strong>«Abans de Chrome»</strong>, ja que el punt es crearà abans d'instal·lar el navegador.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/2Sprint1P4Windows.png" alt="Creació del punt de restauració Abans de Chrome"><figcaption>Creació del punt de restauració «Abans de Chrome».</figcaption></figure>
+    <h3>3. Descarregar i instal·lar Google Chrome</h3>
+    <p>Després, accedirem a la pàgina oficial de <a href="https://www.google.com/intl/ca_ES/chrome/" target="_blank" rel="noopener">Google Chrome</a>, descarregarem l'instal·lador i l'executarem per instal·lar el navegador a Windows.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/3Sprint1P4Windows.png" alt="Descàrrega o instal·lació de Google Chrome"><figcaption>Descàrrega i instal·lació de Google Chrome.</figcaption></figure>
+    <h3>4. Obrir la restauració del sistema</h3>
+    <p>Un cop instal·lat Chrome, tornarem a l'eina de recuperació i seleccionarem <strong>«Restaurar sistema»</strong> per iniciar l'assistent de restauració.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/4Sprint1P4Windows.png" alt="Inici de l'assistent de restauració del sistema"><figcaption>Inici de l'assistent de restauració del sistema.</figcaption></figure>
+    <h3>5. Seleccionar el punt i detectar els programes afectats</h3>
+    <p>A l'assistent, seleccionarem el punt de restauració que hem creat anteriorment. Abans de continuar, farem clic a <strong>«Detecta els programes afectats»</strong> per veure quines aplicacions i controladors poden quedar afectats pel procés.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/5Sprint1P4Windows.png" alt="Selecció del punt de restauració i detecció de programes afectats"><figcaption>Selecció del punt de restauració i comprovació dels programes afectats.</figcaption></figure>
+    <h3>6. Comprovar els programes afectats</h3>
+    <p>En el nostre cas, la llista indica que <strong>Google Chrome</strong> es veurà afectat per la restauració. Això permet comprovar que l'aplicació s'ha instal·lat després de crear el punt de restauració.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/6Sprint1P4Windows.png" alt="Google Chrome a la llista de programes afectats"><figcaption>Google Chrome apareix com a programa afectat per la restauració.</figcaption></figure>
+    <h3>7. Iniciar la restauració</h3>
+    <p>Després de revisar la informació, confirmarem la restauració. Windows iniciarà el procés i reiniciarà l'ordinador virtual. No apagarem la màquina mentre s'estigui duent a terme la restauració.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/7Sprint1P4Windows.png" alt="Inici de la restauració i reinici de Windows"><figcaption>Inici del procés de restauració del sistema.</figcaption></figure>
+    <h3>8. Comprovar el resultat</h3>
+    <p>Quan Windows s'hagi reiniciat, comprovarem si Google Chrome continua instal·lat. Com que el punt de restauració s'havia creat abans d'instal·lar-lo, l'aplicació hauria de deixar d'estar disponible si la restauració s'ha completat correctament.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P4/8Sprint1P4Windows.png" alt="Comprovació de Google Chrome després de restaurar el sistema"><figcaption>Comprovació de l'estat de Google Chrome després de la restauració.</figcaption></figure>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
+
+<!-- APARTAT 5 -->
+<section class="sprint-apartat" id="apartat5">
+  <div class="apartat-cap"><span class="apartat-numero">05</span><div><p class="apartat-etiqueta">APARTAT 05</p><h2>Xarxa</h2></div></div>
+  <div class="apartat-cos">
+    <h3>1. Consultar la configuració de xarxa</h3>
+    <p>En primer lloc, obrirem el símbol del sistema (CMD) i executarem <code>ipconfig</code>. Aquesta comanda mostra la configuració TCP/IP de l'ordinador, com ara l'adreça IPv4, la màscara de subxarxa i la passarel·la predeterminada.</p>
+    <pre><code>ipconfig</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/1Sprint1P5Windows.png" alt="Configuració de xarxa amb ipconfig"><figcaption>Consulta de la configuració de xarxa amb ipconfig.</figcaption></figure>
+    <h3>2. Comprovar la connexió mitjançant un nom de domini</h3>
+    <p>A continuació, farem un ping a <code>google.com</code> per comprovar si l'ordinador pot resoldre el nom de domini i rebre respostes del servidor de destinació.</p>
+    <pre><code>ping google.com</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/2Sprint1P5Windows.png" alt="Comprovació de la connexió amb ping google.com"><figcaption>Prova de connexió amb el nom de domini google.com.</figcaption></figure>
+    <h3>3. Comprovar la connexió amb una adreça IP</h3>
+    <p>Després, enviarem paquets a l'adreça IP pública <code>8.8.8.8</code>, associada al servei DNS públic de Google. Aquesta prova permet comprovar la connectivitat IP sense dependre de la resolució d'un nom de domini.</p>
+    <pre><code>ping 8.8.8.8</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/3Sprint1P5Windows.png" alt="Comprovació de la connectivitat amb ping 8.8.8.8"><figcaption>Prova de connectivitat amb l'adreça IP 8.8.8.8.</figcaption></figure>
+    <h3>4. Desconnectar l'adaptador de xarxa</h3>
+    <p>Per comprovar el comportament del sistema sense connexió, apagarem el cable de xarxa virtual des de la configuració de VirtualBox. Això desconnectarà la màquina virtual de la xarxa.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/4Sprint1P5Windows.png" alt="Desconnexió del cable de xarxa virtual a VirtualBox"><figcaption>Desconnexió del cable de xarxa virtual.</figcaption></figure>
+    <h3>5. Repetir les proves sense connexió</h3>
+    <p>Amb l'adaptador desconnectat, repetirem les ordres anteriors: <code>ipconfig</code>, <code>ping google.com</code> i <code>ping 8.8.8.8</code>. Compararem els resultats amb els obtinguts quan la connexió estava activa.</p>
+    <pre><code>ipconfig
+ping google.com
+ping 8.8.8.8</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/5Sprint1P5Windows.png" alt="Resultats de les proves de xarxa amb el cable desconnectat"><figcaption>Resultats de les ordres de xarxa sense connexió.</figcaption></figure>
+    <h3>6. Tornar a connectar la xarxa i seleccionar el mode pont</h3>
+    <p>Tornarem a habilitar el cable de xarxa virtual. Després, a la configuració de VirtualBox, canviarem el tipus de connexió de l'adaptador a <strong>«Adaptador pont»</strong>. Aquest mode connecta la màquina virtual a la xarxa com si fos un dispositiu independent, subjecte a la configuració de la xarxa física.</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/6Sprint1P5Windows.png" alt="Configuració de l'adaptador de xarxa en mode pont"><figcaption>Configuració de l'adaptador en mode pont.</figcaption></figure>
+    <h3>7. Repetir les proves amb l'adaptador pont</h3>
+    <p>Un cop iniciat Windows amb la nova configuració, tornarem a executar <code>ipconfig</code> i les dues ordres <code>ping</code>. Així podrem observar la configuració IP assignada en mode pont i comprovar si hi ha connectivitat.</p>
+    <pre><code>ipconfig
+ping google.com
+ping 8.8.8.8</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/7Sprint1P5Windows.png" alt="Proves de xarxa amb l'adaptador en mode pont"><figcaption>Resultats de les proves de xarxa en mode pont.</figcaption></figure>
+    <h3>8. Obrir les propietats de la connexió</h3>
+    <p>Per canviar el DNS, obrirem la finestra Executar amb <strong>Windows + R</strong> i hi escriurem <code>ncpa.cpl</code>. A la finestra de connexions de xarxa, farem clic amb el botó dret sobre la connexió activa i seleccionarem <strong>«Propietats»</strong>.</p>
+    <pre><code>ncpa.cpl</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/8Sprint1P5Windows.png" alt="Accés a les propietats de la connexió de xarxa"><figcaption>Accés a les propietats de la connexió de xarxa.</figcaption></figure>
+    <h3>9. Configurar manualment el servidor DNS</h3>
+    <p>A les propietats de la connexió, farem doble clic a <strong>«Protocol d'Internet versió 4 (TCP/IPv4)»</strong>. Seleccionarem l'opció per utilitzar adreces de servidor DNS específiques i introduirem <code>1.2.3.4</code> com a servidor DNS preferit. Desarem els canvis prement «D'acord».</p>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/9Sprint1P5Windows.png" alt="Configuració manual del servidor DNS 1.2.3.4"><figcaption>Configuració manual del servidor DNS 1.2.3.4.</figcaption></figure>
+    <h3>10. Repetir les proves de connectivitat</h3>
+    <p>Per acabar, tornarem a executar les dues ordres <code>ping</code>. La prova amb <code>ping 8.8.8.8</code> comprova la connectivitat IP, mentre que <code>ping google.com</code> també depèn que el nom de domini es resolgui correctament. L'adreça <code>1.2.3.4</code> s'ha configurat com a exercici i no necessàriament és un servidor DNS operatiu; per tant, la resolució de noms pot fallar.</p>
+    <pre><code>ping google.com
+ping 8.8.8.8</code></pre>
+    <figure class="captura-sprint"><img src="../../img/windows/sprint1Windows/P5/10Sprint1P5Windows.png" alt="Proves de ping després de canviar el servidor DNS"><figcaption>Resultats de les proves de connectivitat després de canviar el DNS.</figcaption></figure>
+    <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+  </div>
+</section>
 
 </main>
-
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
 <footer class="peu">
-
-  <p class="peu-llicencia">
-
-    <a
-      href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-      target="_blank"
-      rel="license noopener"
-    >
-
-      <img
-        src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-        alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0"
-        width="88"
-        height="31"
-      >
-
-    </a>
-
-    <span>
-
-      Contingut sota llicència
-
-      <a
-        href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-        target="_blank"
-        rel="license noopener"
-      >
-        CC BY-NC-ND 4.0
-      </a>
-
-    </span>
-
-  </p>
-
-
-  <!-- ENLLAÇ A LA PÀGINA DE LA LLICÈNCIA -->
-
-  <p>
-    <a href="../../llicencia.html">
-      Veure informació de la llicència →
-    </a>
-  </p>
-
-
-  <p class="autoria">
-
-    Autor:
-
-    <strong>
-      Eloi Amat Farrerons
-    </strong>
-
-    · Pràctica 0 · Sistemes Operatius (ISOPJ1)
-
-  </p>
-
+  <p class="peu-llicencia"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0" width="88" height="31"></a><span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a></span></p>
+  <p><a href="../../llicencia.html">Veure informació de la llicència →</a></p>
+  <p class="autoria">Autor: <strong>Eloi Amat Farrerons</strong> · Sprint 1 · Sistemes Operatius (ISOPJ1)</p>
 </footer>
-
 <div class="cursor-personalitzat"></div>
-
 <script src="../../js/cursor.js"></script>
-
 </body>
 </html>
