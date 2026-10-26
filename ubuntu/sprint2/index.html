@@ -41,11 +41,10 @@
 
       <div class="terminal-contingut">
         <div class="terminal-comanda"><span>$</span><span>cat index.md</span></div>
-        <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Preparació dels scripts</span></a>
-        <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Inspecció de processos</span></a>
-        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Gestió de la descàrrega</span></a>
-        <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Prioritat i senyals</span></a>
-        <a class="terminal-sprint-line" href="#apartat5"><span class="terminal-accent">05</span><span>Comprovacions finals</span></a>
+        <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Gestió d'usuaris i grups</span></a>
+        <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Gestió de permisos</span></a>
+        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Gestió de processos</span></a>
+        <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Sistemes de fitxers</span></a>
         <div class="terminal-prompt"><span>$</span><span>_</span></div>
       </div>
     </figure>
@@ -58,7 +57,31 @@
   <section class="sprint-apartat" id="apartat1">
     <div class="apartat-cap">
       <span class="apartat-numero">01</span>
-      <div><p class="apartat-etiqueta">APARTAT 01</p><h2>Preparació dels scripts</h2></div>
+      <div><p class="apartat-etiqueta">APARTAT 01</p><h2>Gestió d'usuaris i grups</h2></div>
+    </div>
+    <div class="apartat-cos">
+      <p>Aquest apartat forma part del Sprint 2. Encara no s'hi ha incorporat documentació perquè les captures i les explicacions facilitades fins ara corresponen a la gestió de processos.</p>
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 2 -->
+  <section class="sprint-apartat" id="apartat2">
+    <div class="apartat-cap">
+      <span class="apartat-numero">02</span>
+      <div><p class="apartat-etiqueta">APARTAT 02</p><h2>Gestió de permisos</h2></div>
+    </div>
+    <div class="apartat-cos">
+      <p>Aquest apartat forma part del Sprint 2. Encara no s'hi ha incorporat documentació perquè les captures i les explicacions facilitades fins ara corresponen a la gestió de processos.</p>
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 1 -->
+  <section class="sprint-apartat" id="apartat3">
+    <div class="apartat-cap">
+      <span class="apartat-numero">03.1</span>
+      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Preparació dels scripts</h2></div>
     </div>
 
     <div class="apartat-cos">
@@ -86,10 +109,10 @@ ls -l</code></pre>
   </section>
 
   <!-- APARTAT 2 -->
-  <section class="sprint-apartat" id="apartat2">
+  <section class="sprint-apartat" id="proc-inspeccio">
     <div class="apartat-cap">
-      <span class="apartat-numero">02</span>
-      <div><p class="apartat-etiqueta">APARTAT 02</p><h2>Inspecció dels processos</h2></div>
+      <span class="apartat-numero">03.2</span>
+      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Inspecció dels processos</h2></div>
     </div>
 
     <div class="apartat-cos">
@@ -135,10 +158,10 @@ ps -o pid,comm -p 1486</code></pre>
   </section>
 
   <!-- APARTAT 3 -->
-  <section class="sprint-apartat" id="apartat3">
+  <section class="sprint-apartat" id="proc-descarga">
     <div class="apartat-cap">
-      <span class="apartat-numero">03</span>
-      <div><p class="apartat-etiqueta">APARTAT 03</p><h2>Gestió de la descàrrega</h2></div>
+      <span class="apartat-numero">03.3</span>
+      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Gestió de la descàrrega</h2></div>
     </div>
 
     <div class="apartat-cos">
@@ -168,10 +191,10 @@ watch -n 1 cat progres.txt</code></pre>
   </section>
 
   <!-- APARTAT 4 -->
-  <section class="sprint-apartat" id="apartat4">
+  <section class="sprint-apartat" id="proc-senyals">
     <div class="apartat-cap">
-      <span class="apartat-numero">04</span>
-      <div><p class="apartat-etiqueta">APARTAT 04</p><h2>Prioritat i senyals dels processos</h2></div>
+      <span class="apartat-numero">03.4</span>
+      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Prioritat i senyals dels processos</h2></div>
     </div>
 
     <div class="apartat-cos">
@@ -210,10 +233,10 @@ ps -o pid,stat,comm -p 5720</code></pre>
   </section>
 
   <!-- APARTAT 5 -->
-  <section class="sprint-apartat" id="apartat5">
+  <section class="sprint-apartat" id="proc-final">
     <div class="apartat-cap">
-      <span class="apartat-numero">05</span>
-      <div><p class="apartat-etiqueta">APARTAT 05</p><h2>Comprovacions finals</h2></div>
+      <span class="apartat-numero">03.5</span>
+      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Comprovacions finals</h2></div>
     </div>
 
     <div class="apartat-cos">
@@ -237,6 +260,18 @@ ps -o pid,stat,comm -p 5720</code></pre>
       <p>En aquesta pràctica he après a identificar i supervisar processos a Ubuntu mitjançant <code>ps</code>, <code>pgrep</code>, <code>pstree</code> i <code>top</code>. També he practicat la gestió de tasques en primer i segon pla amb <code>jobs</code>, <code>bg</code> i <code>fg</code>, i he comprovat la diferència entre finalitzar un procés, aturar-lo temporalment i reprendre'l mitjançant els senyals SIGTERM, SIGKILL, SIGSTOP i SIGCONT.</p>
       <p>Finalment, el fitxer de progrés confirma que la descàrrega de <code>ubuntu.iso</code> s'ha completat. Abans del lliurament, és recomanable verificar amb <code>pgrep</code> que l'estat dels processos restants coincideix amb els requisits de l'enunciat.</p>
 
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 4 -->
+  <section class="sprint-apartat" id="apartat4">
+    <div class="apartat-cap">
+      <span class="apartat-numero">04</span>
+      <div><p class="apartat-etiqueta">APARTAT 04</p><h2>Sistemes de fitxers</h2></div>
+    </div>
+    <div class="apartat-cos">
+      <p>Aquest apartat forma part del Sprint 2. Encara no s'hi ha incorporat documentació perquè les captures i les explicacions facilitades fins ara corresponen a la gestió de processos.</p>
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
   </section>
