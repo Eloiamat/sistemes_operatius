@@ -2,434 +2,264 @@
 <html lang="ca">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sprint 2 · Ubuntu</title>
-
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="../../img/logo.svg"
-  >
-
-  <link
-    rel="stylesheet"
-    href="../../css/estils.css"
-  >
-
+  <title>Sprint 2 · Gestió de processos · Ubuntu</title>
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <link rel="stylesheet" href="../../css/estils.css">
 </head>
-
 
 <body class="pagina-ubuntu pagina-sprint">
 
-
-<!-- =========================================================
-     CAPÇALERA
-     ========================================================= -->
-
 <header class="hero" id="index-apartats">
-
-
-  <!-- CAPÇALERA PRINCIPAL -->
-
   <div class="capcalera-portada">
-
-    <a
-      class="marca-portada"
-      href="../../index.html"
-    >
-
+    <a class="marca-portada" href="../../index.html">
       <span class="marca-icon">›_</span>
-
       <span>sistemes_operatius</span>
-
     </a>
 
-
     <nav class="hero-nav">
-
-      <a href="../../index.html">
-        Home
-      </a>
-
-      <a href="../index.html">
-        Índex Ubuntu
-      </a>
-
-      <a href="../../windows/index.html">
-        Índex Windows
-      </a>
-
-      <a
-        href="https://github.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Codi a GitHub ↗
-      </a>
-
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Índex Ubuntu</a>
+      <a href="../../windows/index.html">Índex Windows</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
     </nav>
-
   </div>
-
-
-  <!-- =======================================================
-       HERO DEL SPRINT
-       ======================================================= -->
 
   <div class="sprint-hero">
-
-
-    <!-- PRESENTACIÓ -->
-
     <div class="sprint-presentacio">
-
-      <p class="etiqueta-curs">
-        UBUNTU · SPRINT 2
-      </p>
-
-
-      <h1>
-        Gestió de<br>
-        programari i usuaris
-      </h1>
-
-
-      <p class="subtitol">
-        Sprint 2 · Sistemes Operatius
-      </p>
-
+      <p class="etiqueta-curs">UBUNTU · SPRINT 2</p>
+      <h1>Gestió de<br>processos</h1>
+      <p class="subtitol">Sprint 2 · Sistemes Operatius</p>
     </div>
 
-
-    <!-- =====================================================
-         TERMINAL / ÍNDEX
-         ===================================================== -->
-
     <figure class="terminal-portada sprint-terminal">
-
-
       <div class="terminal-cap">
-
-        <div class="terminal-punts">
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
-
-
-        <span class="terminal-titol">
-          ubuntu/sprint2
-        </span>
-
+        <div class="terminal-punts"><span></span><span></span><span></span></div>
+        <span class="terminal-titol">ubuntu/sprint2</span>
       </div>
-
 
       <div class="terminal-contingut">
-
-
-        <div class="terminal-comanda">
-
-          <span>$</span>
-
-          <span>
-            cat index.md
-          </span>
-
-        </div>
-
-
-        <!-- APARTAT 1 -->
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat1"
-        >
-
-          <span class="terminal-accent">
-            01
-          </span>
-
-          <span>
-            Gestors de paquets
-          </span>
-
-        </a>
-
-
-        <!-- APARTAT 2 -->
-
-        <a
-          class="terminal-sprint-line"
-          href="#apartat2"
-        >
-
-          <span class="terminal-accent">
-            02
-          </span>
-
-          <span>
-            Permisos i propietaris d'arxius
-          </span>
-
-        </a>
-
-
-        <div class="terminal-prompt">
-
-          <span>$</span>
-
-          <span>_</span>
-
-        </div>
-
+        <div class="terminal-comanda"><span>$</span><span>cat index.md</span></div>
+        <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Preparació dels scripts</span></a>
+        <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Inspecció de processos</span></a>
+        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Gestió de la descàrrega</span></a>
+        <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Prioritat i senyals</span></a>
+        <a class="terminal-sprint-line" href="#apartat5"><span class="terminal-accent">05</span><span>Comprovacions finals</span></a>
+        <div class="terminal-prompt"><span>$</span><span>_</span></div>
       </div>
-
     </figure>
-
   </div>
-
 </header>
-
-
-
-<!-- =========================================================
-     CONTINGUT
-     ========================================================= -->
 
 <main class="sprint-contingut">
 
-
-  <!-- =======================================================
-       APARTAT 1
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat1"
-  >
-
-
+  <!-- APARTAT 1 -->
+  <section class="sprint-apartat" id="apartat1">
     <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        01
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 01
-        </p>
-
-        <h2>
-          Gestors de paquets
-        </h2>
-
-      </div>
-
+      <span class="apartat-numero">01</span>
+      <div><p class="apartat-etiqueta">APARTAT 01</p><h2>Preparació dels scripts</h2></div>
     </div>
-
 
     <div class="apartat-cos">
+      <p>En aquesta pràctica treballarem amb diversos scripts que simulen processos del sistema. Abans d'executar-los, hem de donar-los permisos d'execució i comprovar que els fitxers es troben al directori de treball <strong>~/missio</strong>.</p>
 
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. El gestor de paquets permet
-        <strong>
-          instal·lar, actualitzar i eliminar
-        </strong>
-        programari de manera controlada.
-      </p>
-
-
-      <ul>
-
-        <li>
-          Actualitzar la llista de paquets disponibles.
-        </li>
-
-        <li>
-          Instal·lar un paquet nou.
-        </li>
-
-        <li>
-          Eliminar un paquet que ja no es fa servir.
-        </li>
-
-      </ul>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       APARTAT 2
-       ======================================================= -->
-
-  <section
-    class="sprint-apartat"
-    id="apartat2"
-  >
-
-
-    <div class="apartat-cap">
-
-      <span class="apartat-numero">
-        02
-      </span>
-
-
-      <div>
-
-        <p class="apartat-etiqueta">
-          APARTAT 02
-        </p>
-
-        <h2>
-          Permisos i propietaris d'arxius
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="apartat-cos">
-
-
-      <p>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Cada arxiu
-        té un
-        <strong>
-          propietari, un grup i uns permisos
-        </strong>
-        que en determinen l'accés.
-      </p>
-
-
+      <h3>1. Donar permisos d'execució</h3>
+      <p>Amb la comanda <code>chmod +x</code> donem permís d'execució als scripts de la pràctica. Després, utilitzem <code>ls -l</code> per comprovar els permisos i els noms dels fitxers.</p>
+      <pre><code>chmod +x backup_nocturn espia descarrega.sh sospitosos.sh
+ls -l</code></pre>
       <figure class="captura-sprint">
-
-        <img
-          src="../../img/exemple.svg"
-          alt="Exemple de captura de pantalla dels permisos d'un arxiu"
-        >
-
-        <figcaption>
-          Exemple de captura de pantalla dels permisos d'un arxiu.
-        </figcaption>
-
+        <img src="../../img/ubuntu/sprint2Ubuntu/1Sprint2Ubuntu.png" alt="Permisos d'execució dels scripts i llistat de fitxers">
+        <figcaption>Permisos d'execució i comprovació dels scripts disponibles al directori.</figcaption>
       </figure>
 
+      <h3>2. Executar l'script que inicia la missió</h3>
+      <p>Executem <code>sospitosos.sh</code>. El missatge que apareix al terminal indica que el servidor comença a anar lent. Això inicia la simulació dels processos que haurem d'identificar i gestionar.</p>
+      <pre><code>./sospitosos.sh</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/2Sprint2Ubuntu.png" alt="Execució de sospitosos.sh">
+        <figcaption>Execució de l'script que inicia la simulació de processos sospitosos.</figcaption>
+      </figure>
 
-      <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-
-
-      <a
-        class="tornar-index"
-        href="#index-apartats"
-      >
-        ↑ Tornar a l'índex
-      </a>
-
-
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
-
   </section>
 
+  <!-- APARTAT 2 -->
+  <section class="sprint-apartat" id="apartat2">
+    <div class="apartat-cap">
+      <span class="apartat-numero">02</span>
+      <div><p class="apartat-etiqueta">APARTAT 02</p><h2>Inspecció dels processos</h2></div>
+    </div>
+
+    <div class="apartat-cos">
+      <h3>1. Consultar l'arbre de processos</h3>
+      <p>La comanda <code>pstree</code> mostra els processos en forma d'arbre i permet observar les relacions entre els processos pare i els processos fills. A la sortida es poden identificar els processos <strong>backup_nocturn</strong>, <strong>espia</strong> i altres processos de la simulació.</p>
+      <pre><code>pstree</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/3Sprint2Ubuntu.png" alt="Arbre de processos del sistema">
+        <figcaption>Arbre de processos amb els processos sospitosos visibles.</figcaption>
+      </figure>
+
+      <h3>2. Identificar el consum de CPU amb top</h3>
+      <p>La utilitat <code>top</code> mostra informació actualitzada sobre els processos, incloent-hi l'ús de CPU i memòria. A la captura, els dos processos anomenats <strong>minador</strong> consumeixen una part molt elevada de la CPU, fet que explica la lentitud simulada del servidor.</p>
+      <pre><code>top</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/4Sprint2Ubuntu.png" alt="Consum de CPU dels processos minador">
+        <figcaption>Monitoratge en temps real del consum de recursos amb top.</figcaption>
+      </figure>
+
+      <h3>3. Cercar els processos pel nom</h3>
+      <p>La comanda <code>pgrep -l</code> cerca processos a partir del seu nom. En aquest cas, l'expressió regular permet localitzar els processos relacionats amb <strong>minador</strong>, <strong>espia</strong> i <strong>backup_nocturn</strong>, i mostrar-ne els PID.</p>
+      <pre><code>pgrep -l 'minador|espia|backup'</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/5Sprint2Ubuntu.png" alt="PID dels processos sospitosos localitzats amb pgrep">
+        <figcaption>Identificació dels PID dels processos sospitosos.</figcaption>
+      </figure>
+
+      <h3>4. Consultar informació detallada amb ps</h3>
+      <p>Amb <code>ps</code> podem consultar el PID, el procés pare (PPID), l'estat, el temps d'execució i el percentatge de CPU. La consulta específica del PID 1486 mostra el procés <strong>systemd</strong> com a procés pare de la sessió.</p>
+      <pre><code>ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn
+ps -o pid,comm -p 1486</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/6Sprint2Ubuntu.png" alt="Informació detallada dels processos amb ps">
+        <figcaption>Consulta dels processos sospitosos i del procés pare.</figcaption>
+      </figure>
+
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 3 -->
+  <section class="sprint-apartat" id="apartat3">
+    <div class="apartat-cap">
+      <span class="apartat-numero">03</span>
+      <div><p class="apartat-etiqueta">APARTAT 03</p><h2>Gestió de la descàrrega</h2></div>
+    </div>
+
+    <div class="apartat-cos">
+      <h3>1. Executar la descàrrega i aturar-la temporalment</h3>
+      <p>Executem l'script <code>descarrega.sh</code>. Amb <strong>Ctrl + Z</strong> podem suspendre temporalment el treball que s'està executant en primer pla. La comanda <code>jobs -l</code> mostra els treballs de la sessió i el seu estat.</p>
+      <pre><code>./descarrega.sh
+# Prémer Ctrl + Z
+jobs -l</code></pre>
+      <p>Per reprendre el treball en segon pla utilitzem <code>bg %1</code>. Si necessitem tornar-lo al primer pla, utilitzem <code>fg %1</code>. Un segon terminal amb <code>watch</code> permet observar l'evolució del fitxer de progrés.</p>
+      <pre><code>bg %1
+fg %1
+watch -n 1 cat progres.txt</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/7Sprint2Ubuntu.png" alt="Control de la descàrrega amb jobs, bg i fg">
+        <figcaption>Control de la descàrrega entre primer pla i segon pla, amb el progrés visible en un altre terminal.</figcaption>
+      </figure>
+
+      <h3>2. Monitorar els processos de la descàrrega</h3>
+      <p>Amb <code>top</code> podem filtrar i observar els processos de la descàrrega i els minadors. La captura mostra que <code>descarrega.sh</code> continua executant-se mentre el fitxer <code>progres.txt</code> indica que la descàrrega encara està en curs.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/8Sprint2Ubuntu.png" alt="Monitoratge dels processos i progrés de la descàrrega">
+        <figcaption>Seguiment del consum de CPU i del progrés de la descàrrega.</figcaption>
+      </figure>
+
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 4 -->
+  <section class="sprint-apartat" id="apartat4">
+    <div class="apartat-cap">
+      <span class="apartat-numero">04</span>
+      <div><p class="apartat-etiqueta">APARTAT 04</p><h2>Prioritat i senyals dels processos</h2></div>
+    </div>
+
+    <div class="apartat-cos">
+      <h3>1. Intentar finalitzar els processos espia</h3>
+      <p>La comanda <code>kill</code> envia per defecte el senyal <strong>SIGTERM</strong>, que demana al procés que finalitzi. En aquesta simulació, els processos <strong>espia</strong> continuen apareixent perquè gestionen aquest senyal i no s'acaben amb una petició de finalització normal.</p>
+      <pre><code>pgrep -l espia
+kill 5721 67625 817091 1515361 2135710
+pgrep -l espia</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/9Sprint2Ubuntu.png" alt="Intent de finalització dels processos espia amb SIGTERM">
+        <figcaption>El senyal SIGTERM no elimina els processos espia de la simulació.</figcaption>
+      </figure>
+
+      <h3>2. Finalitzar forçosament els processos espia</h3>
+      <p>Quan un procés no respon a SIGTERM, es pot utilitzar <code>kill -9</code>, que envia <strong>SIGKILL</strong>. Aquest senyal no es pot ignorar ni gestionar pel procés. Després, tornem a executar <code>pgrep</code> per comprovar si queden processos amb aquest nom.</p>
+      <pre><code>kill -9 5721 67625 817091 1515361 2135710
+pgrep -l espia</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/10Sprint2Ubuntu.png" alt="Finalització forçosa dels processos espia">
+        <figcaption>Comprovació que pgrep ja no troba els processos espia indicats.</figcaption>
+      </figure>
+
+      <h3>3. Aturar i reprendre backup_nocturn</h3>
+      <p>Els senyals <strong>SIGSTOP</strong> i <strong>SIGCONT</strong> permeten aturar i reprendre un procés sense eliminar-lo. L'estat <code>T</code> indica que el procés està aturat; després de SIGCONT, el procés torna a executar-se o a esperar segons el seu funcionament.</p>
+      <pre><code>kill -STOP 5720
+ps -o pid,stat,comm -p 5720
+kill -CONT 5720
+ps -o pid,stat,comm -p 5720</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/11Sprint2Ubuntu.png" alt="Aturada i represa de backup_nocturn">
+        <figcaption>El procés backup_nocturn passa a l'estat T i després es reprèn.</figcaption>
+      </figure>
+
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
+
+  <!-- APARTAT 5 -->
+  <section class="sprint-apartat" id="apartat5">
+    <div class="apartat-cap">
+      <span class="apartat-numero">05</span>
+      <div><p class="apartat-etiqueta">APARTAT 05</p><h2>Comprovacions finals</h2></div>
+    </div>
+
+    <div class="apartat-cos">
+      <h3>1. Comprovar que la descàrrega ha finalitzat</h3>
+      <p>El fitxer <code>progres.txt</code> mostra el missatge <strong>«ubuntu.iso COMPLETADA en 35 s»</strong>. Aquesta sortida confirma que la descàrrega simulada ha arribat al 100 % i ha finalitzat correctament.</p>
+      <pre><code>cat progres.txt</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/12Sprint2Ubuntu.png" alt="Missatge de descàrrega completada">
+        <figcaption>El fitxer de progrés indica que ubuntu.iso s'ha completat en 35 segons.</figcaption>
+      </figure>
+
+      <h3>2. Revisar l'arbre del procés de descàrrega</h3>
+      <p>Amb <code>pstree -ps</code> podem consultar els processos antecessors d'un procés concret. La captura mostra la cadena de processos que condueix fins a <code>descarrega.sh</code>, incloent-hi la terminal i l'intèrpret d'ordres que l'han iniciat.</p>
+      <pre><code>pstree -ps $(pgrep descarrega)</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/13Sprint2Ubuntu.png" alt="Arbre de processos pare de descarrega.sh">
+        <figcaption>Arbre de processos pare associat a l'script de descàrrega.</figcaption>
+      </figure>
+
+      <h3>3. Revisió final</h3>
+      <p>Per completar la revisió, podem cercar els noms dels processos de la missió i comprovar si encara n'hi ha algun en execució. Cal tenir en compte que un procés com <code>backup_nocturn</code> pot haver estat reprès i continuar actiu si l'enunciat no indica que s'hagi d'eliminar.</p>
+      <pre><code>pgrep -a -f 'minador|espia|backup_nocturn|descarrega.sh'</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/14Sprint2Ubuntu.png" alt="Captura final de la pràctica de gestió de processos">
+        <figcaption>Captura final aportada per documentar l'estat de la missió.</figcaption>
+      </figure>
+
+      <h3>Conclusió</h3>
+      <p>En aquesta pràctica he après a identificar i supervisar processos a Ubuntu mitjançant <code>ps</code>, <code>pgrep</code>, <code>pstree</code> i <code>top</code>. També he practicat la gestió de tasques en primer i segon pla amb <code>jobs</code>, <code>bg</code> i <code>fg</code>, i he comprovat la diferència entre finalitzar un procés, aturar-lo temporalment i reprendre'l mitjançant els senyals SIGTERM, SIGKILL, SIGSTOP i SIGCONT.</p>
+      <p>Finalment, el fitxer de progrés confirma que la descàrrega de <code>ubuntu.iso</code> s'ha completat. Abans del lliurament, és recomanable verificar amb <code>pgrep</code> que l'estat dels processos restants coincideix amb els requisits de l'enunciat.</p>
+
+      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
+    </div>
+  </section>
 
 </main>
 
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-  <footer class="peu">
-
+<footer class="peu">
   <p class="peu-llicencia">
-
-    <a
-      href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-      target="_blank"
-      rel="license noopener"
-    >
-
-      <img
-        src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-        alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0"
-        width="88"
-        height="31"
-      >
-
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener">
+      <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-SenseObraDerivada 4.0" width="88" height="31">
     </a>
-
-    <span>
-
-      Contingut sota llicència
-
-      <a
-        href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca"
-        target="_blank"
-        rel="license noopener"
-      >
-        CC BY-NC-ND 4.0
-      </a>
-
-    </span>
-
+    <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a></span>
   </p>
-
-
-  <!-- ENLLAÇ A LA PÀGINA DE LA LLICÈNCIA -->
-
-  <p>
-    <a href="../../llicencia.html">
-      Veure informació de la llicència →
-    </a>
-  </p>
-
-
-  <p class="autoria">
-
-    Autor:
-
-    <strong>
-      Eloi Amat Farrerons
-    </strong>
-
-    · Pràctica 0 · Sistemes Operatius (ISOPJ1)
-
-  </p>
-
+  <p><a href="../../llicencia.html">Veure informació de la llicència →</a></p>
+  <p class="autoria">Autor: <strong>Eloi Amat Farrerons</strong> · Sprint 2 · Sistemes Operatius (ISOPJ1)</p>
 </footer>
 
-
 <div class="cursor-personalitzat"></div>
-
 <script src="../../js/cursor.js"></script>
+
 </body>
 </html>
