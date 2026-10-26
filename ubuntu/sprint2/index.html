@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sprint 2 · Gestió de processos · Ubuntu</title>
+  <title>Sprint 2 · Gestió de fitxers · Ubuntu</title>
   <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
   <link rel="stylesheet" href="../../css/estils.css">
 </head>
@@ -27,7 +27,7 @@
   <div class="sprint-hero">
     <div class="sprint-presentacio">
       <p class="etiqueta-curs">UBUNTU · SPRINT 2</p>
-      <h1>Gestió de<br>processos</h1>
+      <h1>Gestió de<br>fitxers</h1>
       <p class="subtitol">Sprint 2 · Sistemes Operatius</p>
     </div>
 
@@ -41,7 +41,7 @@
         <div class="terminal-comanda"><span>$</span><span>cat index.md</span></div>
         <a class="terminal-sprint-line" href="#apartat1"><span class="terminal-accent">01</span><span>Gestió d'usuaris i grups</span></a>
         <a class="terminal-sprint-line" href="#apartat2"><span class="terminal-accent">02</span><span>Gestió de permisos</span></a>
-        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Gestió de processos</span></a>
+        <a class="terminal-sprint-line" href="#apartat3"><span class="terminal-accent">03</span><span>Gestió de fitxers</span></a>
         <a class="terminal-sprint-line" href="#apartat4"><span class="terminal-accent">04</span><span>Sistemes de fitxers</span></a>
         <div class="terminal-prompt"><span>$</span><span>_</span></div>
       </div>
@@ -74,17 +74,18 @@
     </div>
   </section>
 
-  <!-- APARTAT 1 -->
+  <!-- APARTAT 3 -->
   <section class="sprint-apartat" id="apartat3">
     <div class="apartat-cap">
-      <span class="apartat-numero">03.1</span>
-      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Preparació dels scripts</h2></div>
+      <span class="apartat-numero">03</span>
+      <div><p class="apartat-etiqueta">APARTAT 03</p><h2>Gestió de fitxers</h2></div>
     </div>
 
     <div class="apartat-cos">
+<h3>1. Preparació dels scripts</h3>
       <p>En aquesta pràctica treballarem amb diversos scripts que simulen processos del sistema. Abans d'executar-los, hem de donar-los permisos d'execució i comprovar que els fitxers es troben al directori de treball <strong>~/missio</strong>.</p>
 
-      <h3>1. Donar permisos d'execució</h3>
+      <h4>1. Donar permisos d'execució</h4>
       <p>Amb la comanda <code>chmod +x</code> donem permís d'execució als scripts de la pràctica. Després, utilitzem <code>ls -l</code> per comprovar els permisos i els noms dels fitxers.</p>
       <pre><code>chmod +x backup_nocturn espia descarrega.sh sospitosos.sh
 ls -l</code></pre>
@@ -93,7 +94,7 @@ ls -l</code></pre>
         <figcaption>Permisos d'execució i comprovació dels scripts disponibles al directori.</figcaption>
       </figure>
 
-      <h3>2. Executar l'script que inicia la missió</h3>
+      <h4>2. Executar l'script que inicia la missió</h4>
       <p>Executem <code>sospitosos.sh</code>. El missatge que apareix al terminal indica que el servidor comença a anar lent. Això inicia la simulació dels processos que haurem d'identificar i gestionar.</p>
       <pre><code>./sospitosos.sh</code></pre>
       <figure class="captura-sprint">
@@ -101,19 +102,8 @@ ls -l</code></pre>
         <figcaption>Execució de l'script que inicia la simulació de processos sospitosos.</figcaption>
       </figure>
 
-      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
-    </div>
-  </section>
-
-  <!-- APARTAT 2 -->
-  <section class="sprint-apartat" id="proc-inspeccio">
-    <div class="apartat-cap">
-      <span class="apartat-numero">03.2</span>
-      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Inspecció dels processos</h2></div>
-    </div>
-
-    <div class="apartat-cos">
-      <h3>1. Consultar l'arbre de processos</h3>
+<h3>2. Inspecció dels processos</h3>
+<h4>1. Consultar l'arbre de processos</h4>
       <p>La comanda <code>pstree</code> mostra els processos en forma d'arbre i permet observar les relacions entre els processos pare i els processos fills. A la sortida es poden identificar els processos <strong>backup_nocturn</strong>, <strong>espia</strong> i altres processos de la simulació.</p>
       <pre><code>pstree</code></pre>
       <figure class="captura-sprint">
@@ -125,7 +115,7 @@ ls -l</code></pre>
         <figcaption>Continuació i ampliació de l'arbre de processos de la captura anterior.</figcaption>
       </figure>
 
-      <h3>2. Identificar el consum de CPU amb top</h3>
+      <h4>2. Identificar el consum de CPU amb top</h4>
       <p>La utilitat <code>top</code> mostra informació actualitzada sobre els processos, incloent-hi l’ús de CPU i memòria. A la captura, els dos processos anomenats <strong>minador</strong> consumeixen una part molt elevada de la CPU, fet que explica la lentitud simulada del servidor.</p>
       <pre><code>top</code></pre>
       <figure class="captura-sprint">
@@ -133,7 +123,7 @@ ls -l</code></pre>
         <figcaption>Monitoratge en temps real del consum de recursos amb top.</figcaption>
       </figure>
 
-      <h3>3. Cercar els processos pel nom</h3>
+      <h4>3. Cercar els processos pel nom</h4>
       <p>La comanda <code>pgrep -l</code> cerca processos a partir del seu nom. En aquest cas, l'expressió regular permet localitzar els processos relacionats amb <strong>minador</strong>, <strong>espia</strong> i <strong>backup_nocturn</strong>, i mostrar-ne els PID.</p>
       <pre><code>pgrep -l 'minador|espia|backup'</code></pre>
       <figure class="captura-sprint">
@@ -141,7 +131,7 @@ ls -l</code></pre>
         <figcaption>Identificació dels PID dels processos sospitosos.</figcaption>
       </figure>
 
-      <h3>4. Consultar informació detallada amb ps</h3>
+      <h4>4. Consultar informació detallada amb ps</h4>
       <p>Amb <code>ps</code> podem consultar el PID, el procés pare (PPID), l'estat, el temps d'execució i el percentatge de CPU. La consulta específica del PID 1486 mostra el procés <strong>systemd</strong> com a procés pare de la sessió.</p>
       <pre><code>ps -o pid,ppid,user,stat,etime,%cpu,comm -C minador,espia,backup_nocturn
 ps -o pid,comm -p 1486</code></pre>
@@ -150,19 +140,8 @@ ps -o pid,comm -p 1486</code></pre>
         <figcaption>Consulta dels processos sospitosos i del procés pare.</figcaption>
       </figure>
 
-      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
-    </div>
-  </section>
-
-  <!-- APARTAT 3 -->
-  <section class="sprint-apartat" id="proc-descarga">
-    <div class="apartat-cap">
-      <span class="apartat-numero">03.3</span>
-      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Gestió de la descàrrega</h2></div>
-    </div>
-
-    <div class="apartat-cos">
-      <h3>1. Executar la descàrrega i aturar-la temporalment</h3>
+<h3>3. Gestió de la descàrrega</h3>
+<h4>1. Executar la descàrrega i aturar-la temporalment</h4>
       <p>Executem l'script <code>descarrega.sh</code>. Amb <strong>Ctrl + Z</strong> podem suspendre temporalment el treball que s'està executant en primer pla. La comanda <code>jobs -l</code> mostra els treballs de la sessió i el seu estat.</p>
       <pre><code>./descarrega.sh
 # Prémer Ctrl + Z
@@ -176,26 +155,15 @@ watch -n 1 cat progres.txt</code></pre>
         <figcaption>Control de la descàrrega entre primer pla i segon pla, amb el progrés visible en un altre terminal.</figcaption>
       </figure>
 
-      <h3>2. Monitorar els processos de la descàrrega</h3>
+      <h4>2. Monitorar els processos de la descàrrega</h4>
       <p>Amb <code>top</code> podem filtrar i observar els processos de la descàrrega i els minadors. La captura mostra que <code>descarrega.sh</code> continua executant-se mentre el fitxer <code>progres.txt</code> indica que la descàrrega encara està en curs.</p>
       <figure class="captura-sprint">
         <img src="../../img/ubuntu/sprint2Ubuntu/9Sprint2Ubuntu.png" alt="Monitoratge dels processos i progrés de la descàrrega">
         <figcaption>Seguiment del consum de CPU i del progrés de la descàrrega.</figcaption>
       </figure>
 
-      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
-    </div>
-  </section>
-
-  <!-- APARTAT 4 -->
-  <section class="sprint-apartat" id="proc-senyals">
-    <div class="apartat-cap">
-      <span class="apartat-numero">03.4</span>
-      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Prioritat i senyals dels processos</h2></div>
-    </div>
-
-    <div class="apartat-cos">
-      <h3>1. Intentar finalitzar els processos espia</h3>
+<h3>4. Prioritat i senyals dels processos</h3>
+<h4>1. Intentar finalitzar els processos espia</h4>
       <p>La comanda <code>kill</code> envia per defecte el senyal <strong>SIGTERM</strong>, que demana al procés que finalitzi. En aquesta simulació, els processos <strong>espia</strong> continuen apareixent perquè gestionen aquest senyal i no s'acaben amb una petició de finalització normal.</p>
       <pre><code>pgrep -l espia
 kill 5721 67625 817091 1515361 2135710
@@ -205,7 +173,7 @@ pgrep -l espia</code></pre>
         <figcaption>El senyal SIGTERM no elimina els processos espia de la simulació.</figcaption>
       </figure>
 
-      <h3>2. Finalitzar forçosament els processos espia</h3>
+      <h4>2. Finalitzar forçosament els processos espia</h4>
       <p>Quan un procés no respon a SIGTERM, es pot utilitzar <code>kill -9</code>, que envia <strong>SIGKILL</strong>. Aquest senyal no es pot ignorar ni gestionar pel procés. Després, tornem a executar <code>pgrep</code> per comprovar si queden processos amb aquest nom.</p>
       <pre><code>kill -9 5721 67625 817091 1515361 2135710
 pgrep -l espia</code></pre>
@@ -214,7 +182,7 @@ pgrep -l espia</code></pre>
         <figcaption>Comprovació que pgrep ja no troba els processos espia indicats.</figcaption>
       </figure>
 
-      <h3>3. Aturar i reprendre backup_nocturn</h3>
+      <h4>3. Aturar i reprendre backup_nocturn</h4>
       <p>Els senyals <strong>SIGSTOP</strong> i <strong>SIGCONT</strong> permeten aturar i reprendre un procés sense eliminar-lo. L'estat <code>T</code> indica que el procés està aturat; després de SIGCONT, el procés torna a executar-se o a esperar segons el seu funcionament.</p>
       <pre><code>kill -STOP 5720
 ps -o pid,stat,comm -p 5720
@@ -225,19 +193,8 @@ ps -o pid,stat,comm -p 5720</code></pre>
         <figcaption>El procés backup_nocturn passa a l'estat T i després es reprèn.</figcaption>
       </figure>
 
-      <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
-    </div>
-  </section>
-
-  <!-- APARTAT 5 -->
-  <section class="sprint-apartat" id="proc-final">
-    <div class="apartat-cap">
-      <span class="apartat-numero">03.5</span>
-      <div><p class="apartat-etiqueta">GESTIÓ DE PROCESSOS</p><h2>Comprovacions finals</h2></div>
-    </div>
-
-    <div class="apartat-cos">
-      <h3>1. Comprovar que la descàrrega ha finalitzat</h3>
+<h3>5. Comprovacions finals</h3>
+<h4>1. Comprovar que la descàrrega ha finalitzat</h4>
       <p>El fitxer <code>progres.txt</code> mostra el missatge <strong>«ubuntu.iso COMPLETADA en 35 s»</strong>. Aquesta sortida confirma que la descàrrega simulada ha arribat al 100 % i ha finalitzat correctament.</p>
       <pre><code>cat progres.txt</code></pre>
       <figure class="captura-sprint">
@@ -245,7 +202,7 @@ ps -o pid,stat,comm -p 5720</code></pre>
         <figcaption>El fitxer de progrés indica que ubuntu.iso s'ha completat en 35 segons.</figcaption>
       </figure>
 
-      <h3>2. Revisar l'arbre del procés de descàrrega</h3>
+      <h4>2. Revisar l'arbre del procés de descàrrega</h4>
       <p>Amb <code>pstree -ps</code> podem consultar els processos antecessors d'un procés concret. La captura mostra la cadena de processos que condueix fins a <code>descarrega.sh</code>, incloent-hi la terminal i l'intèrpret d'ordres que l'han iniciat.</p>
       <pre><code>pstree -ps $(pgrep descarrega)</code></pre>
       <figure class="captura-sprint">
@@ -256,7 +213,6 @@ ps -o pid,stat,comm -p 5720</code></pre>
       <h3>Conclusió</h3>
       <p>En aquesta pràctica he après a identificar i supervisar processos a Ubuntu mitjançant <code>ps</code>, <code>pgrep</code>, <code>pstree</code> i <code>top</code>. També he practicat la gestió de tasques en primer i segon pla amb <code>jobs</code>, <code>bg</code> i <code>fg</code>, i he comprovat la diferència entre finalitzar un procés, aturar-lo temporalment i reprendre'l mitjançant els senyals SIGTERM, SIGKILL, SIGSTOP i SIGCONT.</p>
       <p>Finalment, el fitxer de progrés confirma que la descàrrega de <code>ubuntu.iso</code> s'ha completat. Abans del lliurament, és recomanable verificar amb <code>pgrep</code> que l'estat dels processos restants coincideix amb els requisits de l'enunciat.</p>
-
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
   </section>
