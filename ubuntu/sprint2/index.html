@@ -82,7 +82,7 @@
     </div>
 
     <div class="apartat-cos">
-<h3>1. Preparació dels scripts</h3>
+<h3>Preparació dels scripts</h3>
       <p>En aquesta pràctica treballarem amb diversos scripts que simulen processos del sistema. Abans d'executar-los, hem de donar-los permisos d'execució i comprovar que els fitxers es troben al directori de treball <strong>~/missio</strong>.</p>
 
       <h4>1. Donar permisos d'execució</h4>
@@ -102,7 +102,7 @@ ls -l</code></pre>
         <figcaption>Execució de l'script que inicia la simulació de processos sospitosos.</figcaption>
       </figure>
 
-<h3>2. Inspecció dels processos</h3>
+<h3>Inspecció dels processos</h3>
 <h4>1. Consultar l'arbre de processos</h4>
       <p>La comanda <code>pstree</code> mostra els processos en forma d'arbre i permet observar les relacions entre els processos pare i els processos fills. A la sortida es poden identificar els processos <strong>backup_nocturn</strong>, <strong>espia</strong> i altres processos de la simulació.</p>
       <pre><code>pstree</code></pre>
@@ -140,7 +140,7 @@ ps -o pid,comm -p 1486</code></pre>
         <figcaption>Consulta dels processos sospitosos i del procés pare.</figcaption>
       </figure>
 
-<h3>3. Gestió de la descàrrega</h3>
+<h3>Gestió de la descàrrega</h3>
 <h4>1. Executar la descàrrega i aturar-la temporalment</h4>
       <p>Executem l'script <code>descarrega.sh</code>. Amb <strong>Ctrl + Z</strong> podem suspendre temporalment el treball que s'està executant en primer pla. La comanda <code>jobs -l</code> mostra els treballs de la sessió i el seu estat.</p>
       <pre><code>./descarrega.sh
@@ -162,7 +162,7 @@ watch -n 1 cat progres.txt</code></pre>
         <figcaption>Seguiment del consum de CPU i del progrés de la descàrrega.</figcaption>
       </figure>
 
-<h3>4. Prioritat i senyals dels processos</h3>
+<h3>Prioritat i senyals dels processos</h3>
 <h4>1. Intentar finalitzar els processos espia</h4>
       <p>La comanda <code>kill</code> envia per defecte el senyal <strong>SIGTERM</strong>, que demana al procés que finalitzi. En aquesta simulació, els processos <strong>espia</strong> continuen apareixent perquè gestionen aquest senyal i no s'acaben amb una petició de finalització normal.</p>
       <pre><code>pgrep -l espia
@@ -193,7 +193,7 @@ ps -o pid,stat,comm -p 5720</code></pre>
         <figcaption>El procés backup_nocturn passa a l'estat T i després es reprèn.</figcaption>
       </figure>
 
-<h3>5. Comprovacions finals</h3>
+<h3>Comprovacions finals</h3>
 <h4>1. Comprovar que la descàrrega ha finalitzat</h4>
       <p>El fitxer <code>progres.txt</code> mostra el missatge <strong>«ubuntu.iso COMPLETADA en 35 s»</strong>. Aquesta sortida confirma que la descàrrega simulada ha arribat al 100 % i ha finalitzat correctament.</p>
       <pre><code>cat progres.txt</code></pre>
