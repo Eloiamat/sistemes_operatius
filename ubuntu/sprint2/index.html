@@ -220,7 +220,54 @@
       <div><p class="apartat-etiqueta">APARTAT 04</p><h2>Sistemes de fitxers</h2></div>
     </div>
     <div class="apartat-cos">
-      <p>Aquest apartat forma part del Sprint 2. Encara no s'hi ha incorporat documentació perquè les captures i les explicacions facilitades fins ara corresponen a la gestió de processos.</p>
+      <h3>Recuperació de fitxers després d'un format</h3>
+      <p>En aquesta pràctica hem treballat amb un disc virtual per comprovar si és possible recuperar fitxers després de formatar-lo. Hem utilitzat una imatge JPG, un PDF i un fitxer de text.</p>
+
+      <h4>1. Preparació del disc virtual</h4>
+      <p>Hem instal·lat <code>photorec</code>, creat el disc virtual <code>disc.img</code> i l'hem formatat amb el sistema de fitxers <strong>ext4</strong>. Després hi hem copiat els tres fitxers i n'hem calculat els hashes SHA-256 per poder comprovar més endavant si s'han recuperat correctament.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/1Sprint2Pt4Ubuntu.png" alt="Preparació del disc virtual i hashes dels fitxers originals">
+        <figcaption>Creació del disc virtual, còpia dels fitxers i càlcul dels hashes originals.</figcaption>
+      </figure>
+
+      <h4>2. Formateig d'alt nivell</h4>
+      <p>Hem tornat a formatar el disc amb <code>mkfs.ext4 -E nodiscard</code>. En muntar-lo, només hi apareixia la carpeta <code>lost+found</code>. Això demostra que s'ha esborrat l'índex del sistema de fitxers, però no necessàriament les dades.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/2Sprint2Pt4Ubuntu.png" alt="Contingut del disc després del formateig d'alt nivell">
+        <figcaption>Després del format, el disc només mostra la carpeta lost+found.</figcaption>
+      </figure>
+
+      <h4>3. Recuperació de la foto i del PDF</h4>
+      <p>Hem executat <code>photorec</code> per buscar fitxers dins del disc virtual. El programa ha recuperat la foto i el PDF, però els ha assignat noms diferents dels originals. Hem comparat els seus hashes SHA-256 i hem comprovat que coincideixen.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/3Sprint2Pt4Ubuntu.png" alt="Recuperació dels fitxers i comparació dels hashes">
+        <figcaption>Recuperació dels fitxers i verificació que la foto i el PDF són idèntics als originals.</figcaption>
+      </figure>
+
+      <h4>4. Recuperació del fitxer de text</h4>
+      <p><code>photorec</code> no ha recuperat <code>notes.txt</code>, perquè els fitxers de text no tenen una capçalera identificable. Per trobar-ne el contingut, hem utilitzat <code>strings</code> i <code>grep</code> per cercar una paraula de la frase desada al disc.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/4Sprint2Pt4Ubuntu.png" alt="Cerca del contingut del fitxer de text amb strings i grep">
+        <figcaption>Localització del text original mitjançant la cerca d'una paraula clau.</figcaption>
+      </figure>
+
+      <h4>5. Esborrat de baix nivell</h4>
+      <p>Finalment, hem sobreescrit el disc virtual amb zeros mitjançant <code>dd</code>. En tornar a executar <code>photorec</code> i cercar el text, ja no hem trobat els fitxers ni la frase. Això confirma que les dades s'han esborrat.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/5Sprint2Pt4Ubuntu.png" alt="Comprovació que no es poden recuperar els fitxers després de sobreescriure el disc">
+        <figcaption>Després de sobreescriure el disc amb zeros, ja no es recuperen els fitxers.</figcaption>
+      </figure>
+
+      <h3>Respostes a les preguntes</h3>
+      <ol>
+        <li>Els fitxers continuaven físicament al disc; el format havia eliminat l'índex que permetia localitzar-los.</li>
+        <li>Perquè els noms originals s'havien perdut amb l'índex i <code>photorec</code> els assigna noms nous.</li>
+        <li>Comparant els hashes SHA-256 de l'original i del fitxer recuperat. Si coincideixen, són idèntics.</li>
+        <li>Perquè un fitxer de text no té una capçalera pròpia. L'hem localitzat amb <code>strings</code> i <code>grep</code>, cercant una paraula del seu contingut.</li>
+        <li>Al nivell 3 hem fet un formateig d'alt nivell; al nivell 5 hem sobreescrit el disc amb zeros, és a dir, un esborrat de baix nivell.</li>
+        <li>Faria un esborrat segur que sobreescrigui les dades o utilitzaria l'eina d'esborrat segur del dispositiu, perquè no es puguin recuperar les fotografies.</li>
+      </ol>
+
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
   </section>
