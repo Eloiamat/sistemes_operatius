@@ -272,16 +272,6 @@
       <h3>Fitxers i particions</h3>
       <p>En aquesta pràctica hem treballat amb la segona partició del disc virtual <code>/dev/sdb</code>. L'hem formatat amb el sistema de fitxers <strong>NTFS</strong> i una mida de clúster de <strong>64 KiB</strong>, pensada per emmagatzemar fitxers grans, com ara les imatges mèdiques. També hem configurat el muntatge automàtic de les dues particions. En el meu cas, les carpetes de muntatge són <code>/mnt/particio1</code> i <code>/mnt/particio2</code>, en lloc de les carpetes <code>/var</code> que apareixen a la guia.</p>
 
-      <h4>Preguntes sobre sectors i blocs</h4>
-      <ol>
-        <li>Un sector és la unitat mínima d'emmagatzematge d'un disc. La seva mida ve determinada pel fabricant del disc i no la triem nosaltres quan el formatem.</li>
-        <li>El meu disc <code>/dev/sdb</code> té sectors lògics de <strong>512 bytes</strong> i sectors físics de <strong>512 bytes</strong>. El valor lògic és la mida que utilitza el sistema per llegir i escriure, mentre que el físic és la mida real dels sectors del disc. En aquest cas, tots dos coincideixen.</li>
-        <li>Un bloc és la unitat mínima d'espai que utilitza el sistema de fitxers per guardar les dades. Està format per un o més sectors i la seva mida es pot escollir quan es formata la partició.</li>
-        <li>La mida del bloc de la partició ext4 és de <strong>2048 bytes (2 KiB)</strong>. Com que cada sector fa 512 bytes, en un bloc hi caben <strong>4 sectors</strong>.</li>
-        <li>Un fitxer de 3000 bytes ocupa <strong>2 blocs</strong> a ext4, perquè un sol bloc de 2048 bytes no és suficient. Per tant, ocupa 4096 bytes i en queden 1096 de lliures. En una partició NTFS amb clústers de 64 KiB, ocupa un clúster sencer de 65.536 bytes i en queden 62.536 de lliures. Cada clúster de 64 KiB conté <strong>128 sectors</strong> de 512 bytes.</li>
-        <li>Sí, els resultats coincideixen amb el càlcul: el fitxer ocupa 4 KiB a ext4 i 64 KiB a NTFS. A radiologia fan servir clústers grans perquè la majoria dels fitxers són imatges mèdiques de mida gran. Així, el sistema pot gestionar aquests fitxers de manera més eficient, encara que es perdi més espai quan es guarden fitxers petits.</li>
-      </ol>
-
       <h4>1. Comprovar la mida dels sectors i dels blocs</h4>
       <p>Primer hem consultat la mida del disc, de les particions i dels sectors amb <code>lsblk</code>. El resultat mostra que tant el sector lògic com el físic fan 512 bytes. Després hem comprovat la mida del bloc de la partició ext4 amb <code>stat</code> i <code>tune2fs</code>: tots dos indiquen 2048 bytes.</p>
       <pre><code>lsblk -o NAME,SIZE,LOG-SEC,PHY-SEC /dev/sdb
@@ -358,6 +348,17 @@ du -h /mnt/particio1/informe.txt /mnt/particio2/informe.txt</code></pre>
         <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
         <figcaption>El mateix fitxer de 3000 bytes ocupa 4 KiB a ext4 i 64 KiB a NTFS.</figcaption>
       </figure>
+      
+      <h4>Preguntes sobre sectors i blocs</h4>
+      <ol>
+        <li>Un sector és la unitat mínima d'emmagatzematge d'un disc. La seva mida ve determinada pel fabricant del disc i no la triem nosaltres quan el formatem.</li>
+        <li>El meu disc <code>/dev/sdb</code> té sectors lògics de <strong>512 bytes</strong> i sectors físics de <strong>512 bytes</strong>. El valor lògic és la mida que utilitza el sistema per llegir i escriure, mentre que el físic és la mida real dels sectors del disc. En aquest cas, tots dos coincideixen.</li>
+        <li>Un bloc és la unitat mínima d'espai que utilitza el sistema de fitxers per guardar les dades. Està format per un o més sectors i la seva mida es pot escollir quan es formata la partició.</li>
+        <li>La mida del bloc de la partició ext4 és de <strong>2048 bytes (2 KiB)</strong>. Com que cada sector fa 512 bytes, en un bloc hi caben <strong>4 sectors</strong>.</li>
+        <li>Un fitxer de 3000 bytes ocupa <strong>2 blocs</strong> a ext4, perquè un sol bloc de 2048 bytes no és suficient. Per tant, ocupa 4096 bytes i en queden 1096 de lliures. En una partició NTFS amb clústers de 64 KiB, ocupa un clúster sencer de 65.536 bytes i en queden 62.536 de lliures. Cada clúster de 64 KiB conté <strong>128 sectors</strong> de 512 bytes.</li>
+        <li>Sí, els resultats coincideixen amb el càlcul: el fitxer ocupa 4 KiB a ext4 i 64 KiB a NTFS. A radiologia fan servir clústers grans perquè la majoria dels fitxers són imatges mèdiques de mida gran. Així, el sistema pot gestionar aquests fitxers de manera més eficient, encara que es perdi més espai quan es guarden fitxers petits.</li>
+      </ol>
+
 
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
