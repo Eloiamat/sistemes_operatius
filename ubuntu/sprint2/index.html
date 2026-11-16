@@ -268,6 +268,97 @@
         <li>Faria un esborrat segur que sobreescrigui les dades o utilitzaria l'eina d'esborrat segur del dispositiu, perquè no es puguin recuperar les fotografies.</li>
       </ol>
 
+
+      <h3>Fitxers i particions</h3>
+      <p>En aquesta pràctica hem treballat amb la segona partició del disc virtual <code>/dev/sdb</code>. L'hem formatat amb el sistema de fitxers <strong>NTFS</strong> i una mida de clúster de <strong>64 KiB</strong>, pensada per emmagatzemar fitxers grans, com ara les imatges mèdiques. També hem configurat el muntatge automàtic de les dues particions. En el meu cas, les carpetes de muntatge són <code>/mnt/particio1</code> i <code>/mnt/particio2</code>, en lloc de les carpetes <code>/var</code> que apareixen a la guia.</p>
+
+      <h4>Preguntes sobre sectors i blocs</h4>
+      <ol>
+        <li>Un sector és la unitat mínima d'emmagatzematge d'un disc. La seva mida ve determinada pel fabricant del disc i no la triem nosaltres quan el formatem.</li>
+        <li>El meu disc <code>/dev/sdb</code> té sectors lògics de <strong>512 bytes</strong> i sectors físics de <strong>512 bytes</strong>. El valor lògic és la mida que utilitza el sistema per llegir i escriure, mentre que el físic és la mida real dels sectors del disc. En aquest cas, tots dos coincideixen.</li>
+        <li>Un bloc és la unitat mínima d'espai que utilitza el sistema de fitxers per guardar les dades. Està format per un o més sectors i la seva mida es pot escollir quan es formata la partició.</li>
+        <li>La mida del bloc de la partició ext4 és de <strong>2048 bytes (2 KiB)</strong>. Com que cada sector fa 512 bytes, en un bloc hi caben <strong>4 sectors</strong>.</li>
+        <li>Un fitxer de 3000 bytes ocupa <strong>2 blocs</strong> a ext4, perquè un sol bloc de 2048 bytes no és suficient. Per tant, ocupa 4096 bytes i en queden 1096 de lliures. En una partició NTFS amb clústers de 64 KiB, ocupa un clúster sencer de 65.536 bytes i en queden 62.536 de lliures. Cada clúster de 64 KiB conté <strong>128 sectors</strong> de 512 bytes.</li>
+        <li>Sí, els resultats coincideixen amb el càlcul: el fitxer ocupa 4 KiB a ext4 i 64 KiB a NTFS. A radiologia fan servir clústers grans perquè la majoria dels fitxers són imatges mèdiques de mida gran. Així, el sistema pot gestionar aquests fitxers de manera més eficient, encara que es perdi més espai quan es guarden fitxers petits.</li>
+      </ol>
+
+      <h4>1. Comprovar la mida dels sectors i dels blocs</h4>
+      <p>Primer hem consultat la mida del disc, de les particions i dels sectors amb <code>lsblk</code>. El resultat mostra que tant el sector lògic com el físic fan 512 bytes. Després hem comprovat la mida del bloc de la partició ext4 amb <code>stat</code> i <code>tune2fs</code>: tots dos indiquen 2048 bytes.</p>
+      <pre><code>lsblk -o NAME,SIZE,LOG-SEC,PHY-SEC /dev/sdb
+stat -f /mnt/particio1 | grep "Block size"
+sudo tune2fs -l /dev/sdb1 | grep "Block size"</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/1Sprint2Pt5Ubuntu.png.png" alt="Mida dels sectors del disc /dev/sdb">
+        <figcaption>Comprovació de la mida dels sectors lògics i físics del disc.</figcaption>
+      </figure>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/2Sprint2Pt5Ubuntu.png.png" alt="Mida del bloc de la partició ext4">
+        <figcaption>La partició ext4 té blocs de 2048 bytes, és a dir, 2 KiB.</figcaption>
+      </figure>
+
+      <h4>2. Comprovar les particions del disc</h4>
+      <p>Amb <code>fdisk</code> hem consultat la taula de particions del disc <code>/dev/sdb</code>. Hi apareixen dues particions: <code>/dev/sdb1</code>, que utilitza ext4, i <code>/dev/sdb2</code>, que serà la partició NTFS. En el meu disc, la primera ocupa aproximadament 5,2 GB i la segona 4,8 GB.</p>
+      <pre><code>sudo fdisk -l /dev/sdb</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/3Sprint2Pt5Ubuntu.png.png" alt="Taula de particions del disc /dev/sdb">
+        <figcaption>Les dues particions del disc: sdb1 en ext4 i sdb2 preparada per a NTFS.</figcaption>
+      </figure>
+
+      <h4>3. Formatar la segona partició en NTFS</h4>
+      <p>Hem formatat <code>/dev/sdb2</code> amb NTFS, l'etiqueta <code>radiologia</code> i una mida de clúster de 65.536 bytes (64 KiB). Després, amb <code>lsblk -f</code>, hem comprovat que la partició utilitza NTFS i que té l'etiqueta correcta.</p>
+      <pre><code>sudo mkfs.ntfs -f -c 65536 -L radiologia /dev/sdb2
+lsblk -f /dev/sdb</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/4Sprint2Pt5Ubuntu.png.png" alt="Format NTFS i comprovació de les particions">
+        <figcaption>Creació del sistema de fitxers NTFS amb clústers de 64 KiB i comprovació amb lsblk.</figcaption>
+      </figure>
+
+      <h4>4. Muntar la partició i comprovar la mida del clúster</h4>
+      <p>Hem creat la carpeta <code>/mnt/particio2</code> i hi hem muntat la partició NTFS. També hem indicat el nostre usuari i grup perquè puguem treballar amb els fitxers sense haver d'utilitzar <code>sudo</code> cada vegada. Amb <code>stat</code> hem comprovat que la mida del bloc és de 65536 bytes.</p>
+      <pre><code>sudo mkdir -p /mnt/particio2
+id -u
+sudo mount -t ntfs-3g -o uid=1000,gid=1000 /dev/sdb2 /mnt/particio2
+stat -f /mnt/particio2 | grep "Block size"
+df -hT /mnt/particio2</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/5Sprint2Pt5Ubuntu.png.png" alt="Mida del clúster i espai de la partició NTFS muntada">
+        <figcaption>La mida del clúster és de 65536 bytes i la partició apareix muntada com a fuseblk.</figcaption>
+      </figure>
+
+      <h4>5. Configurar el muntatge automàtic</h4>
+      <p>Perquè la partició es munti automàticament quan s'iniciï Ubuntu, hem consultat el seu UUID i hem afegit les dues particions al fitxer <code>/etc/fstab</code>. En el meu cas, les rutes són <code>/mnt/particio1</code> i <code>/mnt/particio2</code>. Després hem verificat la configuració i hem comprovat que totes dues particions estiguessin muntades.</p>
+      <pre><code>sudo blkid /dev/sdb2
+sudo cp /etc/fstab /etc/fstab.copia
+sudo nano /etc/fstab
+sudo findmnt --verify
+sudo systemctl daemon-reload
+sudo mount -a
+grep particio /etc/fstab
+df -hT /mnt/particio1 /mnt/particio2</code></pre>
+      <p>Les línies que tenim configurades a <code>/etc/fstab</code> són les següents:</p>
+      <pre><code>UUID=30ad71ff-d217-46a9-b06a-2e8f626d3aa9 /mnt/particio1 ext4 defaults,nofail 0 2
+UUID=0C43D15E10BD818B /mnt/particio2 ntfs-3g defaults,nofail,uid=1000,gid=1000 0 0</code></pre>
+      <p><code>findmnt --verify</code> mostra dos avisos relacionats amb <code>ntfs-3g</code>, però no hi ha errors. Finalment, <code>df</code> confirma que les dues particions estan muntades als directoris correctes.</p>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/6Sprint2Pt5Ubuntu.png.png" alt="Verificació de fstab i muntatge de les dues particions">
+        <figcaption>Comprovació de fstab i de les dues particions muntades a /mnt.</figcaption>
+      </figure>
+
+      <h4>6. Reiniciar i comparar l'espai ocupat per un fitxer</h4>
+      <p>Després de reiniciar l'ordinador, hem comprovat que les dues particions es munten automàticament. A continuació, hem creat un fitxer anomenat <code>informe.txt</code> de 3000 bytes i n'hem fet una còpia a cada partició. Tot i que el fitxer té la mateixa mida en tots dos casos, l'espai que ocupa al disc és diferent: 4 KiB a ext4 i 64 KiB a NTFS.</p>
+      <pre><code>df -hT /mnt/particio1 /mnt/particio2
+cd ~
+yes "Informe de radiologia" | head -c 3000 > informe.txt
+ls -l informe.txt
+sudo cp informe.txt /mnt/particio1/
+cp informe.txt /mnt/particio2/
+ls -l /mnt/particio1/informe.txt /mnt/particio2/informe.txt
+du -h /mnt/particio1/informe.txt /mnt/particio2/informe.txt</code></pre>
+      <figure class="captura-sprint">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
+        <figcaption>El mateix fitxer de 3000 bytes ocupa 4 KiB a ext4 i 64 KiB a NTFS.</figcaption>
+      </figure>
+
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
   </section>
