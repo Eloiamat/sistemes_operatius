@@ -220,54 +220,62 @@
       <div><p class="apartat-etiqueta">APARTAT 04</p><h2>Sistemes de fitxers</h2></div>
     </div>
     <div class="apartat-cos">
-      <h3>Recuperació de fitxers després d'un format</h3>
-      <p>En aquesta pràctica hem treballat amb un disc virtual per comprovar si és possible recuperar fitxers després de formatar-lo. Hem utilitzat una imatge JPG, un PDF i un fitxer de text.</p>
+      <h3>Recuperació de fitxers després d'un formateig</h3>
+      <p>En aquesta pràctica hem comprovat si es poden recuperar fitxers després de formatar un disc. Hem treballat amb un disc virtual que contenia una fotografia, un PDF i un fitxer de text. Després del formateig d'alt nivell, hem intentat recuperar-los amb <code>photorec</code> i, finalment, hem sobreescrit el disc amb zeros per comprovar que les dades ja no es podien recuperar.</p>
 
-      <h4>1. Preparació del disc virtual</h4>
-      <p>Hem instal·lat <code>photorec</code>, creat el disc virtual <code>disc.img</code> i l'hem formatat amb el sistema de fitxers <strong>ext4</strong>. Després hi hem copiat els tres fitxers i n'hem calculat els hashes SHA-256 per poder comprovar més endavant si s'han recuperat correctament.</p>
+      <h4>1. Comprovació dels fitxers originals</h4>
+      <p>Abans de formatar el disc, hem calculat els hashes SHA-256 dels tres fitxers originals i els hem guardat. Aquests codis serveixen per comprovar si els fitxers recuperats són exactament iguals als originals.</p>
+      <pre><code>cat originals.sha</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/1Sprint2Pt4Ubuntu.png" alt="Preparació del disc virtual i hashes dels fitxers originals">
-        <figcaption>Creació del disc virtual, còpia dels fitxers i càlcul dels hashes originals.</figcaption>
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/1Sprint2Pt4Ubuntu.png" alt="Hashes SHA-256 dels fitxers originals">
+        <figcaption>La captura mostra els hashes SHA-256 de foto.jpg, apunts.pdf i notes.txt. Cada fitxer té un codi propi que més endavant compararem amb els fitxers recuperats.</figcaption>
       </figure>
 
-      <h4>2. Formateig d'alt nivell</h4>
-      <p>Hem tornat a formatar el disc amb <code>mkfs.ext4 -E nodiscard</code>. En muntar-lo, només hi apareixia la carpeta <code>lost+found</code>. Això demostra que s'ha esborrat l'índex del sistema de fitxers, però no necessàriament les dades.</p>
+      <h4>2. Comprovació després del formateig d'alt nivell</h4>
+      <p>Hem tornat a formatar el disc virtual amb <code>mkfs.ext4 -E nodiscard</code> i l'hem muntat per consultar-ne el contingut.</p>
+      <pre><code>ls -l /mnt/prova</code></pre>
       <figure class="captura-sprint">
         <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/2Sprint2Pt4Ubuntu.png" alt="Contingut del disc després del formateig d'alt nivell">
-        <figcaption>Després del format, el disc només mostra la carpeta lost+found.</figcaption>
+        <figcaption>Només apareix la carpeta lost+found. Els fitxers ja no es veuen perquè el formateig ha creat un índex nou, però les dades encara poden continuar al disc.</figcaption>
       </figure>
 
-      <h4>3. Recuperació de la foto i del PDF</h4>
-      <p>Hem executat <code>photorec</code> per buscar fitxers dins del disc virtual. El programa ha recuperat la foto i el PDF, però els ha assignat noms diferents dels originals. Hem comparat els seus hashes SHA-256 i hem comprovat que coincideixen.</p>
+      <h4>3. Recuperació de la fotografia i del PDF</h4>
+      <p>Hem utilitzat <code>photorec</code> per buscar fitxers dins del disc virtual. El programa ha recuperat la fotografia i el PDF, però els ha assignat noms diferents dels originals. Per comprovar que són els mateixos fitxers, hem comparat els seus hashes SHA-256 amb els que havíem guardat abans del format.</p>
+      <pre><code>sha256sum recup.1/*.jpg recup.1/*.pdf
+cat originals.sha</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/3Sprint2Pt4Ubuntu.png" alt="Recuperació dels fitxers i comparació dels hashes">
-        <figcaption>Recuperació dels fitxers i verificació que la foto i el PDF són idèntics als originals.</figcaption>
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/3Sprint2Pt4Ubuntu.png" alt="Comparació dels hashes originals i dels fitxers recuperats">
+        <figcaption>Els hashes de la fotografia i del PDF recuperats coincideixen amb els dels originals. Això confirma que els dos fitxers s'han recuperat correctament i que són idèntics.</figcaption>
       </figure>
 
-      <h4>4. Recuperació del fitxer de text</h4>
-      <p><code>photorec</code> no ha recuperat <code>notes.txt</code>, perquè els fitxers de text no tenen una capçalera identificable. Per trobar-ne el contingut, hem utilitzat <code>strings</code> i <code>grep</code> per cercar una paraula de la frase desada al disc.</p>
+      <h4>4. Recuperació del contingut del fitxer de text</h4>
+      <p><code>photorec</code> no ha trobat <code>notes.txt</code>, perquè els fitxers de text no tenen una capçalera pròpia que permeti identificar-los. Tot i això, hem pogut localitzar-ne el contingut buscant una paraula de la frase original.</p>
+      <pre><code>strings -e S disc.img | grep pizza</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/4Sprint2Pt4Ubuntu.png" alt="Cerca del contingut del fitxer de text amb strings i grep">
-        <figcaption>Localització del text original mitjançant la cerca d'una paraula clau.</figcaption>
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/4Sprint2Pt4Ubuntu.png" alt="Cerca de la frase del fitxer de text amb strings i grep">
+        <figcaption>El terminal mostra la frase «El meu secret és que m'encanta la pizza amb pinya». Això demostra que el contingut del fitxer de text encara es podia trobar al disc, tot i que PhotoRec no l'havia recuperat com a fitxer.</figcaption>
       </figure>
 
-      <h4>5. Esborrat de baix nivell</h4>
-      <p>Finalment, hem sobreescrit el disc virtual amb zeros mitjançant <code>dd</code>. En tornar a executar <code>photorec</code> i cercar el text, ja no hem trobat els fitxers ni la frase. Això confirma que les dades s'han esborrat.</p>
+      <h4>5. Comprovació després de l'esborrat de baix nivell</h4>
+      <p>Finalment, hem sobreescrit tot el disc virtual amb zeros mitjançant <code>dd</code>. Després hem tornat a provar de recuperar els fitxers i de buscar la frase del fitxer de text.</p>
+      <pre><code>ls recup_zeros.1 | grep -v dovecot
+strings -e S disc.img | grep pizza</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/5Sprint2Pt4Ubuntu.png" alt="Comprovació que no es poden recuperar els fitxers després de sobreescriure el disc">
-        <figcaption>Després de sobreescriure el disc amb zeros, ja no es recuperen els fitxers.</figcaption>
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt4/5Sprint2Pt4Ubuntu.png" alt="Comprovació que no es recuperen fitxers després de sobreescriure el disc virtual">
+        <figcaption>La cerca no mostra cap fitxer recuperat ni cap resultat per a la paraula «pizza». Després de sobreescriure el disc amb zeros, les dades ja no es poden recuperar amb aquest procediment.</figcaption>
       </figure>
 
       <h3>Respostes a les preguntes</h3>
       <ol>
-        <li>Els fitxers continuaven físicament al disc; el format havia eliminat l'índex que permetia localitzar-los.</li>
-        <li>Perquè els noms originals s'havien perdut amb l'índex i <code>photorec</code> els assigna noms nous.</li>
-        <li>Comparant els hashes SHA-256 de l'original i del fitxer recuperat. Si coincideixen, són idèntics.</li>
-        <li>Perquè un fitxer de text no té una capçalera pròpia. L'hem localitzat amb <code>strings</code> i <code>grep</code>, cercant una paraula del seu contingut.</li>
-        <li>Al nivell 3 hem fet un formateig d'alt nivell; al nivell 5 hem sobreescrit el disc amb zeros, és a dir, un esborrat de baix nivell.</li>
-        <li>Faria un esborrat segur que sobreescrigui les dades o utilitzaria l'eina d'esborrat segur del dispositiu, perquè no es puguin recuperar les fotografies.</li>
+        <li>Els fitxers continuaven guardats físicament al disc virtual. El formateig havia creat un índex nou i havia deixat de mostrar on es trobaven, però les dades encara hi eren.</li>
+        <li>Perquè el formateig havia esborrat l'índex on es guardaven els noms originals. PhotoRec recupera el contingut i els posa noms nous.</li>
+        <li>Comparant el hash SHA-256 de la fotografia original amb el de la recuperada. Si els dos codis coincideixen, vol dir que els fitxers són exactament iguals.</li>
+        <li>Perquè els fitxers de text no tenen una capçalera que PhotoRec pugui reconèixer. L'hem trobat amb <code>strings</code> i <code>grep</code>, buscant la paraula «pizza» dins del disc.</li>
+        <li>Al nivell 3 hem fet un formateig d'alt nivell, perquè hem creat un sistema de fitxers nou sense esborrar les dades. Al nivell 5 hem fet un esborrat de baix nivell, ja que hem sobreescrit tot el disc virtual amb zeros.</li>
+        <li>Abans de vendre l'USB faria un esborrat segur que sobreescrigui les dades o utilitzaria l'eina d'esborrat segur del dispositiu. Així evitaria que una altra persona pogués recuperar les fotografies.</li>
       </ol>
 
+      <p>Quan hem acabat i hem guardat les captures, podem eliminar el disc virtual i les carpetes de recuperació per alliberar espai.</p>
 
       <h3>Fitxers i particions</h3>
       <p>En aquesta pràctica hem treballat amb la segona partició del disc virtual <code>/dev/sdb</code>. L'hem formatat amb el sistema de fitxers <strong>NTFS</strong> i una mida de clúster de <strong>64 KiB</strong>, pensada per emmagatzemar fitxers grans, com ara les imatges mèdiques. També hem configurat el muntatge automàtic de les dues particions. En el meu cas, les carpetes de muntatge són <code>/mnt/particio1</code> i <code>/mnt/particio2</code>, en lloc de les carpetes <code>/var</code> que apareixen a la guia.</p>
@@ -345,10 +353,10 @@ cp informe.txt /mnt/particio2/
 ls -l /mnt/particio1/informe.txt /mnt/particio2/informe.txt
 du -h /mnt/particio1/informe.txt /mnt/particio2/informe.txt</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
         <figcaption>El mateix fitxer de 3000 bytes ocupa 4 KiB a ext4 i 64 KiB a NTFS.</figcaption>
       </figure>
-      
+
       <h4>Preguntes sobre sectors i blocs</h4>
       <ol>
         <li>Un sector és la unitat mínima d'emmagatzematge d'un disc. La seva mida ve determinada pel fabricant del disc i no la triem nosaltres quan el formatem.</li>
@@ -358,7 +366,6 @@ du -h /mnt/particio1/informe.txt /mnt/particio2/informe.txt</code></pre>
         <li>Un fitxer de 3000 bytes ocupa <strong>2 blocs</strong> a ext4, perquè un sol bloc de 2048 bytes no és suficient. Per tant, ocupa 4096 bytes i en queden 1096 de lliures. En una partició NTFS amb clústers de 64 KiB, ocupa un clúster sencer de 65.536 bytes i en queden 62.536 de lliures. Cada clúster de 64 KiB conté <strong>128 sectors</strong> de 512 bytes.</li>
         <li>Sí, els resultats coincideixen amb el càlcul: el fitxer ocupa 4 KiB a ext4 i 64 KiB a NTFS. A radiologia fan servir clústers grans perquè la majoria dels fitxers són imatges mèdiques de mida gran. Així, el sistema pot gestionar aquests fitxers de manera més eficient, encara que es perdi més espai quan es guarden fitxers petits.</li>
       </ol>
-
 
       <a class="tornar-index" href="#index-apartats">↑ Tornar a l'índex</a>
     </div>
