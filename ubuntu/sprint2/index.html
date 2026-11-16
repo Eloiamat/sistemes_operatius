@@ -288,11 +288,11 @@
 stat -f /mnt/particio1 | grep "Block size"
 sudo tune2fs -l /dev/sdb1 | grep "Block size"</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/1Sprint2Pt5Ubuntu.png.png" alt="Mida dels sectors del disc /dev/sdb">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/1Sprint2Pt5Ubuntu.png" alt="Mida dels sectors del disc /dev/sdb">
         <figcaption>Comprovació de la mida dels sectors lògics i físics del disc.</figcaption>
       </figure>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/2Sprint2Pt5Ubuntu.png.png" alt="Mida del bloc de la partició ext4">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/2Sprint2Pt5Ubuntu.png" alt="Mida del bloc de la partició ext4">
         <figcaption>La partició ext4 té blocs de 2048 bytes, és a dir, 2 KiB.</figcaption>
       </figure>
 
@@ -300,7 +300,7 @@ sudo tune2fs -l /dev/sdb1 | grep "Block size"</code></pre>
       <p>Amb <code>fdisk</code> hem consultat la taula de particions del disc <code>/dev/sdb</code>. Hi apareixen dues particions: <code>/dev/sdb1</code>, que utilitza ext4, i <code>/dev/sdb2</code>, que serà la partició NTFS. En el meu disc, la primera ocupa aproximadament 5,2 GB i la segona 4,8 GB.</p>
       <pre><code>sudo fdisk -l /dev/sdb</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/3Sprint2Pt5Ubuntu.png.png" alt="Taula de particions del disc /dev/sdb">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/3Sprint2Pt5Ubuntu.png" alt="Taula de particions del disc /dev/sdb">
         <figcaption>Les dues particions del disc: sdb1 en ext4 i sdb2 preparada per a NTFS.</figcaption>
       </figure>
 
@@ -309,7 +309,7 @@ sudo tune2fs -l /dev/sdb1 | grep "Block size"</code></pre>
       <pre><code>sudo mkfs.ntfs -f -c 65536 -L radiologia /dev/sdb2
 lsblk -f /dev/sdb</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/4Sprint2Pt5Ubuntu.png.png" alt="Format NTFS i comprovació de les particions">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/4Sprint2Pt5Ubuntu.png" alt="Format NTFS i comprovació de les particions">
         <figcaption>Creació del sistema de fitxers NTFS amb clústers de 64 KiB i comprovació amb lsblk.</figcaption>
       </figure>
 
@@ -321,7 +321,7 @@ sudo mount -t ntfs-3g -o uid=1000,gid=1000 /dev/sdb2 /mnt/particio2
 stat -f /mnt/particio2 | grep "Block size"
 df -hT /mnt/particio2</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/5Sprint2Pt5Ubuntu.png.png" alt="Mida del clúster i espai de la partició NTFS muntada">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/5Sprint2Pt5Ubuntu.png" alt="Mida del clúster i espai de la partició NTFS muntada">
         <figcaption>La mida del clúster és de 65536 bytes i la partició apareix muntada com a fuseblk.</figcaption>
       </figure>
 
@@ -340,7 +340,7 @@ df -hT /mnt/particio1 /mnt/particio2</code></pre>
 UUID=0C43D15E10BD818B /mnt/particio2 ntfs-3g defaults,nofail,uid=1000,gid=1000 0 0</code></pre>
       <p><code>findmnt --verify</code> mostra dos avisos relacionats amb <code>ntfs-3g</code>, però no hi ha errors. Finalment, <code>df</code> confirma que les dues particions estan muntades als directoris correctes.</p>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/6Sprint2Pt5Ubuntu.png.png" alt="Verificació de fstab i muntatge de les dues particions">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/6Sprint2Pt5Ubuntu.png" alt="Verificació de fstab i muntatge de les dues particions">
         <figcaption>Comprovació de fstab i de les dues particions muntades a /mnt.</figcaption>
       </figure>
 
@@ -355,7 +355,7 @@ cp informe.txt /mnt/particio2/
 ls -l /mnt/particio1/informe.txt /mnt/particio2/informe.txt
 du -h /mnt/particio1/informe.txt /mnt/particio2/informe.txt</code></pre>
       <figure class="captura-sprint">
-        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
+        <img src="../../img/ubuntu/sprint2Ubuntu/Pt5/7Sprint2Pt5Ubuntu.png" alt="Comparació de l'espai ocupat per informe.txt a ext4 i NTFS">
         <figcaption>El mateix fitxer de 3000 bytes ocupa 4 KiB a ext4 i 64 KiB a NTFS.</figcaption>
       </figure>
 
